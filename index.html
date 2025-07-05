@@ -52,6 +52,15 @@
             overflow-x: hidden;
             height: 100%;
         }
+        
+        /* --- View Toggle Styles --- */
+        .table-view {
+            display: none;
+            height: 100%;
+        }
+        .table-view.active {
+            display: block;
+        }
 
         /* --- Header & Toolbar (Ultra-Compacted) --- */
         .calendar-header {
@@ -103,6 +112,11 @@
             justify-content: center;
             position: relative;
         }
+        .view-toggle-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
         .control-btn {
             padding: 0.5rem 1rem;
             font-size: 0.9rem;
@@ -110,6 +124,25 @@
             background-color: var(--white);
             border-radius: 0.25rem;
             cursor: pointer;
+            transition: all 0.2s;
+        }
+        .control-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        .control-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        .control-btn.view-toggle:hover {
+            background-color: var(--medium-gray);
+            color: var(--text-color);
+            border-color: var(--border-color);
+        }
+        .view-icon {
+            margin-right: 0.5rem;
         }
         #filter-trigger-btn:after {
             content: '▼';
@@ -118,19 +151,17 @@
         }
         .filter-dropdown-panel {
             display: none;
-            position: absolute;
+            position: fixed;
             background-color: var(--white);
-            min-width: 220px;
+            min-width: 300px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             border: 1px solid var(--border-color);
             border-radius: 0.25rem;
             z-index: 1001;
             padding: 1rem;
             left: 50%;
+            top: 20%;
             transform: translateX(-50%);
-            text-align: center;
-            top: 100%;
-            margin-top: 0.5rem;
         }
         .filter-dropdown-panel.active {
             display: block;
@@ -141,38 +172,47 @@
         .filter-controls {
             display: flex;
             gap: 0.5rem;
-            justify-content: center;
             margin-bottom: 1rem;
+            justify-content: center;
         }
         .filter-control-btn {
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
+            padding: 0.375rem 0.75rem;
             border: 1px solid var(--border-color);
-            background-color: var(--white);
+            background: var(--white);
             border-radius: 0.25rem;
             cursor: pointer;
             transition: all 0.2s;
+            font-size: 0.875rem;
         }
         .filter-control-btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
+            background: var(--light-gray);
+        }
+        .filter-options-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: flex-start;
         }
         .role-option {
-            display: inline-block;
-            margin: 0.25rem;
+            display: block;
+            width: calc(50% - 0.25rem);
+            margin-bottom: 0.25rem;
         }
         .role-option input[type="checkbox"] { display: none; }
         .role-option label {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 1rem;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem;
             background: #f1f3f5;
             color: #343a40;
             cursor: pointer;
             transition: background 0.2s, color 0.2s;
             border: 1px solid var(--border-color);
             user-select: none;
+            text-align: center;
+            font-size: 0.875rem;
+            width: 100%;
+            box-sizing: border-box;
         }
         .role-option input[type="checkbox"]:checked + label {
             background: var(--primary-color);
@@ -234,6 +274,106 @@
             margin-right: 6px;
             display: inline-block;
             flex-shrink: 0;
+        }
+
+        /* --- Card View Layout --- */
+        .card-view {
+            display: none;
+            padding: 0.5rem;
+            gap: 1rem;
+            flex-direction: column;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .card-view.active {
+            display: flex;
+        }
+        .agenda-card {
+            background: var(--white);
+            border: 2px solid #6385ff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .agenda-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 0;
+        }
+        .card-time {
+            font-size: 0.9rem;
+            color: #666;
+            background: var(--light-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        .card-description {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .card-roles {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .role-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+        .role-assignment {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 0.375rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        .role-name {
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        .role-activity {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .no-events-card {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 2rem;
+        }
+        .role-pair-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-color), transparent);
+            margin: 0.25rem 0;
+            position: relative;
+        }
+        .role-pair-divider::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 50%;
         }
 
         /* --- Calendar Grid & Events --- */
@@ -399,6 +539,14 @@
                 font-size: 0.7rem;
                 padding: 0.25rem !important;
             }
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .card-title {
+                font-size: 1.1rem;
+            }
         }
         @media (max-width: 480px) {
             .calendar-toolbar {
@@ -409,6 +557,12 @@
             }
             .key-item {
                 font-size: 0.65rem; /* Smaller font size on mobile */
+            }
+            .agenda-card {
+                padding: 1rem;
+            }
+            .card-title {
+                font-size: 1rem;
             }
         }
 
@@ -432,6 +586,11 @@
                     <button id="filter-trigger-btn" class="control-btn">Filter Roles</button>
                     <div id="filter-panel" class="filter-dropdown-panel">
                         </div>
+                </div>
+                <div class="view-toggle-container">
+                    <button id="view-toggle-btn" class="control-btn view-toggle">
+                        Table View
+                    </button>
                 </div>
                 <section class="color-key-container">
                     <div class="key-item"><span class="key-color" style="background-color: #dbe4ff;"></span>Main Agenda</div>
@@ -577,7 +736,101 @@
                 return roleName;
             };
             
-            // Function to update column abbreviations based on current visibility
+            // Function to get color styling for role activities
+            const getActivityColor = (activityData) => {
+                // Handle simple string case (Free)
+                if (typeof activityData === 'string') {
+                    if (activityData === 'Free') {
+                        return {
+                            backgroundColor: '#f8f9fa',
+                            borderColor: '#6c757d',
+                            textColor: '#6c757d'
+                        };
+                    }
+                    // Fallback for other strings
+                    return {
+                        backgroundColor: '#d1e7dd',
+                        borderColor: '#198754',
+                        textColor: '#0f5132'
+                    };
+                }
+                
+                // Handle object case with eventType
+                if (activityData && activityData.eventType) {
+                    const eventType = activityData.eventType.toLowerCase();
+                    
+                    switch (eventType) {
+                        case 'break':
+                            return {
+                                backgroundColor: '#fff3cd',
+                                borderColor: '#ffc107',
+                                textColor: '#856404'
+                            };
+                        case 'meeting':
+                            return {
+                                backgroundColor: '#cff4fc',
+                                borderColor: '#0dcaf0',
+                                textColor: '#055160'
+                            };
+                        case 'duty':
+                            return {
+                                backgroundColor: '#d1e7dd',
+                                borderColor: '#198754',
+                                textColor: '#0f5132'
+                            };
+                        case 'agenda':
+                            return {
+                                backgroundColor: '#dbe4ff',
+                                borderColor: '#6385ff',
+                                textColor: '#0a58ca'
+                            };
+                        case 'free':
+                            return {
+                                backgroundColor: '#f8f9fa',
+                                borderColor: '#6c757d',
+                                textColor: '#6c757d'
+                            };
+                        default:
+                            // Default for unknown types
+                            return {
+                                backgroundColor: '#d1e7dd',
+                                borderColor: '#198754',
+                                textColor: '#0f5132'
+                            };
+                    }
+                }
+                
+                // Fallback
+                return {
+                    backgroundColor: '#d1e7dd',
+                    borderColor: '#198754',
+                    textColor: '#0f5132'
+                };
+            };
+            
+            // Function to regenerate card views for all days
+            function regenerateCardViews() {
+                CONFIG.DAYS_ORDER.forEach(day => {
+                    const slide = document.querySelector(`.swiper-slide[data-day="${day}"]`);
+                    if (slide) {
+                        const cardView = slide.querySelector('.card-view');
+                        if (cardView) {
+                            const newCardHTML = generateCardViewForDay(day);
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = newCardHTML;
+                            const newCardView = tempDiv.querySelector('.card-view');
+                            
+                            // Preserve the active class if it exists
+                            if (cardView.classList.contains('active')) {
+                                newCardView.classList.add('active');
+                            }
+                            
+                            // Replace the old card view with the new one
+                            cardView.parentNode.replaceChild(newCardView, cardView);
+                        }
+                    }
+                });
+            }
             const updateColumnAbbreviations = () => {
                 // Update all calendar tables
                 document.querySelectorAll('.calendar').forEach(calendar => {
@@ -683,14 +936,304 @@
                 return `<div class="calendar-wrapper"><table class="calendar ${manyColumnsClass}">${tableHeader}<tbody>${tableRows}</tbody></table></div>`;
             }
             
+            function generateCardViewForDay(day) {
+                const dayEvents = state.processedData[day];
+                if (!dayEvents || dayEvents.length === 0) {
+                    return `<div class="card-view"><div class="no-events-card">No events for ${day}.</div></div>`;
+                }
+                
+                // Get only agenda events and sort by time
+                const agendaEvents = dayEvents
+                    .filter(event => event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda')
+                    .sort((a, b) => a.startMins - b.startMins);
+                
+                if (agendaEvents.length === 0) {
+                    return `<div class="card-view"><div class="no-events-card">No agenda events for ${day}.</div></div>`;
+                }
+                
+                let cardsHTML = '';
+                
+                agendaEvents.forEach(agendaEvent => {
+                    // Find what each role is doing during this agenda event
+                    const roleActivities = {};
+                    
+                    // Initialize all roles (except filtered out ones), plus paired AC/CN roles
+                    state.roles.forEach(role => {
+                        if (role !== 'Agenda') {
+                            const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                            // Check if role is currently visible (not filtered out)
+                            const isRoleVisible = document.querySelector(`[data-role="${roleClass}"]`)?.style.display !== 'none';
+                            if (isRoleVisible) {
+                                roleActivities[role] = 'Free';
+                                
+                                // If this is an AC role, also include its paired CN role even if filtered out
+                                const acMatch = role.match(/^AC (\d+)$/);
+                                if (acMatch) {
+                                    const acNumber = parseInt(acMatch[1]);
+                                    const pairedCnLetter = String.fromCharCode('A'.charCodeAt(0) + acNumber - 1);
+                                    const pairedCnRole = `CN ${pairedCnLetter}`;
+                                    // Add the paired CN role if it exists in the data
+                                    if (state.roles.includes(pairedCnRole)) {
+                                        roleActivities[pairedCnRole] = 'Free';
+                                    }
+                                }
+                                
+                                // If this is a CN role, also include its paired AC role even if filtered out
+                                const cnMatch = role.match(/^CN ([A-Z])$/);
+                                if (cnMatch) {
+                                    const cnLetter = cnMatch[1];
+                                    const acNumber = cnLetter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                                    const pairedAcRole = `AC ${acNumber}`;
+                                    // Add the paired AC role if it exists in the data
+                                    if (state.roles.includes(pairedAcRole)) {
+                                        roleActivities[pairedAcRole] = 'Free';
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Find concurrent events for other roles (only include visible roles)
+                    dayEvents.forEach(event => {
+                        if (event.Role && event.Role !== 'Agenda' && 
+                            event.startMins < agendaEvent.endMins && 
+                            event.endMins > agendaEvent.startMins) {
+                            // Check if this role should be included
+                            if (roleActivities.hasOwnProperty(event.Role)) {
+                                // This event overlaps with the agenda event
+                                roleActivities[event.Role] = {
+                                    activity: `${event['Event Abbreviation']} - ${event['Event Name']}`,
+                                    eventType: event['Event Type']
+                                };
+                            }
+                        }
+                    });
+                    
+                    // Generate role assignments HTML with paired columns
+                    const roleAssignmentsHTML = (() => {
+                        const roleEntries = Object.entries(roleActivities);
+                        
+                        // Separate AC and CN roles, and other roles
+                        const acRoles = roleEntries.filter(([role]) => role.startsWith('AC '));
+                        const cnRoles = roleEntries.filter(([role]) => role.startsWith('CN '));
+                        const otherRoles = roleEntries.filter(([role]) => !role.startsWith('AC ') && !role.startsWith('CN '));
+                        
+                        // Sort AC and CN roles numerically/alphabetically
+                        acRoles.sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
+                        cnRoles.sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
+                        
+                        let html = '';
+                        
+                        // Create specific AC/CN pairings (AC 1 with CN A, AC 2 with CN B, etc.)
+                        // Convert roles to maps for easier lookup
+                        const acRoleMap = new Map();
+                        const cnRoleMap = new Map();
+                        
+                        acRoles.forEach(([role, activityData]) => {
+                            const match = role.match(/^AC (\d+)$/);
+                            if (match) {
+                                acRoleMap.set(parseInt(match[1]), [role, activityData]);
+                            }
+                        });
+                        
+                        cnRoles.forEach(([role, activityData]) => {
+                            const match = role.match(/^CN ([A-Z])$/);
+                            if (match) {
+                                // Convert letter to number (A=1, B=2, etc.)
+                                const letterNumber = match[1].charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                                cnRoleMap.set(letterNumber, [role, activityData]);
+                            }
+                        });
+                        
+                        // Find all AC numbers that exist
+                        const allAcNumbers = [...acRoleMap.keys(), ...cnRoleMap.keys()];
+                        const maxAcNumber = allAcNumbers.length > 0 ? Math.max(...allAcNumbers) : 0;
+                        
+                        // Create pairs and track for dividers
+                        const visibleRows = [];
+                        
+                        for (let acNumber = 1; acNumber <= maxAcNumber; acNumber++) {
+                            const acRole = acRoleMap.get(acNumber);
+                            const cnRole = cnRoleMap.get(acNumber);
+                            
+                            // Only create a row if at least one role exists
+                            if (acRole || cnRole) {
+                                visibleRows.push(acNumber);
+                                
+                                html += '<div class="role-pair">';
+                                
+                                // Add AC role if exists, otherwise add invisible placeholder
+                                if (acRole) {
+                                    const [role, activityData] = acRole;
+                                    const colors = getActivityColor(activityData);
+                                    const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                    html += `
+                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
+                                            <div class="role-name">${role}</div>
+                                            <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
+                                        </div>
+                                    `;
+                                } else {
+                                    // Invisible placeholder for AC column when no AC role but CN role exists
+                                    html += '<div class="role-assignment" style="visibility: hidden;"></div>';
+                                }
+                                
+                                // Add CN role if exists, otherwise add invisible placeholder
+                                if (cnRole) {
+                                    const [role, activityData] = cnRole;
+                                    const colors = getActivityColor(activityData);
+                                    const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                    html += `
+                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
+                                            <div class="role-name">${role}</div>
+                                            <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
+                                        </div>
+                                    `;
+                                } else {
+                                    // Invisible placeholder for CN column when no CN role but AC role exists
+                                    html += '<div class="role-assignment" style="visibility: hidden;"></div>';
+                                }
+                                
+                                html += '</div>';
+                            }
+                        }
+                        
+                        // Add dividers based on AC number grouping (1-2, 3-4, 5-6, etc.)
+                        if (visibleRows.length > 0) {
+                            // Insert dividers by going through visible rows and adding dividers after every second AC number
+                            let htmlWithDividers = '';
+                            const rowsArray = html.split('<div class="role-pair">').filter(part => part.trim());
+                            
+                            for (let i = 0; i < visibleRows.length; i++) {
+                                const acNumber = visibleRows[i];
+                                const isLastRow = i === visibleRows.length - 1;
+                                const isEvenAcNumber = acNumber % 2 === 0;
+                                
+                                // Add the role pair
+                                if (i === 0) {
+                                    htmlWithDividers += '<div class="role-pair">' + rowsArray[i];
+                                } else {
+                                    htmlWithDividers += '<div class="role-pair">' + rowsArray[i];
+                                }
+                                
+                                // Add divider after even AC numbers (2, 4, 6, etc.) but not after the last row
+                                if (isEvenAcNumber && !isLastRow) {
+                                    htmlWithDividers += '<div class="role-pair-divider"></div>';
+                                }
+                                // Special case: if there's only one visible row from an odd-even pair, add dividers above and below
+                                else if (!isEvenAcNumber && !isLastRow) {
+                                    const nextVisibleAcNumber = visibleRows[i + 1];
+                                    // If next number is not the immediate next (i.e., the even pair is missing), add divider
+                                    if (nextVisibleAcNumber !== acNumber + 1) {
+                                        htmlWithDividers += '<div class="role-pair-divider"></div>';
+                                    }
+                                }
+                            }
+                            
+                            html = htmlWithDividers;
+                        }
+                        
+                        // Add other roles in pairs
+                        for (let i = 0; i < otherRoles.length; i += 2) {
+                            html += '<div class="role-pair">';
+                            
+                            for (let j = 0; j < 2 && (i + j) < otherRoles.length; j++) {
+                                const [role, activityData] = otherRoles[i + j];
+                                const colors = getActivityColor(activityData);
+                                const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                html += `
+                                    <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
+                                        <div class="role-name">${role}</div>
+                                        <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
+                                    </div>
+                                `;
+                            }
+                            
+                            html += '</div>';
+                        }
+                        
+                        return html;
+                    })();
+                    
+                    cardsHTML += `
+                        <div class="agenda-card">
+                            <div class="card-header">
+                                <h3 class="card-title">${agendaEvent['Event Name']}</h3>
+                                <div class="card-time">${agendaEvent['Start Time']} - ${agendaEvent['End Time']}</div>
+                            </div>
+                            <div class="card-description">${agendaEvent['Event Description']}</div>
+                            <div class="card-roles">
+                                ${roleAssignmentsHTML}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                return `<div class="card-view">${cardsHTML}</div>`;
+            }
+            
             function populateFilters() {
                 const filterControls = `<div class="filter-controls"><button class="filter-control-btn" data-action="select-all">Select All</button><button class="filter-control-btn" data-action="deselect-all">Deselect All</button></div>`;
-                const roleOptionsHTML = state.roles.filter(role => role !== 'Agenda').map(role => {
+                
+                // Separate and organize roles like in the card view
+                const allRoles = state.roles.filter(role => role !== 'Agenda');
+                const acRoles = allRoles.filter(role => role.startsWith('AC '));
+                const cnRoles = allRoles.filter(role => role.startsWith('CN '));
+                const otherRoles = allRoles.filter(role => !role.startsWith('AC ') && !role.startsWith('CN '));
+                
+                // Sort AC and CN roles numerically/alphabetically
+                acRoles.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+                cnRoles.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+                
+                // Create AC/CN role maps for pairing
+                const acRoleMap = new Map();
+                const cnRoleMap = new Map();
+                
+                acRoles.forEach(role => {
+                    const match = role.match(/^AC (\d+)$/);
+                    if (match) {
+                        acRoleMap.set(parseInt(match[1]), role);
+                    }
+                });
+                
+                cnRoles.forEach(role => {
+                    const match = role.match(/^CN ([A-Z])$/);
+                    if (match) {
+                        const letterNumber = match[1].charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                        cnRoleMap.set(letterNumber, role);
+                    }
+                });
+                
+                // Generate role options in paired order
+                let roleOptionsHTML = '';
+                
+                // Add AC/CN pairs first
+                const maxAcNumber = Math.max(...[...acRoleMap.keys(), ...cnRoleMap.keys()], 0);
+                for (let acNumber = 1; acNumber <= maxAcNumber; acNumber++) {
+                    const acRole = acRoleMap.get(acNumber);
+                    const cnRole = cnRoleMap.get(acNumber);
+                    
+                    // Add AC role if it exists
+                    if (acRole) {
+                        const roleClass = acRole.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                        roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${acRole}</label></div>`;
+                    }
+                    
+                    // Add CN role if it exists
+                    if (cnRole) {
+                        const roleClass = cnRole.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                        roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${cnRole}</label></div>`;
+                    }
+                }
+                
+                // Add other roles at the end
+                otherRoles.forEach(role => {
                     const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-                    return `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${role}</label></div>`;
-                }).join('');
+                    roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${role}</label></div>`;
+                });
+                
                 // Only populate the dropdown filter panel
-                document.querySelector(CONFIG.SELECTORS.filterPanel).innerHTML = filterControls + roleOptionsHTML;
+                document.querySelector(CONFIG.SELECTORS.filterPanel).innerHTML = filterControls + '<div class="filter-options-grid">' + roleOptionsHTML + '</div>';
             }
 
             // Function to update active day button
@@ -774,6 +1317,7 @@
                             document.querySelectorAll(`input[value="${role}"]`).forEach(cb => cb.checked = isVisible);
                             document.querySelectorAll(`[data-role="${role}"]`).forEach(el => el.style.display = isVisible ? '' : 'none');
                             updateColumnAbbreviations(); // Update abbreviations when filters change
+                            regenerateCardViews(); // Update card views when filters change
                             savePreferences();
                         } else if (target.matches('.filter-control-btn')) {
                             const isSelectAll = target.dataset.action === 'select-all';
@@ -781,6 +1325,7 @@
                                 if (cb.checked !== isSelectAll) cb.click();
                             });
                             updateColumnAbbreviations(); // Update abbreviations after bulk changes
+                            regenerateCardViews(); // Update card views after bulk changes
                         }
                     });
                 });
@@ -788,27 +1333,50 @@
 
             function savePreferences() {
                 const filters = Array.from(document.querySelectorAll('#filter-panel input[type="checkbox"]')).map(cb => ({ value: cb.value, checked: cb.checked }));
-                localStorage.setItem(CONFIG.LOCAL_STORAGE_KEY, JSON.stringify({ filters }));
+                const isCardView = document.querySelector('.card-view.active') !== null;
+                localStorage.setItem(CONFIG.LOCAL_STORAGE_KEY, JSON.stringify({ filters, isCardView }));
             }
 
             function loadPreferences() {
                 const saved = localStorage.getItem(CONFIG.LOCAL_STORAGE_KEY);
-                if (!saved) return;
-                const { filters } = JSON.parse(saved);
-                filters.forEach(filter => {
-                    document.querySelectorAll(`input[value="${filter.value}"]`).forEach(cb => cb.checked = filter.checked);
-                    document.querySelectorAll(`[data-role="${filter.value}"]`).forEach(el => el.style.display = filter.checked ? '' : 'none');
-                });
+                if (!saved) return { isCardView: true }; // Default to card view
+                
+                const { filters, isCardView = true } = JSON.parse(saved); // Default to card view if not set
+                
+                // Apply filter preferences
+                if (filters) {
+                    filters.forEach(filter => {
+                        document.querySelectorAll(`input[value="${filter.value}"]`).forEach(cb => cb.checked = filter.checked);
+                        document.querySelectorAll(`[data-role="${filter.value}"]`).forEach(el => el.style.display = filter.checked ? '' : 'none');
+                    });
+                }
+                
                 updateColumnAbbreviations(); // Update abbreviations after loading preferences
+                
+                return { isCardView };
             }
 
             function initialize() {
                 preprocessData(scheduleData);
                 const swiperWrapper = document.querySelector(CONFIG.SELECTORS.swiperWrapper);
-                swiperWrapper.innerHTML = CONFIG.DAYS_ORDER.map(day => `<div class="swiper-slide" data-day="${day}">${generateCalendarForDay(day)}</div>`).join('');
+                
+                // Generate slides with both table and card views
+                swiperWrapper.innerHTML = CONFIG.DAYS_ORDER.map(day => `
+                    <div class="swiper-slide" data-day="${day}">
+                        <div class="table-view">
+                            ${generateCalendarForDay(day)}
+                        </div>
+                        ${generateCardViewForDay(day)}
+                    </div>
+                `).join('');
+                
                 populateFilters();
-                loadPreferences();
+                const preferences = loadPreferences();
                 updateColumnAbbreviations(); // Initial abbreviation update after calendar generation
+                
+                // Regenerate card views after filters are applied to ensure they respect saved preferences
+                regenerateCardViews();
+                
                 const swiper = new Swiper('.swiper', {
                     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
                     keyboard: { enabled: true },
@@ -819,7 +1387,9 @@
                         }
                     }
                 });
+                
                 setupEventListeners(swiper);
+                setupViewToggle(preferences.isCardView);
                 
                 const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
                 const todayIndex = CONFIG.DAYS_ORDER.indexOf(today);
@@ -830,6 +1400,58 @@
                      swiper.emit('slideChangeTransitionEnd');
                 }
                 setInterval(() => updateCurrentTimeIndicator(swiper), 60000);
+            }
+
+            function setupViewToggle(initialIsCardView = true) {
+                const viewToggleBtn = document.getElementById('view-toggle-btn');
+                let isCardView = initialIsCardView;
+                
+                // Set initial view state
+                if (isCardView) {
+                    viewToggleBtn.textContent = 'Table View';
+                    document.querySelectorAll('.swiper-slide').forEach(slide => {
+                        const tableView = slide.querySelector('.table-view');
+                        const cardView = slide.querySelector('.card-view');
+                        tableView.classList.remove('active');
+                        cardView.classList.add('active');
+                    });
+                } else {
+                    viewToggleBtn.textContent = 'Card View';
+                    document.querySelectorAll('.swiper-slide').forEach(slide => {
+                        const tableView = slide.querySelector('.table-view');
+                        const cardView = slide.querySelector('.card-view');
+                        tableView.classList.add('active');
+                        cardView.classList.remove('active');
+                    });
+                }
+                
+                viewToggleBtn.addEventListener('click', () => {
+                    isCardView = !isCardView;
+                    
+                    // Update button text only (no active state)
+                    if (isCardView) {
+                        viewToggleBtn.textContent = 'Table View';
+                    } else {
+                        viewToggleBtn.textContent = 'Card View';
+                    }
+                    
+                    // Toggle views in all slides
+                    document.querySelectorAll('.swiper-slide').forEach(slide => {
+                        const tableView = slide.querySelector('.table-view');
+                        const cardView = slide.querySelector('.card-view');
+                        
+                        if (isCardView) {
+                            tableView.classList.remove('active');
+                            cardView.classList.add('active');
+                        } else {
+                            tableView.classList.add('active');
+                            cardView.classList.remove('active');
+                        }
+                    });
+                    
+                    // Save the preference
+                    savePreferences();
+                });
             }
 
             initialize();
