@@ -49,6 +49,7 @@
         }
         .calendar-wrapper {
             overflow-y: auto;
+            overflow-x: hidden;
             height: 100%;
         }
 
@@ -61,7 +62,7 @@
             border-bottom: 1px solid var(--border-color);
             transform: translateY(0);
             transition: transform 0.3s ease-in-out;
-            margin: -1rem -1rem 1rem -1rem;
+            margin: -1rem -1rem 0.5rem -1rem; /* Reduced bottom margin */
             padding: 1rem;
         }
         .calendar-header.hidden {
@@ -74,7 +75,7 @@
             justify-content: center; /* Center the entire block */
             align-items: center;
             gap: 0.5rem; /* Gap between arrows and buttons */
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.25rem; /* Reduced margin */
         }
         .swiper-button-next, .swiper-button-prev {
             position: static !important;
@@ -92,14 +93,14 @@
         .calendar-toolbar {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 1rem;
             margin-bottom: 0.5rem; /* Reduced margin */
             align-items: center;
+            flex-wrap: wrap;
         }
         .filter-container {
             display: flex;
             justify-content: center;
-            width: 100%;
             position: relative;
         }
         .control-btn {
@@ -135,17 +136,7 @@
             display: block;
         }
         .role-filters-expanded {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem; /* Reduced gap */
-            margin-bottom: 0.5rem; /* Reduced margin */
-        }
-        .role-filters-expanded .role-options-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
+            display: none; /* Always hidden now */
         }
         .filter-controls {
             display: flex;
@@ -210,10 +201,15 @@
             text-align: center;
             white-space: nowrap;
         }
-        .quick-nav-btn:hover, .quick-nav-btn.active {
+        .quick-nav-btn:hover {
             background: var(--primary-color);
             color: white;
             border-color: var(--primary-color);
+        }
+        .quick-nav-btn.active {
+            background: var(--primary-color) !important;
+            color: white !important;
+            border-color: var(--primary-color) !important;
         }
 
         /* --- Color Key (Compacted) --- */
@@ -223,7 +219,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 0.25rem 1rem;
-            margin-bottom: 0.75rem;
+            margin: 0; /* Remove margin since it's now inline */
         }
         .key-item {
             display: flex;
@@ -245,6 +241,7 @@
             width: 100%;
             border-collapse: collapse;
             table-layout: fixed;
+            max-width: 100%;
         }
         .calendar th {
             position: sticky;
@@ -396,13 +393,7 @@
         }
         
         /* --- Responsive Design --- */
-        @media (min-width: 769px) {
-            .calendar-toolbar { display: none; }
-            .role-filters-expanded { display: flex; }
-        }
         @media (max-width: 768px) {
-            .calendar-toolbar { flex-direction: column; gap: 0.5rem; }
-            .role-filters-expanded { display: none; }
             .time-col, .calendar th.time-col, .calendar td.time-col {
                 width: 45px !important;
                 font-size: 0.7rem;
@@ -410,7 +401,15 @@
             }
         }
         @media (max-width: 480px) {
-            .color-key-container { display: none; }
+            .calendar-toolbar {
+                gap: 0.5rem; /* Reduced gap on mobile */
+            }
+            .color-key-container {
+                gap: 0.15rem 0.5rem; /* Reduced spacing on mobile */
+            }
+            .key-item {
+                font-size: 0.65rem; /* Smaller font size on mobile */
+            }
         }
 
         /* --- Print Styles --- */
@@ -434,17 +433,17 @@
                     <div id="filter-panel" class="filter-dropdown-panel">
                         </div>
                 </div>
+                <section class="color-key-container">
+                    <div class="key-item"><span class="key-color" style="background-color: #dbe4ff;"></span>Main Agenda</div>
+                    <div class="key-item"><span class="key-color" style="background-color: #d1e7dd;"></span>Duty</div>
+                    <div class="key-item"><span class="key-color" style="background-color: #cff4fc;"></span>Meeting</div>
+                    <div class="key-item"><span class="key-color" style="background-color: #fff3cd;"></span>Break/Off</div>
+                    <div class="key-item"><span class="key-color" style="background-color: #f8f9fa; border: 1px solid #dee2e6;"></span>Free</div>
+                </section>
             </section>
 
-            <section class="role-filters-expanded" id="role-filters-expanded">
-                </section>
-
-            <section class="color-key-container">
-                <div class="key-item"><span class="key-color" style="background-color: #dbe4ff;"></span>Main Agenda</div>
-                <div class="key-item"><span class="key-color" style="background-color: #d1e7dd;"></span>Duty</div>
-                <div class="key-item"><span class="key-color" style="background-color: #cff4fc;"></span>Meeting</div>
-                <div class="key-item"><span class="key-color" style="background-color: #fff3cd;"></span>Break/Off</div>
-                <div class="key-item"><span class="key-color" style="background-color: #f8f9fa; border: 1px solid #dee2e6;"></span>Free</div>
+            <section class="role-filters-expanded" id="role-filters-expanded" style="display: none;">
+                <!-- This section is now permanently hidden -->
             </section>
 
             <nav class="navigation-controls">
@@ -690,13 +689,42 @@
                     const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
                     return `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${role}</label></div>`;
                 }).join('');
-                const expandedRoleOptionsHTML = state.roles.filter(role => role !== 'Agenda').map(role => {
-                    const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-                    return `<div class="role-option"><input type="checkbox" id="ex-role-${roleClass}" value="${roleClass}" checked><label for="ex-role-${roleClass}">${role}</label></div>`;
-                }).join('');
+                // Only populate the dropdown filter panel
                 document.querySelector(CONFIG.SELECTORS.filterPanel).innerHTML = filterControls + roleOptionsHTML;
-                const expandedContainer = document.querySelector(CONFIG.SELECTORS.expandedFilters);
-                expandedContainer.innerHTML = filterControls + `<div class="role-options-row">${expandedRoleOptionsHTML}</div>`;
+            }
+
+            // Function to update active day button
+            function updateActiveDayButton(swiper) {
+                // Use requestAnimationFrame to ensure this runs after any DOM updates
+                requestAnimationFrame(() => {
+                    const currentDay = swiper.slides[swiper.activeIndex].dataset.day;
+                    // Force remove active class from all buttons first
+                    document.querySelectorAll('.quick-nav-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        // Aggressively clear all inline styles on mobile
+                        btn.style.removeProperty('background');
+                        btn.style.removeProperty('background-color');
+                        btn.style.removeProperty('color');
+                        btn.style.removeProperty('border-color');
+                        // Also reset to default values
+                        btn.style.background = '#ffffff';
+                        btn.style.color = '#343a40';
+                        btn.style.borderColor = '#dee2e6';
+                    });
+                    
+                    // Then add active class to the current day button
+                    const currentDayButton = document.querySelector(`.quick-nav-btn[data-day="${currentDay}"]`);
+                    if (currentDayButton) {
+                        currentDayButton.classList.add('active');
+                        // Force the active styling on mobile
+                        currentDayButton.style.background = '#007bff';
+                        currentDayButton.style.color = 'white';
+                        currentDayButton.style.borderColor = '#007bff';
+                        
+                        // Additional force reflow on mobile
+                        currentDayButton.offsetHeight;
+                    }
+                });
             }
 
             function updateCurrentTimeIndicator(swiper) {
@@ -713,7 +741,7 @@
                         const timeCell = timeRow.querySelector('.time-col');
                         if (timeCell) {
                            timeCell.style.position = 'relative';
-                           timeCell.appendChild(indicator);
+                              timeCell.appendChild(indicator);
                         }
                     }
                 }
@@ -731,10 +759,12 @@
                 document.querySelector(CONFIG.SELECTORS.quickNav).addEventListener('click', (e) => {
                     if (e.target.matches('.quick-nav-btn[data-day]')) {
                         const dayIndex = CONFIG.DAYS_ORDER.indexOf(e.target.dataset.day);
-                        if (dayIndex !== -1) swiper.slideTo(dayIndex);
+                        if (dayIndex !== -1) {
+                            swiper.slideTo(dayIndex);
+                        }
                     }
                 });
-                const filterContainers = [filterPanel, document.querySelector(CONFIG.SELECTORS.expandedFilters)];
+                const filterContainers = [filterPanel];
                 filterContainers.forEach(container => {
                     container.addEventListener('click', (e) => {
                         const target = e.target;
@@ -783,23 +813,21 @@
                     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
                     keyboard: { enabled: true },
                     on: {
-                        slideChange: function () {
-                            const currentDay = this.slides[this.activeIndex].dataset.day;
-                            document.querySelectorAll('.quick-nav-btn').forEach(btn => {
-                                btn.classList.toggle('active', btn.dataset.day === currentDay);
-                            });
+                        slideChangeTransitionEnd: function () {
+                            updateActiveDayButton(this);
                             updateCurrentTimeIndicator(this);
                         }
                     }
                 });
                 setupEventListeners(swiper);
+                
                 const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
                 const todayIndex = CONFIG.DAYS_ORDER.indexOf(today);
                 if (todayIndex !== -1) {
                     swiper.slideTo(todayIndex, 0);
                 }
                 if (swiper.slides.length > 0) {
-                     swiper.emit('slideChange');
+                     swiper.emit('slideChangeTransitionEnd');
                 }
                 setInterval(() => updateCurrentTimeIndicator(swiper), 60000);
             }
