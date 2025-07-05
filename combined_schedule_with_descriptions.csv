@@ -1,0 +1,1479 @@
+Weekday,Start Time,End Time,Role,Event Name,Event Abbreviation,Event Type,Event Description
+Sunday,6:00 PM,6:45 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,6:45 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,6:00 PM,7:00 PM,CN A,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN B,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN C,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN D,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN E,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN F,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN G,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN H,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN I,Free,FR,free,Unscheduled or free time.
+Sunday,6:00 PM,7:00 PM,CN J,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Sunday,6:45 PM,7:00 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Sunday,7:00 PM,7:50 PM,CN A,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN B,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN C,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN D,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN E,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN F,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN G,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN H,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN I,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,CN J,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:00 PM,7:50 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,7:50 PM,8:00 PM,CN A,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN B,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN C,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN D,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN E,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN F,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN G,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN H,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN I,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,CN J,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Sunday,7:50 PM,8:00 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Sunday,8:00 PM,8:15 PM,CN A,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN B,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN C,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN D,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN E,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN F,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN G,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN H,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN I,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,CN J,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:00 PM,8:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,8:15 PM,9:15 PM,AC 1,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 2,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 3,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 4,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 5,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 6,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 7,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 8,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 9,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:15 PM,AC 10,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,8:15 PM,9:55 PM,CN A,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN B,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN C,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN D,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN E,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN F,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN G,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN H,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN I,Free,FR,free,Unscheduled or free time.
+Sunday,8:15 PM,9:55 PM,CN J,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Sunday,9:15 PM,9:55 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,8:00 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Monday,8:00 AM,8:25 AM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:00 AM,8:25 AM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:25 AM,8:30 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Monday,8:25 AM,8:30 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Monday,8:30 AM,9:15 AM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,8:30 AM,9:15 AM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,7:30 AM,10:00 AM,CN E,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,10:00 AM,CN F,Free,FR,free,Unscheduled or free time.
+Monday,9:15 AM,10:00 AM,AC 1,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 2,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 3,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 4,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 5,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 6,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 7,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 8,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 9,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,9:15 AM,10:00 AM,AC 10,Interviews,IN,duty,A specific duty or task: Interviews.
+Monday,7:30 AM,11:00 AM,CN A,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,11:00 AM,CN B,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,11:00 AM,CN C,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,11:00 AM,CN D,Free,FR,free,Unscheduled or free time.
+Monday,10:00 AM,11:00 AM,CN E,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
+Monday,10:00 AM,11:00 AM,CN F,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
+Monday,7:30 AM,11:00 AM,CN G,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,11:00 AM,CN H,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,11:00 AM,CN I,Free,FR,free,Unscheduled or free time.
+Monday,7:30 AM,11:00 AM,CN J,Free,FR,free,Unscheduled or free time.
+Monday,10:00 AM,11:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Monday,10:00 AM,11:00 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Monday,10:00 AM,11:00 AM,AC 3,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
+Monday,10:00 AM,11:00 AM,AC 4,Music Performance Coordinator (Singers),MU,duty,A specific duty or task: Music Performance Coordinator (Singers).
+Monday,10:00 AM,11:00 AM,AC 6,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
+Monday,10:00 AM,11:00 AM,AC 8,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
+Monday,10:00 AM,11:00 AM,AC 10,Counselor Dance,CO,duty,A specific duty or task: Counselor Dance.
+Monday,11:00 AM,12:00 PM,CN A,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,11:00 AM,12:00 PM,CN B,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,11:00 AM,12:00 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,CN I,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,11:00 AM,12:00 PM,CN J,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,11:00 AM,12:00 PM,AC 1,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,11:00 AM,12:00 PM,AC 2,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,11:00 AM,12:00 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,AC 6,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,10:00 AM,12:00 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,12:00 PM,AC 10,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
+Monday,12:00 PM,1:00 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,CN C,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,12:00 PM,1:00 PM,CN D,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,11:00 AM,1:00 PM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,11:00 AM,1:00 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,CN G,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,12:00 PM,1:00 PM,CN H,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,12:00 PM,1:00 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,1:00 PM,AC 3,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,12:00 PM,1:00 PM,AC 4,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,10:00 AM,1:00 PM,AC 5,Check-In Coordinator,CH,duty,A specific duty or task: Check-In Coordinator.
+Monday,12:00 PM,1:00 PM,AC 7,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,12:00 PM,1:00 PM,AC 8,Check-in #2,CH,duty,Task related to participant check-in or out: Check-in #2.
+Monday,10:00 AM,1:00 PM,AC 9,Bus Arrival,BU,duty,A specific duty or task: Bus Arrival.
+Monday,12:00 PM,1:00 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,1:00 PM,1:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Monday,1:30 PM,3:00 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,12:00 PM,3:00 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,1:00 PM,3:00 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,1:00 PM,3:00 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,1:00 PM,3:15 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,3:15 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Monday,3:00 PM,3:15 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Monday,3:00 PM,3:15 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Monday,3:00 PM,3:15 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,3:15 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Monday,3:00 PM,3:15 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Monday,3:15 PM,3:30 PM,AC 3,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,3:15 PM,3:30 PM,AC 4,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,3:15 PM,3:30 PM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,3:15 PM,3:30 PM,AC 6,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,3:15 PM,3:30 PM,AC 7,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,3:15 PM,3:30 PM,AC 8,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,3:15 PM,3:30 PM,AC 9,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,1:00 PM,3:30 PM,AC 10,Orientation Prep,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:15 PM,AC 3,Orientation,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:15 PM,AC 4,Orientation,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:15 PM,AC 8,Orientation,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:15 PM,AC 9,Orientation,OR,duty,Activity related to participant orientation.
+Monday,1:00 PM,4:30 PM,CN B,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,4:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,4:30 PM,CN F,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,4:30 PM,CN H,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,4:30 PM,CN J,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,4:30 PM,AC 2,Site-office,SI,duty,A specific duty or task: Site-office.
+Monday,3:30 PM,4:30 PM,AC 5,Orientation/Hallway Supervision,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:30 PM,AC 6,Orientation/Hallway Supervision,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:30 PM,AC 7,Orientation,OR,duty,Activity related to participant orientation.
+Monday,3:30 PM,4:30 PM,AC 10,Devotional Coordinator,DE,duty,A specific duty or task: Devotional Coordinator.
+Monday,4:30 PM,5:30 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,4:30 PM,5:30 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,4:30 PM,5:30 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,4:30 PM,5:30 PM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,4:30 PM,5:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,1:00 PM,6:00 PM,CN A,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,6:00 PM,CN C,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,6:00 PM,CN E,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,6:00 PM,CN G,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,6:00 PM,CN I,Free,FR,free,Unscheduled or free time.
+Monday,1:00 PM,6:00 PM,AC 1,Site-office,SI,duty,A specific duty or task: Site-office.
+Monday,4:30 PM,6:00 PM,AC 2,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,4:15 PM,6:00 PM,AC 3,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,4:15 PM,6:00 PM,AC 4,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,4:30 PM,6:00 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,4:30 PM,6:00 PM,AC 6,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,4:30 PM,6:00 PM,AC 7,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,4:15 PM,6:00 PM,AC 8,Dinner Coordinator,DI,duty,Support task related to mealtime: Dinner Coordinator.
+Monday,4:15 PM,6:00 PM,AC 9,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,4:30 PM,6:00 PM,AC 10,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Monday,6:00 PM,6:15 PM,AC 1,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 2,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 3,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 4,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 6,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 8,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 9,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,6:15 PM,AC 10,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Monday,6:00 PM,7:00 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:00 PM,7:00 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:00 PM,7:00 PM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:00 PM,7:00 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:00 PM,7:00 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:15 PM,7:00 PM,AC 5,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Monday,6:15 PM,7:00 PM,AC 6,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Monday,6:15 PM,7:00 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Monday,6:15 PM,8:00 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:15 PM,8:00 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:15 PM,8:00 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:15 PM,8:00 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,7:00 PM,8:00 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:15 PM,8:00 PM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,7:00 PM,8:00 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,6:15 PM,8:00 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Monday,8:00 PM,9:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Monday,7:00 PM,9:30 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Monday,8:00 PM,9:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Monday,7:00 PM,10:15 PM,CN A,Free,FR,free,Unscheduled or free time.
+Monday,5:30 PM,10:15 PM,CN B,Free,FR,free,Unscheduled or free time.
+Monday,7:00 PM,10:15 PM,CN C,Free,FR,free,Unscheduled or free time.
+Monday,5:30 PM,10:15 PM,CN D,Free,FR,free,Unscheduled or free time.
+Monday,7:00 PM,10:15 PM,CN E,Free,FR,free,Unscheduled or free time.
+Monday,5:30 PM,10:15 PM,CN F,Free,FR,free,Unscheduled or free time.
+Monday,7:00 PM,10:15 PM,CN G,Free,FR,free,Unscheduled or free time.
+Monday,5:30 PM,10:15 PM,CN H,Free,FR,free,Unscheduled or free time.
+Monday,7:00 PM,10:15 PM,CN I,Free,FR,free,Unscheduled or free time.
+Monday,5:30 PM,10:15 PM,CN J,Free,FR,free,Unscheduled or free time.
+Monday,9:30 PM,10:15 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,6:00 PM,10:15 PM,AC 7,Site-office,SI,duty,A specific duty or task: Site-office.
+Monday,9:30 PM,10:15 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,9:30 PM,10:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Monday,10:15 PM,10:25 PM,CN A,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN B,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN C,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN D,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN E,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN F,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN G,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN H,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN I,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,CN J,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 1,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 2,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 3,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 4,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 5,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 6,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 7,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 8,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 9,Lights Out,LI,free,End-of-day procedure.
+Monday,10:15 PM,10:25 PM,AC 10,Lights Out,LI,free,End-of-day procedure.
+Tuesday,7:10 AM,7:20 AM,AC 1,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 2,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 3,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 4,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 5,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 6,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 7,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 8,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 9,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:10 AM,7:20 AM,AC 10,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,7:20 AM,7:30 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Tuesday,7:20 AM,8:30 AM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,7:20 AM,8:30 AM,AC 4,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Tuesday,7:20 AM,8:30 AM,AC 5,Breakfast Coordinator,BR,duty,Support task related to mealtime: Breakfast Coordinator.
+Tuesday,7:20 AM,8:30 AM,AC 6,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Tuesday,7:20 AM,8:30 AM,AC 7,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Tuesday,7:20 AM,8:30 AM,AC 8,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Tuesday,7:20 AM,8:30 AM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,7:10 AM,9:00 AM,CN A,Free,FR,free,Unscheduled or free time.
+Tuesday,7:10 AM,9:00 AM,CN C,Free,FR,free,Unscheduled or free time.
+Tuesday,7:10 AM,9:00 AM,CN F,Free,FR,free,Unscheduled or free time.
+Tuesday,7:10 AM,9:00 AM,CN G,Free,FR,free,Unscheduled or free time.
+Tuesday,7:10 AM,9:00 AM,CN I,Free,FR,free,Unscheduled or free time.
+Tuesday,7:20 AM,9:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Tuesday,8:30 AM,9:00 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Tuesday,8:30 AM,9:00 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Tuesday,8:30 AM,9:00 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Tuesday,8:30 AM,9:00 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Tuesday,8:30 AM,9:00 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Tuesday,8:30 AM,9:00 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Tuesday,9:00 AM,9:30 AM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,9:30 AM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,9:30 AM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,9:30 AM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,9:30 AM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,8:30 AM,9:30 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Tuesday,9:30 AM,9:45 AM,AC 1,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Tuesday,9:30 AM,9:45 AM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Tuesday,9:30 AM,9:45 AM,AC 6,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Tuesday,9:30 AM,9:45 AM,AC 7,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Tuesday,9:30 AM,9:45 AM,AC 9,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Tuesday,9:00 AM,10:15 AM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,10:30 AM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,7:10 AM,10:30 AM,CN B,Free,FR,free,Unscheduled or free time.
+Tuesday,9:00 AM,10:30 AM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,7:10 AM,10:30 AM,CN D,Free,FR,free,Unscheduled or free time.
+Tuesday,7:10 AM,10:30 AM,CN E,Free,FR,free,Unscheduled or free time.
+Tuesday,9:00 AM,10:30 AM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,10:30 AM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,7:10 AM,10:30 AM,CN H,Free,FR,free,Unscheduled or free time.
+Tuesday,9:00 AM,10:30 AM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,7:10 AM,10:30 AM,CN J,Free,FR,free,Unscheduled or free time.
+Tuesday,9:45 AM,10:30 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Tuesday,10:15 AM,10:30 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Tuesday,7:30 AM,10:30 AM,AC 3,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Tuesday,9:30 AM,10:30 AM,AC 4,Music Performance Coordinator (Singers),MU,duty,A specific duty or task: Music Performance Coordinator (Singers).
+Tuesday,9:45 AM,10:30 AM,AC 5,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Tuesday,9:45 AM,10:30 AM,AC 6,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Tuesday,9:45 AM,10:30 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Tuesday,9:45 AM,10:30 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Tuesday,7:20 AM,10:30 AM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,9:00 AM,11:15 AM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,10:30 AM,11:30 AM,CN A,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,CN B,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,CN C,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,CN D,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,CN G,Free,FR,free,Unscheduled or free time.
+Tuesday,10:30 AM,11:30 AM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,10:30 AM,11:30 AM,AC 1,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,AC 2,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,AC 3,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,AC 4,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,11:30 AM,AC 7,Class Coordinator,CL,duty,A specific duty or task: Class Coordinator.
+Tuesday,11:15 AM,11:30 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Tuesday,11:30 AM,12:15 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,11:30 AM,12:15 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Tuesday,11:30 AM,12:15 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Tuesday,10:30 AM,12:15 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,10:30 AM,12:15 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,10:30 AM,12:15 PM,AC 10,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Tuesday,11:30 AM,12:30 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,11:30 AM,12:30 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,11:30 AM,12:30 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,10:30 AM,12:30 PM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,10:30 AM,12:30 PM,CN F,Class Support,CL,duty,A specific duty or task: Class Support.
+Tuesday,11:30 AM,12:30 PM,CN G,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,11:30 AM,12:30 PM,CN H,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,12:30 PM,CN I,Class Support,CL,duty,A specific duty or task: Class Support.
+Tuesday,10:30 AM,12:30 PM,CN J,Class Support,CL,duty,A specific duty or task: Class Support.
+Tuesday,11:30 AM,12:30 PM,AC 7,Class Coordinator / CN Coordination Meeting,CL,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,11:30 AM,12:30 PM,AC 8,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:30 AM,12:30 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,12:30 PM,1:00 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Tuesday,12:30 PM,1:15 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,12:15 PM,1:15 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,12:30 PM,1:30 PM,CN A,Free,FR,free,Unscheduled or free time.
+Tuesday,11:30 AM,1:30 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,12:30 PM,1:30 PM,CN C,Free,FR,free,Unscheduled or free time.
+Tuesday,12:30 PM,1:30 PM,CN E,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Tuesday,12:30 PM,1:30 PM,CN F,Free,FR,free,Unscheduled or free time.
+Tuesday,12:30 PM,1:30 PM,CN H,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Tuesday,12:30 PM,1:30 PM,CN I,Free,FR,free,Unscheduled or free time.
+Tuesday,12:30 PM,1:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,12:15 PM,1:30 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Tuesday,12:15 PM,1:30 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Tuesday,12:15 PM,1:30 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Tuesday,12:15 PM,1:30 PM,AC 5,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Tuesday,12:15 PM,1:30 PM,AC 6,Lunch Coordinator,LU,duty,Support task related to mealtime: Lunch Coordinator.
+Tuesday,12:30 PM,1:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Tuesday,1:15 PM,1:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Tuesday,12:30 PM,2:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Tuesday,1:30 PM,2:30 PM,CN E,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:30 PM,2:30 PM,CN F,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,12:30 PM,2:30 PM,CN G,Free,FR,free,Unscheduled or free time.
+Tuesday,1:30 PM,2:30 PM,CN I,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:30 PM,2:30 PM,CN J,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:30 PM,2:30 PM,AC 5,Site-Office / CN Coordination Meeting,SI,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:30 PM,2:30 PM,AC 6,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:00 PM,2:30 PM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,1:30 PM,2:30 PM,AC 9,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:30 PM,2:30 PM,AC 10,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:30 PM,2:45 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,1:30 PM,2:45 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,1:30 PM,2:45 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,11:30 AM,2:45 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:30 PM,2:45 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Tuesday,2:30 PM,2:45 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Tuesday,2:30 PM,2:45 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Tuesday,2:30 PM,2:45 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Tuesday,1:30 PM,3:30 PM,CN A,Class Support,CL,duty,A specific duty or task: Class Support.
+Tuesday,1:30 PM,3:30 PM,CN B,Class Support,CL,duty,A specific duty or task: Class Support.
+Tuesday,1:30 PM,3:30 PM,CN C,Class Support,CL,duty,A specific duty or task: Class Support.
+Tuesday,2:30 PM,3:30 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:30 PM,3:30 PM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:30 PM,3:30 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:30 PM,3:30 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,1:30 PM,3:30 PM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:30 PM,3:30 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:30 PM,3:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,2:45 PM,3:30 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,2:45 PM,3:30 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,2:45 PM,3:30 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,2:45 PM,3:30 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,2:30 PM,3:30 PM,AC 5,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Tuesday,2:45 PM,3:30 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,1:15 PM,3:30 PM,AC 7,Class Coordinator,CL,duty,A specific duty or task: Class Coordinator.
+Tuesday,2:45 PM,3:30 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,2:45 PM,3:30 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,2:45 PM,3:30 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,3:30 PM,4:30 PM,CN E,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,4:30 PM,CN H,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,4:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,5:00 PM,CN B,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,5:00 PM,CN D,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Tuesday,3:30 PM,5:00 PM,CN G,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Tuesday,3:30 PM,5:00 PM,CN J,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,5:00 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Tuesday,3:30 PM,5:00 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Tuesday,3:30 PM,5:00 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Tuesday,3:30 PM,5:00 PM,AC 5,Variety Show Coordinator,VA,duty,A specific duty or task: Variety Show Coordinator.
+Tuesday,3:30 PM,5:00 PM,AC 6,Variety Show Coordinator,VA,duty,A specific duty or task: Variety Show Coordinator.
+Tuesday,3:30 PM,5:30 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,5:00 PM,6:00 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,5:00 PM,6:00 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,4:30 PM,6:00 PM,CN E,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Tuesday,4:30 PM,6:00 PM,CN H,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Tuesday,5:00 PM,6:00 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,5:00 PM,6:00 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,3:30 PM,6:00 PM,AC 4,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Tuesday,5:00 PM,6:00 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,5:00 PM,6:00 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,4:30 PM,6:00 PM,AC 8,Dinner Coordinator,DI,duty,Support task related to mealtime: Dinner Coordinator.
+Tuesday,3:30 PM,6:00 PM,AC 9,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Tuesday,3:30 PM,6:00 PM,AC 10,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Tuesday,6:00 PM,6:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Tuesday,5:00 PM,6:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,6:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,6:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,6:45 PM,CN D,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,6:45 PM,CN F,Free,FR,free,Unscheduled or free time.
+Tuesday,5:00 PM,7:00 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Tuesday,3:30 PM,7:45 PM,CN A,Free,FR,free,Unscheduled or free time.
+Tuesday,6:45 PM,7:45 PM,CN D,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Tuesday,6:45 PM,7:45 PM,CN F,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Tuesday,3:30 PM,7:45 PM,CN I,Free,FR,free,Unscheduled or free time.
+Tuesday,6:30 PM,8:40 PM,AC 9,Dance Accomodations,DA,duty,A specific duty or task: Dance Accomodations.
+Tuesday,7:45 PM,8:45 PM,CN A,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Tuesday,7:45 PM,8:45 PM,CN I,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Tuesday,8:40 PM,8:45 PM,AC 9,Dance Accommodations,DA,duty,A specific duty or task: Dance Accommodations.
+Tuesday,6:30 PM,8:45 PM,AC 10,Dance Accomodations,DA,duty,A specific duty or task: Dance Accomodations.
+Tuesday,6:30 PM,9:00 PM,AC 1,Dance DJ,DA,duty,A specific duty or task: Dance DJ.
+Tuesday,6:30 PM,9:00 PM,AC 2,Dance Coordinator,DA,duty,A specific duty or task: Dance Coordinator.
+Tuesday,9:00 PM,9:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Tuesday,9:00 PM,9:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Tuesday,7:00 PM,9:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,9:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,9:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,9:30 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Tuesday,5:30 PM,9:30 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Tuesday,8:45 PM,9:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Tuesday,8:45 PM,9:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Tuesday,8:45 PM,10:15 PM,CN A,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,10:15 PM,CN B,Free,FR,free,Unscheduled or free time.
+Tuesday,3:30 PM,10:15 PM,CN C,Free,FR,free,Unscheduled or free time.
+Tuesday,7:45 PM,10:15 PM,CN D,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,10:15 PM,CN E,Free,FR,free,Unscheduled or free time.
+Tuesday,7:45 PM,10:15 PM,CN F,Free,FR,free,Unscheduled or free time.
+Tuesday,5:00 PM,10:15 PM,CN G,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,10:15 PM,CN H,Free,FR,free,Unscheduled or free time.
+Tuesday,8:45 PM,10:15 PM,CN I,Free,FR,free,Unscheduled or free time.
+Tuesday,6:00 PM,10:15 PM,CN J,Free,FR,free,Unscheduled or free time.
+Tuesday,9:30 PM,10:15 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,6:00 PM,10:15 PM,AC 8,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Tuesday,9:30 PM,10:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,9:30 PM,10:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Tuesday,10:15 PM,10:25 PM,CN A,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN B,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN C,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN D,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN E,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN F,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN G,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN H,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN I,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,CN J,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 1,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 2,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 3,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 4,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 5,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 6,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 7,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 8,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 9,Lights Out,LI,free,End-of-day procedure.
+Tuesday,10:15 PM,10:25 PM,AC 10,Lights Out,LI,free,End-of-day procedure.
+Wednesday,7:10 AM,7:20 AM,AC 1,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 2,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 3,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 4,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 5,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 6,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 7,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 8,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 9,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:10 AM,7:20 AM,AC 10,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,7:20 AM,7:30 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Wednesday,7:20 AM,8:30 AM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,7:20 AM,8:30 AM,AC 2,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Wednesday,7:20 AM,8:30 AM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,7:20 AM,8:30 AM,AC 4,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Wednesday,7:20 AM,8:30 AM,AC 5,Breakfast Coordinator,BR,duty,Support task related to mealtime: Breakfast Coordinator.
+Wednesday,7:20 AM,8:30 AM,AC 6,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Wednesday,7:20 AM,8:30 AM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,7:20 AM,8:30 AM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,7:20 AM,8:30 AM,AC 9,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Wednesday,7:10 AM,9:00 AM,CN B,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,9:00 AM,CN D,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,9:00 AM,CN E,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,9:00 AM,CN H,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,9:00 AM,CN J,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:00 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:00 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:00 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:00 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:00 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 AM,9:15 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 AM,9:30 AM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,8:30 AM,9:30 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 AM,9:30 AM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:00 AM,9:30 AM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:00 AM,9:30 AM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,8:30 AM,9:30 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 AM,9:30 AM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:30 AM,9:45 AM,AC 1,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:30 AM,9:45 AM,AC 2,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:30 AM,9:45 AM,AC 3,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:30 AM,9:45 AM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:00 AM,9:45 AM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:30 AM,9:45 AM,AC 7,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:30 AM,9:45 AM,AC 8,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:30 AM,9:45 AM,AC 9,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Wednesday,9:45 AM,10:15 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,10:30 AM,CN A,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 AM,10:30 AM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,7:10 AM,10:30 AM,CN C,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 AM,10:30 AM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:00 AM,10:30 AM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,7:10 AM,10:30 AM,CN F,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,10:30 AM,CN G,Free,FR,free,Unscheduled or free time.
+Wednesday,7:10 AM,10:30 AM,CN I,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 AM,10:30 AM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:45 AM,10:30 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Wednesday,9:45 AM,10:30 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Wednesday,9:45 AM,10:30 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Wednesday,9:15 AM,10:30 AM,AC 4,Music Performance Coordinator (Singers),MU,duty,A specific duty or task: Music Performance Coordinator (Singers).
+Wednesday,9:45 AM,10:30 AM,AC 5,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Wednesday,9:45 AM,10:30 AM,AC 6,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Wednesday,7:30 AM,10:30 AM,AC 10,Site-office,SI,duty,A specific duty or task: Site-office.
+Wednesday,9:45 AM,11:00 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Wednesday,9:45 AM,11:15 AM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,10:30 AM,11:30 AM,CN A,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,CN B,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,CN C,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,CN D,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,9:00 AM,11:30 AM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,10:30 AM,11:30 AM,AC 1,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,AC 2,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,AC 3,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,11:30 AM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,10:15 AM,11:30 AM,AC 7,Class Coordinator,CL,duty,A specific duty or task: Class Coordinator.
+Wednesday,11:15 AM,11:30 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Wednesday,10:30 AM,12:00 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:15 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:15 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:15 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:15 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Wednesday,11:30 AM,12:30 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:30 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:30 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,10:30 AM,12:30 PM,CN E,Class Support,CL,duty,A specific duty or task: Class Support.
+Wednesday,10:30 AM,12:30 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:30 PM,CN G,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,11:30 AM,12:30 PM,CN H,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:30 AM,12:30 PM,CN I,Class Support,CL,duty,A specific duty or task: Class Support.
+Wednesday,10:30 AM,12:30 PM,CN J,Class Support,CL,duty,A specific duty or task: Class Support.
+Wednesday,12:15 PM,12:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Wednesday,12:15 PM,12:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Wednesday,12:15 PM,12:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Wednesday,10:30 AM,12:30 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:30 AM,12:30 PM,AC 7,Class Coordinator / CN Coordination Meeting,CL,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,11:30 AM,12:30 PM,AC 8,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,12:30 PM,1:15 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,11:00 AM,1:15 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,12:30 PM,1:30 PM,CN A,Free,FR,free,Unscheduled or free time.
+Wednesday,12:30 PM,1:30 PM,CN B,Free,FR,free,Unscheduled or free time.
+Wednesday,11:30 AM,1:30 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,12:30 PM,1:30 PM,CN E,Free,FR,free,Unscheduled or free time.
+Wednesday,12:30 PM,1:30 PM,CN F,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Wednesday,12:30 PM,1:30 PM,CN G,Free,FR,free,Unscheduled or free time.
+Wednesday,12:30 PM,1:30 PM,CN H,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Wednesday,12:30 PM,1:30 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,12:30 PM,1:30 PM,CN J,Free,FR,free,Unscheduled or free time.
+Wednesday,12:30 PM,1:30 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Wednesday,12:30 PM,1:30 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Wednesday,12:30 PM,1:30 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Wednesday,10:30 AM,1:30 PM,AC 4,Site-office,SI,duty,A specific duty or task: Site-office.
+Wednesday,12:30 PM,1:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Wednesday,12:15 PM,1:30 PM,AC 6,Lunch Coordinator,LU,duty,Support task related to mealtime: Lunch Coordinator.
+Wednesday,12:30 PM,1:30 PM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:15 PM,1:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Wednesday,12:00 PM,1:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Wednesday,1:30 PM,2:30 PM,CN E,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,CN F,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,2:30 PM,CN I,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,CN J,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,AC 5,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,AC 6,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,AC 9,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:30 PM,AC 10,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:30 PM,2:45 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,2:45 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,2:45 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,2:45 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,2:30 PM,2:45 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Wednesday,2:30 PM,2:45 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Wednesday,2:30 PM,2:45 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Wednesday,2:30 PM,2:45 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Wednesday,1:30 PM,3:30 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,3:30 PM,CN B,Class Support,CL,duty,A specific duty or task: Class Support.
+Wednesday,1:30 PM,3:30 PM,CN C,Class Support,CL,duty,A specific duty or task: Class Support.
+Wednesday,12:30 PM,3:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Wednesday,2:30 PM,3:30 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,3:30 PM,CN G,Class Support,CL,duty,A specific duty or task: Class Support.
+Wednesday,2:30 PM,3:30 PM,CN H,Free,FR,free,Unscheduled or free time.
+Wednesday,2:30 PM,3:30 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,2:45 PM,3:30 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,2:45 PM,3:30 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,2:45 PM,3:30 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,2:45 PM,3:30 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,2:45 PM,3:30 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,2:45 PM,3:30 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,1:15 PM,3:30 PM,AC 7,Class Coordinator,CL,duty,A specific duty or task: Class Coordinator.
+Wednesday,2:45 PM,3:30 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,2:45 PM,3:30 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,3:30 PM,4:30 PM,CN A,Free,FR,free,Unscheduled or free time.
+Wednesday,2:30 PM,4:30 PM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,2:30 PM,4:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,3:30 PM,4:30 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,1:30 PM,4:30 PM,AC 8,Site-office,SI,duty,A specific duty or task: Site-office.
+Wednesday,3:30 PM,5:00 PM,CN C,Free,FR,free,Unscheduled or free time.
+Wednesday,3:30 PM,5:00 PM,CN D,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Wednesday,3:30 PM,5:00 PM,CN G,Free,FR,free,Unscheduled or free time.
+Wednesday,3:30 PM,5:00 PM,CN H,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Wednesday,3:30 PM,5:00 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Wednesday,3:30 PM,5:00 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Wednesday,3:30 PM,5:00 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Wednesday,3:30 PM,5:00 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,3:30 PM,5:00 PM,AC 5,Variety Show Coordinator,VA,duty,A specific duty or task: Variety Show Coordinator.
+Wednesday,3:30 PM,5:00 PM,AC 6,Variety Show Coordinator,VA,duty,A specific duty or task: Variety Show Coordinator.
+Wednesday,4:30 PM,6:00 PM,CN A,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Wednesday,5:00 PM,6:00 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,5:00 PM,6:00 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,4:30 PM,6:00 PM,CN J,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Wednesday,5:00 PM,6:00 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Wednesday,4:30 PM,6:00 PM,AC 8,Dinner Coordinator,DI,duty,Support task related to mealtime: Dinner Coordinator.
+Wednesday,3:30 PM,6:00 PM,AC 9,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Wednesday,3:30 PM,6:00 PM,AC 10,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Wednesday,5:00 PM,6:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Wednesday,5:00 PM,6:30 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,5:00 PM,6:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Wednesday,5:00 PM,6:30 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,5:00 PM,6:30 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,6:00 PM,6:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Wednesday,6:00 PM,6:30 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,6:30 PM,7:15 PM,AC 3,Games Night Accomodations,GA,duty,A specific duty or task: Games Night Accomodations.
+Wednesday,6:30 PM,8:00 PM,AC 1,Games Night Accomodations,GA,duty,A specific duty or task: Games Night Accomodations.
+Wednesday,6:30 PM,8:00 PM,AC 2,Games Night Support,GA,duty,A specific duty or task: Games Night Support.
+Wednesday,6:30 PM,8:00 PM,AC 5,Games Night Support,GA,duty,A specific duty or task: Games Night Support.
+Wednesday,6:30 PM,8:00 PM,AC 6,Games Night Support,GA,duty,A specific duty or task: Games Night Support.
+Wednesday,4:30 PM,8:00 PM,AC 7,Site-office,SI,duty,A specific duty or task: Site-office.
+Wednesday,6:30 PM,8:00 PM,AC 8,Games Night Support,GA,duty,A specific duty or task: Games Night Support.
+Wednesday,6:30 PM,8:00 PM,AC 9,Games Night Support,GA,duty,A specific duty or task: Games Night Support.
+Wednesday,6:00 PM,8:00 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,6:00 PM,8:15 PM,AC 4,Games Night Coordinator,GA,duty,A specific duty or task: Games Night Coordinator.
+Wednesday,8:00 PM,8:30 PM,AC 5,Pizza Night Support,PI,duty,A specific duty or task: Pizza Night Support.
+Wednesday,7:15 PM,9:00 PM,AC 3,Pizza Night Coordinator,PI,duty,A specific duty or task: Pizza Night Coordinator.
+Wednesday,8:15 PM,9:00 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Wednesday,8:00 PM,9:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 PM,9:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Wednesday,9:00 PM,9:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Wednesday,8:30 PM,9:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Wednesday,8:00 PM,9:30 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Wednesday,8:00 PM,9:30 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Wednesday,8:00 PM,9:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Wednesday,8:00 PM,9:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Wednesday,8:00 PM,9:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Wednesday,6:00 PM,10:15 PM,CN A,Free,FR,free,Unscheduled or free time.
+Wednesday,3:30 PM,10:15 PM,CN B,Free,FR,free,Unscheduled or free time.
+Wednesday,6:00 PM,10:15 PM,CN C,Free,FR,free,Unscheduled or free time.
+Wednesday,5:00 PM,10:15 PM,CN D,Free,FR,free,Unscheduled or free time.
+Wednesday,4:30 PM,10:15 PM,CN E,Free,FR,free,Unscheduled or free time.
+Wednesday,3:30 PM,10:15 PM,CN F,Free,FR,free,Unscheduled or free time.
+Wednesday,6:00 PM,10:15 PM,CN G,Free,FR,free,Unscheduled or free time.
+Wednesday,5:00 PM,10:15 PM,CN H,Free,FR,free,Unscheduled or free time.
+Wednesday,3:30 PM,10:15 PM,CN I,Free,FR,free,Unscheduled or free time.
+Wednesday,6:00 PM,10:15 PM,CN J,Free,FR,free,Unscheduled or free time.
+Wednesday,8:00 PM,10:15 PM,AC 1,Site-office,SI,duty,A specific duty or task: Site-office.
+Wednesday,9:30 PM,10:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,9:30 PM,10:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,10:15 PM,10:25 PM,CN A,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN B,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN C,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN D,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN E,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN F,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN G,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN H,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN I,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,CN J,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 1,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 2,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 3,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 4,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 5,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 6,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 7,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 8,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 9,Lights out,LI,duty,A specific duty or task: Lights out.
+Wednesday,10:15 PM,10:25 PM,AC 10,Lights out,LI,duty,A specific duty or task: Lights out.
+Thursday,7:10 AM,7:20 AM,AC 1,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 2,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 3,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 4,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 5,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 6,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 7,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 8,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 9,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:10 AM,7:20 AM,AC 10,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,7:20 AM,7:30 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Thursday,7:20 AM,8:30 AM,AC 1,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Thursday,7:20 AM,8:30 AM,AC 2,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Thursday,7:20 AM,8:30 AM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:20 AM,8:30 AM,AC 4,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Thursday,7:20 AM,8:30 AM,AC 5,Breakfast Coordinator,BR,duty,Support task related to mealtime: Breakfast Coordinator.
+Thursday,7:20 AM,8:30 AM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:20 AM,8:30 AM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:20 AM,8:30 AM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:20 AM,8:30 AM,AC 10,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Thursday,8:30 AM,9:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Thursday,8:30 AM,9:00 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Thursday,8:30 AM,9:00 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Thursday,8:30 AM,9:00 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Thursday,8:30 AM,9:15 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 AM,9:30 AM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,8:30 AM,9:30 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 AM,9:30 AM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,8:30 AM,9:30 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Thursday,8:30 AM,9:30 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 AM,9:30 AM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,9:00 AM,9:30 AM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,8:30 AM,9:30 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,9:45 AM,CN B,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,9:45 AM,CN D,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,9:45 AM,CN E,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,9:45 AM,CN G,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,9:45 AM,CN H,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,9:45 AM,CN I,Free,FR,free,Unscheduled or free time.
+Thursday,9:45 AM,11:00 AM,CN B,YW Activity / Time-Off,YW,duty,A specific duty or task: YW Activity / Time-Off.
+Thursday,9:45 AM,11:00 AM,CN D,YW Activity / Time-Off,YW,duty,A specific duty or task: YW Activity / Time-Off.
+Thursday,9:45 AM,11:00 AM,CN E,YW Activity / Time-Off,YW,duty,A specific duty or task: YW Activity / Time-Off.
+Thursday,9:45 AM,11:00 AM,CN G,YW Activity / Time-Off,YW,duty,A specific duty or task: YW Activity / Time-Off.
+Thursday,9:45 AM,11:00 AM,CN H,YW Activity / Time-Off,YW,duty,A specific duty or task: YW Activity / Time-Off.
+Thursday,9:45 AM,11:00 AM,CN I,YW Activity / Time-Off,YW,duty,A specific duty or task: YW Activity / Time-Off.
+Thursday,11:00 AM,11:15 AM,CN B,Free,FR,free,Unscheduled or free time.
+Thursday,11:00 AM,11:15 AM,CN D,Free,FR,free,Unscheduled or free time.
+Thursday,11:00 AM,11:15 AM,CN E,Free,FR,free,Unscheduled or free time.
+Thursday,11:00 AM,11:15 AM,CN G,Free,FR,free,Unscheduled or free time.
+Thursday,11:00 AM,11:15 AM,CN H,Free,FR,free,Unscheduled or free time.
+Thursday,11:00 AM,11:15 AM,CN I,Free,FR,free,Unscheduled or free time.
+Thursday,11:15 AM,12:30 PM,CN B,YM Activity / Time-Off,YM,duty,A specific duty or task: YM Activity / Time-Off.
+Thursday,7:10 AM,12:30 PM,CN C,Free,FR,free,Unscheduled or free time.
+Thursday,11:15 AM,12:30 PM,CN D,YM Activity / Time-Off,YM,duty,A specific duty or task: YM Activity / Time-Off.
+Thursday,11:15 AM,12:30 PM,CN E,YM Activity / Time-Off,YM,duty,A specific duty or task: YM Activity / Time-Off.
+Thursday,11:15 AM,12:30 PM,CN G,YM Activity / Time-Off,YM,duty,A specific duty or task: YM Activity / Time-Off.
+Thursday,11:15 AM,12:30 PM,CN H,YM Activity / Time-Off,YM,duty,A specific duty or task: YM Activity / Time-Off.
+Thursday,11:15 AM,12:30 PM,CN I,YM Activity / Time-Off,YM,duty,A specific duty or task: YM Activity / Time-Off.
+Thursday,7:10 AM,12:30 PM,CN J,Free,FR,free,Unscheduled or free time.
+Thursday,9:30 AM,12:30 PM,AC 1,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,9:30 AM,12:30 PM,AC 2,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,9:30 AM,12:30 PM,AC 3,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,9:15 AM,12:30 PM,AC 4,YM/YW Activity Coordinator,YM,duty,A specific duty or task: YM/YW Activity Coordinator.
+Thursday,9:30 AM,12:30 PM,AC 5,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,9:30 AM,12:30 PM,AC 6,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,9:30 AM,12:30 PM,AC 7,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,9:30 AM,12:30 PM,AC 8,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,7:30 AM,12:30 PM,AC 9,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Thursday,9:30 AM,12:30 PM,AC 10,YM//YW Activity Support,YM,duty,A specific duty or task: YM//YW Activity Support.
+Thursday,12:30 PM,1:30 PM,CN B,Free,FR,free,Unscheduled or free time.
+Thursday,12:30 PM,1:30 PM,CN C,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Thursday,12:30 PM,1:30 PM,CN G,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Thursday,12:30 PM,1:30 PM,CN I,Free,FR,free,Unscheduled or free time.
+Thursday,12:30 PM,1:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,12:30 PM,1:30 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,12:30 PM,1:30 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,12:30 PM,1:30 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,12:30 PM,1:30 PM,AC 10,Lunch Coordinator,LU,duty,Support task related to mealtime: Lunch Coordinator.
+Thursday,1:30 PM,2:00 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Thursday,1:30 PM,2:00 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Thursday,12:30 PM,2:00 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,12:30 PM,2:00 PM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,12:30 PM,2:00 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,2:00 PM,2:15 PM,AC 1,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,2:00 PM,2:15 PM,AC 3,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,2:00 PM,2:15 PM,AC 4,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,2:00 PM,2:15 PM,AC 8,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,2:00 PM,2:15 PM,AC 9,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,2:15 PM,3:15 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Thursday,1:30 PM,3:15 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,2:15 PM,3:15 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Thursday,2:15 PM,3:15 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Thursday,1:30 PM,3:15 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,1:30 PM,3:30 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,12:30 PM,3:30 PM,CN E,Variety Show Support,VA,duty,A specific duty or task: Variety Show Support.
+Thursday,1:30 PM,3:30 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,1:30 PM,3:30 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,2:15 PM,3:30 PM,AC 4,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Thursday,12:30 PM,3:30 PM,AC 5,Variety Show Coordinator,VA,duty,A specific duty or task: Variety Show Coordinator.
+Thursday,12:30 PM,3:30 PM,AC 6,Variety Show Coordinator,VA,duty,A specific duty or task: Variety Show Coordinator.
+Thursday,12:30 PM,3:30 PM,AC 7,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Thursday,2:15 PM,3:30 PM,AC 8,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Thursday,3:30 PM,4:00 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,3:30 PM,4:00 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,3:30 PM,4:00 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,3:30 PM,4:00 PM,AC 7,Site-Office/Meeting,SI,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,3:30 PM,4:00 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,4:00 PM,4:15 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Thursday,1:30 PM,4:30 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,12:30 PM,4:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Thursday,3:30 PM,4:30 PM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,12:30 PM,4:30 PM,CN H,Free,FR,free,Unscheduled or free time.
+Thursday,7:10 AM,5:00 PM,CN A,Free,FR,free,Unscheduled or free time.
+Thursday,3:30 PM,5:00 PM,CN B,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Thursday,7:10 AM,5:00 PM,CN F,Free,FR,free,Unscheduled or free time.
+Thursday,3:30 PM,5:00 PM,CN I,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Thursday,3:15 PM,5:00 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,3:15 PM,5:00 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,3:15 PM,5:00 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,5:00 PM,5:30 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,5:00 PM,5:30 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,5:00 PM,5:30 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,4:30 PM,5:50 PM,CN D,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Thursday,4:30 PM,5:50 PM,CN H,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Thursday,1:30 PM,5:50 PM,CN J,Free,FR,free,Unscheduled or free time.
+Thursday,4:15 PM,5:50 PM,AC 8,Dinner Coordinator,DI,duty,Support task related to mealtime: Dinner Coordinator.
+Thursday,3:15 PM,5:50 PM,AC 9,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Thursday,3:15 PM,5:50 PM,AC 10,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Thursday,4:00 PM,6:00 PM,AC 7,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Thursday,5:50 PM,6:00 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Thursday,5:50 PM,6:00 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Thursday,5:50 PM,6:00 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Thursday,4:00 PM,6:05 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,4:00 PM,6:05 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,4:00 PM,6:05 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,6:05 PM,6:20 PM,AC 4,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,6:05 PM,6:20 PM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,6:05 PM,6:20 PM,AC 6,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Thursday,5:30 PM,6:55 PM,AC 1,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,5:30 PM,6:55 PM,AC 2,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,5:30 PM,6:55 PM,AC 3,Musical Program Coordinator,MU,duty,A specific duty or task: Musical Program Coordinator.
+Thursday,6:20 PM,7:15 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Thursday,5:00 PM,7:30 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,5:50 PM,7:30 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,5:00 PM,7:30 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,5:50 PM,7:30 PM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,5:50 PM,7:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,6:20 PM,7:40 PM,AC 5,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Thursday,6:20 PM,7:40 PM,AC 6,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Thursday,6:00 PM,7:40 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:40 PM,7:45 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Thursday,6:55 PM,7:50 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,6:00 PM,8:00 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,6:00 PM,8:00 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,6:55 PM,8:50 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:50 PM,8:50 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Thursday,6:55 PM,8:50 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:15 PM,8:50 PM,AC 4,Testimony Rooms Coordinator,TE,duty,A specific duty or task: Testimony Rooms Coordinator.
+Thursday,7:45 PM,8:50 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Thursday,7:40 PM,8:50 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Thursday,7:40 PM,8:50 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Thursday,8:00 PM,8:50 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Thursday,8:00 PM,8:50 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Thursday,8:50 PM,9:00 PM,AC 1,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 2,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 3,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 4,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 5,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 6,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 7,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 9,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,8:50 PM,9:00 PM,AC 10,Travel Assist,TR,duty,A specific duty or task: Travel Assist.
+Thursday,9:00 PM,9:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Thursday,9:00 PM,9:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Thursday,7:30 PM,10:15 PM,CN A,Free,FR,free,Unscheduled or free time.
+Thursday,5:00 PM,10:15 PM,CN B,Free,FR,free,Unscheduled or free time.
+Thursday,4:30 PM,10:15 PM,CN C,Free,FR,free,Unscheduled or free time.
+Thursday,7:30 PM,10:15 PM,CN D,Free,FR,free,Unscheduled or free time.
+Thursday,4:30 PM,10:15 PM,CN E,Free,FR,free,Unscheduled or free time.
+Thursday,7:30 PM,10:15 PM,CN F,Free,FR,free,Unscheduled or free time.
+Thursday,3:30 PM,10:15 PM,CN G,Free,FR,free,Unscheduled or free time.
+Thursday,7:30 PM,10:15 PM,CN H,Free,FR,free,Unscheduled or free time.
+Thursday,5:00 PM,10:15 PM,CN I,Free,FR,free,Unscheduled or free time.
+Thursday,7:30 PM,10:15 PM,CN J,Free,FR,free,Unscheduled or free time.
+Thursday,9:30 PM,10:15 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,6:00 PM,10:15 PM,AC 8,Site-Office,SI,duty,A specific duty or task: Site-Office.
+Thursday,9:30 PM,10:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,9:30 PM,10:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Thursday,10:15 PM,10:30 PM,CN A,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN B,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN C,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN D,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN E,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN F,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN G,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN H,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN I,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,CN J,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 1,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 2,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 3,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 4,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 5,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 6,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 7,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 8,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 9,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:15 PM,10:30 PM,AC 10,Lights Out,LI,free,End-of-day procedure.
+Thursday,10:30 PM,10:30 PM,CN A,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN B,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN C,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN E,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN F,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN G,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN H,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN I,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,CN J,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Thursday,10:30 PM,10:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,7:20 AM,AC 1,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 2,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 3,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 4,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 5,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 6,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 7,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 8,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 9,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:10 AM,7:20 AM,AC 10,AC/CN Meeting,AC,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,7:20 AM,7:30 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Friday,7:20 AM,8:30 AM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,7:20 AM,8:30 AM,AC 3,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Friday,7:20 AM,8:30 AM,AC 4,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Friday,7:20 AM,8:30 AM,AC 5,Breakfast Coordinator,BR,duty,Support task related to mealtime: Breakfast Coordinator.
+Friday,7:20 AM,8:30 AM,AC 7,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Friday,7:20 AM,8:30 AM,AC 8,Breakfast Support,BR,duty,Support task related to mealtime: Breakfast Support.
+Friday,7:20 AM,8:30 AM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,7:10 AM,9:00 AM,CN B,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,9:00 AM,CN C,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,9:00 AM,CN E,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,9:00 AM,CN H,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,9:00 AM,CN J,Free,FR,free,Unscheduled or free time.
+Friday,7:20 AM,9:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Friday,8:30 AM,9:00 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Friday,8:30 AM,9:00 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Friday,8:30 AM,9:00 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Friday,8:30 AM,9:00 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Friday,8:30 AM,9:15 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Friday,9:00 AM,9:30 AM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,9:30 AM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,9:30 AM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:30 AM,9:30 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Friday,7:20 AM,9:30 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Friday,8:30 AM,9:30 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Friday,9:30 AM,9:45 AM,AC 1,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,9:30 AM,9:45 AM,AC 2,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,9:30 AM,9:45 AM,AC 3,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,9:30 AM,9:45 AM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,9:30 AM,9:45 AM,AC 6,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,9:30 AM,9:45 AM,AC 9,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,9:45 AM,10:00 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Friday,7:30 AM,10:00 AM,AC 10,Site Office,SI,duty,A specific duty or task: Site Office.
+Friday,9:00 AM,10:30 AM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,10:30 AM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,10:30 AM,CN E,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,10:30 AM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,10:30 AM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:15 AM,10:30 AM,AC 4,Music Performance Coordinator (Singers),MU,duty,A specific duty or task: Music Performance Coordinator (Singers).
+Friday,9:45 AM,10:30 AM,AC 5,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Friday,9:45 AM,10:30 AM,AC 6,Hallway Supervision,HA,duty,A specific duty or task: Hallway Supervision.
+Friday,9:00 AM,10:45 AM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:00 AM,10:45 AM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:45 AM,12:00 PM,AC 3,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,10:30 AM,12:00 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,10:30 AM,12:00 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,9:45 AM,12:00 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,12:00 PM,12:15 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,12:30 PM,CN A,Free,FR,free,Unscheduled or free time.
+Friday,10:30 AM,12:30 PM,CN C,Free,FR,free,Unscheduled or free time.
+Friday,7:10 AM,12:30 PM,CN F,Free,FR,free,Unscheduled or free time.
+Friday,10:30 AM,12:30 PM,CN H,Free,FR,free,Unscheduled or free time.
+Friday,10:30 AM,12:30 PM,CN J,Free,FR,free,Unscheduled or free time.
+Friday,10:00 AM,12:30 PM,AC 1,Site Office,SI,duty,A specific duty or task: Site Office.
+Friday,9:45 AM,12:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Friday,12:00 PM,12:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Friday,10:45 AM,12:30 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Friday,10:45 AM,12:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Friday,12:00 PM,12:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Friday,10:00 AM,12:30 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,12:30 PM,1:30 PM,CN A,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Friday,12:30 PM,1:30 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,7:10 AM,1:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Friday,12:30 PM,1:30 PM,CN F,Lunch Support,LU,duty,Support task related to mealtime: Lunch Support.
+Friday,7:10 AM,1:30 PM,CN G,Free,FR,free,Unscheduled or free time.
+Friday,12:30 PM,1:30 PM,CN H,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,7:10 AM,1:30 PM,CN I,Free,FR,free,Unscheduled or free time.
+Friday,12:30 PM,1:30 PM,CN J,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,10:30 AM,1:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Friday,12:00 PM,1:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Friday,12:15 PM,1:30 PM,AC 6,Lunch Coordinator,LU,duty,Support task related to mealtime: Lunch Coordinator.
+Friday,12:30 PM,1:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Friday,1:30 PM,1:45 PM,AC 4,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,1:30 PM,1:45 PM,AC 5,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,1:30 PM,1:45 PM,AC 10,Seating Support,SE,duty,A specific duty or task: Seating Support.
+Friday,12:30 PM,2:45 PM,AC 2,Showcase Support,SH,duty,A specific duty or task: Showcase Support.
+Friday,12:30 PM,2:45 PM,AC 7,Showcase Coordinator,SH,duty,A specific duty or task: Showcase Coordinator.
+Friday,12:30 PM,2:45 PM,AC 8,Slideshow,SL,duty,A specific duty or task: Slideshow.
+Friday,12:30 PM,2:45 PM,AC 9,Showcase Support,SH,duty,A specific duty or task: Showcase Support.
+Friday,1:30 PM,3:00 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,1:30 PM,3:00 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,1:30 PM,3:00 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,1:30 PM,3:00 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,1:30 PM,3:00 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,3:00 PM,3:30 PM,CN A,Free,FR,free,Unscheduled or free time.
+Friday,3:00 PM,3:30 PM,CN D,Free,FR,free,Unscheduled or free time.
+Friday,3:00 PM,3:30 PM,CN G,Free,FR,free,Unscheduled or free time.
+Friday,12:30 PM,3:30 PM,AC 1,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,2:45 PM,3:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Friday,1:45 PM,3:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Friday,1:45 PM,3:30 PM,AC 5,Free,FR,free,Unscheduled or free time.
+Friday,1:30 PM,3:30 PM,AC 6,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,2:45 PM,3:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Friday,1:45 PM,3:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Friday,2:45 PM,4:15 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,2:45 PM,4:15 PM,AC 8,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,1:30 PM,4:30 PM,CN C,Free,FR,free,Unscheduled or free time.
+Friday,3:30 PM,4:30 PM,CN D,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,3:00 PM,4:30 PM,CN F,Free,FR,free,Unscheduled or free time.
+Friday,3:30 PM,4:30 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,3:30 PM,5:00 PM,CN A,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Friday,10:30 AM,5:00 PM,CN B,Free,FR,free,Unscheduled or free time.
+Friday,3:30 PM,5:00 PM,CN G,Flex Time Support,FL,duty,A specific duty or task: Flex Time Support.
+Friday,3:00 PM,5:00 PM,CN I,Free,FR,free,Unscheduled or free time.
+Friday,12:30 PM,5:30 PM,AC 3,Site Office,SI,duty,A specific duty or task: Site Office.
+Friday,3:30 PM,5:30 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,3:30 PM,5:30 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,3:30 PM,5:30 PM,AC 6,Free,FR,free,Unscheduled or free time.
+Friday,3:30 PM,5:45 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Friday,4:30 PM,5:45 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Friday,5:30 PM,5:45 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Friday,4:15 PM,5:45 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Friday,5:00 PM,6:00 PM,CN B,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,4:30 PM,6:00 PM,CN C,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Friday,4:30 PM,6:00 PM,CN F,Dinner Support,DI,duty,Support task related to mealtime: Dinner Support.
+Friday,5:00 PM,6:00 PM,CN G,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,1:30 PM,6:00 PM,CN H,Free,FR,free,Unscheduled or free time.
+Friday,5:00 PM,6:00 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,4:15 PM,6:00 PM,AC 8,Dinner Coordinator,DI,duty,Support task related to mealtime: Dinner Coordinator.
+Friday,3:30 PM,6:00 PM,AC 9,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Friday,3:30 PM,6:00 PM,AC 10,Flex Time Coordinator,FL,duty,A specific duty or task: Flex Time Coordinator.
+Friday,6:00 PM,7:00 PM,CN B,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Friday,4:30 PM,7:00 PM,CN D,Free,FR,free,Unscheduled or free time.
+Friday,6:00 PM,7:00 PM,CN H,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Friday,1:30 PM,7:00 PM,CN J,Free,FR,free,Unscheduled or free time.
+Friday,5:00 PM,8:00 PM,CN A,Free,FR,free,Unscheduled or free time.
+Friday,7:00 PM,8:00 PM,CN D,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Friday,6:00 PM,8:00 PM,CN F,Free,FR,free,Unscheduled or free time.
+Friday,6:00 PM,8:00 PM,CN I,Free,FR,free,Unscheduled or free time.
+Friday,7:00 PM,8:00 PM,CN J,Dance Support,DA,duty,A specific duty or task: Dance Support.
+Friday,5:45 PM,8:00 PM,AC 1,Dance Coordinator,DA,duty,A specific duty or task: Dance Coordinator.
+Friday,5:45 PM,8:00 PM,AC 2,Dance DJ,DA,duty,A specific duty or task: Dance DJ.
+Friday,5:45 PM,8:00 PM,AC 4,Dance Accomodations,DA,duty,A specific duty or task: Dance Accomodations.
+Friday,5:45 PM,8:00 PM,AC 7,Dance Accomodations,DA,duty,A specific duty or task: Dance Accomodations.
+Friday,6:00 PM,8:00 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Friday,8:00 PM,9:00 PM,CN A,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:00 PM,9:00 PM,CN F,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:00 PM,9:00 PM,CN I,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:00 PM,9:00 PM,AC 2,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:00 PM,9:00 PM,AC 4,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:00 PM,9:00 PM,AC 10,Time-off,OF,break,Scheduled break or personal time away from duties.
+Friday,8:00 PM,9:30 PM,AC 1,Free,FR,free,Unscheduled or free time.
+Friday,9:00 PM,9:30 PM,AC 2,Free,FR,free,Unscheduled or free time.
+Friday,5:30 PM,9:30 PM,AC 3,Free,FR,free,Unscheduled or free time.
+Friday,9:00 PM,9:30 PM,AC 4,Free,FR,free,Unscheduled or free time.
+Friday,8:00 PM,9:30 PM,AC 7,Free,FR,free,Unscheduled or free time.
+Friday,6:00 PM,9:30 PM,AC 8,Free,FR,free,Unscheduled or free time.
+Friday,6:00 PM,9:30 PM,AC 9,Free,FR,free,Unscheduled or free time.
+Friday,9:00 PM,9:30 PM,AC 10,Free,FR,free,Unscheduled or free time.
+Friday,9:00 PM,10:15 PM,CN A,Free,FR,free,Unscheduled or free time.
+Friday,7:00 PM,10:15 PM,CN B,Free,FR,free,Unscheduled or free time.
+Friday,6:00 PM,10:15 PM,CN C,Free,FR,free,Unscheduled or free time.
+Friday,8:00 PM,10:15 PM,CN D,Free,FR,free,Unscheduled or free time.
+Friday,10:30 AM,10:15 PM,CN E,Free,FR,free,Unscheduled or free time.
+Friday,9:00 PM,10:15 PM,CN F,Free,FR,free,Unscheduled or free time.
+Friday,6:00 PM,10:15 PM,CN G,Free,FR,free,Unscheduled or free time.
+Friday,7:00 PM,10:15 PM,CN H,Free,FR,free,Unscheduled or free time.
+Friday,9:00 PM,10:15 PM,CN I,Free,FR,free,Unscheduled or free time.
+Friday,8:00 PM,10:15 PM,CN J,Free,FR,free,Unscheduled or free time.
+Friday,9:30 PM,10:15 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,9:30 PM,10:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,9:30 PM,10:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,9:30 PM,10:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,5:30 PM,10:15 PM,AC 5,Site Office,SI,duty,A specific duty or task: Site Office.
+Friday,5:30 PM,10:15 PM,AC 6,Site Office,SI,duty,A specific duty or task: Site Office.
+Friday,9:30 PM,10:15 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,9:30 PM,10:15 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,9:30 PM,10:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,9:30 PM,10:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Friday,10:15 PM,10:30 PM,CN A,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN B,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN C,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN D,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN E,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN F,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN G,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN H,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN I,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,CN J,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 1,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 2,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 3,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 4,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 5,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 6,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 7,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 8,Lights Out,LI,free,End-of-day procedure.
+Friday,10:15 PM,10:30 PM,AC 10,Lights Out,LI,free,End-of-day procedure.
+Friday,10:30 PM,10:45 PM,CN A,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN B,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN C,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN D,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN E,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN F,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN G,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN H,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN I,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,CN J,Night Watch,NI,duty,A specific duty or task: Night Watch.
+Friday,10:30 PM,10:45 PM,AC 1,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 2,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 3,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 4,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 5,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 6,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 7,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:30 PM,10:45 PM,AC 8,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Friday,10:15 PM,10:45 PM,AC 9,Night Watch Coordinator,NI,duty,A specific duty or task: Night Watch Coordinator.
+Friday,10:30 PM,10:45 PM,AC 10,Night Watch Support,NI,duty,A specific duty or task: Night Watch Support.
+Saturday,6:30 AM,7:30 AM,CN A,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN B,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN C,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN D,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN E,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN F,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN G,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN H,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN I,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,CN J,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Saturday,6:30 AM,7:30 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Saturday,7:30 AM,7:45 AM,CN A,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN B,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN C,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN D,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN E,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN F,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN G,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN H,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN I,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,CN J,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,6:30 AM,7:45 AM,AC 2,Bus Departure,BU,duty,A specific duty or task: Bus Departure.
+Saturday,7:30 AM,7:45 AM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,6:30 AM,7:45 AM,AC 4,Bus Departure,BU,duty,A specific duty or task: Bus Departure.
+Saturday,7:30 AM,7:45 AM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:30 AM,7:45 AM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Saturday,7:45 AM,8:25 AM,CN A,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN B,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN C,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN D,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN E,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN F,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN G,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN H,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN I,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,CN J,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 1,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 2,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 3,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 4,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 5,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 6,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 7,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 8,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 9,Free,FR,free,Unscheduled or free time.
+Saturday,7:45 AM,8:25 AM,AC 10,Free,FR,free,Unscheduled or free time.
+Sunday,4:45 PM,6:00 PM,Agenda,Staff Dinner,DI,Agenda,A dinner for all staff members to connect and prepare for the upcoming session.
+Sunday,6:00 PM,6:45 PM,Agenda,SC/AC/WC Meeting,ME,Agenda,"A coordination meeting for Session Coordinators, Assistant Coordinators, and Workshop Coordinators."
+Sunday,6:45 PM,7:00 PM,Agenda,Roll Call and Transition,RC,Agenda,A brief gathering to account for all staff and transition to the next activity.
+Sunday,7:00 PM,7:45 PM,Agenda,Session Adviser Message,SA,Agenda,An uplifting message and final instructions from the Session Adviser to the staff.
+Sunday,7:45 PM,8:00 PM,Agenda,Move to AC/CN Breakout,TR,Agenda,Transition time for Assistant Coordinators and Counselors to move to their breakout session locations.
+Sunday,8:00 PM,8:15 PM,Agenda,AC/CN Breakout,ME,Agenda,A breakout session for Assistant Coordinators and Counselors to discuss their specific roles and responsibilities.
+Sunday,8:15 PM,9:15 PM,Agenda,Mingle | Meet Your Co-CN | CN Interviews | Door Tag Prep,PL,Agenda,"A multi-purpose time for staff to mingle, for co-counselors to meet, for counselor interviews to be conducted, and for door tag preparation."
+Monday,7:30 AM,8:20 AM,Agenda,Staff Breakfast,BR,Agenda,A breakfast for all staff members to start the day together.
+Monday,8:30 AM,9:15 AM,Agenda,Staff Business Meeting,ME,Agenda,A meeting to discuss the business and logistical aspects of the FSY session.
+Monday,9:15 AM,10:00 AM,Agenda,Co-counselor Planning,CO,Agenda,Dedicated time for co-counselors to plan and coordinate their activities for their companies.
+Monday,10:00 AM,10:50 AM,Agenda,Check-In Set Up,CH,Agenda,Preparing the registration and check-in areas for participant arrival.
+Monday,11:00 AM,12:00 PM,Agenda,Participant Check-In 1,CH,Agenda,"The first wave of participant arrivals, registration, and room assignments."
+Monday,12:00 PM,1:00 PM,Agenda,Participant Check-In 2,CH,Agenda,"The second wave of participant arrivals, registration, and room assignments."
+Monday,1:15 PM,1:30 PM,Agenda,Participant Room Checks,RC,Agenda,Ensuring participants are settled in their rooms and have everything they need.
+Monday,1:30 PM,2:20 PM,Agenda,Meet Your Counselor | Head Count,CO,Agenda,An initial meeting for participants to get to know their counselor and for a headcount to be taken.
+Monday,2:20 PM,2:30 PM,Agenda,Travel to Meet Your Company,TR,Agenda,Participants and counselors travel to their designated company meeting spots.
+Monday,2:30 PM,3:00 PM,Agenda,Meet Your Company,CO,Agenda,"The first official meeting of each company, a time for introductions and icebreakers."
+Monday,3:00 PM,3:15 PM,Agenda,Company Name and Chant,CO,Agenda,Companies work together to create a unique name and chant that they will use throughout the week.
+Monday,3:15 PM,3:30 PM,Agenda,Travel to Orientation,TR,Agenda,Movement of all companies to the main orientation location.
+Monday,3:30 PM,4:30 PM,Agenda,Orientation,OR,Agenda,"The official welcome and orientation to the FSY session, covering rules, schedules, and expectations."
+Monday,4:30 PM,6:00 PM,Agenda,Dinner,DI,Agenda,Dinner for all participants and staff.
+Monday,6:00 PM,6:15 PM,Agenda,Meet with Company & Travel to Home Evening,TR,Agenda,Companies gather and then travel together to their assigned home evening location.
+Monday,6:15 PM,7:00 PM,Agenda,Home Evening Lesson,HL,Agenda,A spiritual lesson and discussion held within each company.
+Monday,7:00 PM,7:15 PM,Agenda,Travel to Company Spot,TR,Agenda,Companies travel back to their designated company spots.
+Monday,7:15 PM,8:00 PM,Agenda,Home Evening Games,HG,Agenda,Fun and interactive games for each company to play together.
+Monday,8:00 PM,8:45 PM,Agenda,Home Evening Goal-Setting,HG,Agenda,A time for participants to set personal goals for the week.
+Monday,9:00 PM,9:30 PM,Agenda,"Head Count, Reflect & Review, Journaling, Prayer",RR,Agenda,"A nightly routine of headcount, reflection on the day's events, journaling, and a company prayer."
+Monday,9:30 PM,10:15 PM,Agenda,Quiet Time - Get Ready for Bed,QU,Agenda,A designated time for participants to wind down and prepare for bed.
+Monday,10:15 PM,10:30 PM,Agenda,Lights Out,LO,Agenda,The official time for all lights to be out in the dorms.
+Tuesday,7:10 AM,7:20 AM,Agenda,AC/CN Meeting,ME,Agenda,A meeting for Assistant Coordinators and Counselors.
+Tuesday,7:20 AM,7:30 AM,Agenda,Participant Devotional,DV,Agenda,A devotional led by the participants.
+Tuesday,7:30 AM,8:30 AM,Agenda,Breakfast,BR,Agenda,Breakfast for all participants and staff.
+Tuesday,8:30 AM,9:30 AM,Agenda,Gospel Study,GS,Agenda,Personal and group gospel study time for participants.
+Tuesday,9:30 AM,9:45 AM,Agenda,Travel to Morning Devotional,TR,Agenda,Movement to the location for the morning devotional.
+Tuesday,9:45 AM,10:30 AM,Agenda,Morning Devotional,DV,Agenda,"A short, spiritual devotional to start the day."
+Tuesday,10:30 AM,10:45 AM,Agenda,Travel to Classes,TR,Agenda,Movement to the various classroom locations.
+Tuesday,10:45 AM,11:30 AM,Agenda,Classes - Hear Him!,CL,Agenda,A class focused on learning how to receive personal revelation.
+Tuesday,11:30 AM,11:45 AM,Agenda,Travel to Classes,TR,Agenda,Movement to the various classroom locations.
+Tuesday,11:45 AM,12:30 PM,Agenda,Classes - Finding Answers to Questions,CL,Agenda,A class focused on how to find answers to gospel questions.
+Tuesday,12:30 PM,1:30 PM,Agenda,Lunch,LU,Agenda,Lunch for all participants and staff.
+Tuesday,1:30 PM,1:45 PM,Agenda,Travel to Classes,TR,Agenda,Movement to the various classroom locations.
+Tuesday,1:45 PM,3:30 PM,Agenda,Classes,CL,Agenda,General class time for various gospel topics.
+Tuesday,3:30 PM,6:00 PM,Agenda,Participant Flex Time and Dinner,FT,Agenda,A block of free time for participants to choose their own activities.
+Tuesday,6:00 PM,6:30 PM,Agenda,Taking Charge of Technology #ShareGoodness,SG,Agenda,A workshop about using technology for good.
+Tuesday,6:30 PM,7:00 PM,Agenda,Banner and Cheer Prep,BC,Agenda,Time for companies to work on their banners and cheers.
+Tuesday,7:00 PM,7:15 PM,Agenda,FSY Social Etiquette,SE,Agenda,A lesson and discussion on appropriate social etiquette.
+Tuesday,7:15 PM,8:45 PM,Agenda,Dance,DA,Agenda,A fun and energetic dance for all participants.
+Tuesday,8:45 PM,9:00 PM,Agenda,Travel,TR,Agenda,Movement to the dorms.
+Tuesday,9:00 PM,9:30 PM,Agenda,"Head Count, Reflect & Review, Journaling, Prayer",RR,Agenda,"A nightly routine of headcount, reflection on the day's events, journaling, and a company prayer."
+Tuesday,9:30 PM,10:15 PM,Agenda,Quiet Time - Get Ready for Bed,QU,Agenda,A designated time for participants to wind down and prepare for bed.
+Tuesday,10:15 PM,10:30 PM,Agenda,Lights Out,LO,Agenda,The official time for all lights to be out in the dorms.
+Wednesday,7:10 AM,7:20 AM,Agenda,AC/CN Meeting,ME,Agenda,A meeting for Assistant Coordinators and Counselors.
+Wednesday,7:20 AM,7:30 AM,Agenda,Participant Devotional,DV,Agenda,A devotional led by the participants.
+Wednesday,7:30 AM,8:30 AM,Agenda,Breakfast,BR,Agenda,Breakfast for all participants and staff.
+Wednesday,8:30 AM,9:30 AM,Agenda,Gospel Study,GS,Agenda,Personal and group gospel study time for participants.
+Wednesday,9:30 AM,9:45 AM,Agenda,Travel to Morning Devotional,TR,Agenda,Movement to the location for the morning devotional.
+Wednesday,9:45 AM,10:30 AM,Agenda,Morning Devotional,DV,Agenda,"A short, spiritual devotional to start the day."
+Wednesday,10:30 AM,10:45 AM,Agenda,Travel to Classes,TR,Agenda,Movement to the various classroom locations.
+Wednesday,10:45 AM,12:30 PM,Agenda,Classes,CL,Agenda,General class time for various gospel topics.
+Wednesday,12:30 PM,1:30 PM,Agenda,Lunch,LU,Agenda,Lunch for all participants and staff.
+Wednesday,1:30 PM,1:45 PM,Agenda,Travel to Classes,TR,Agenda,Movement to the various classroom locations.
+Wednesday,1:45 PM,3:30 PM,Agenda,Classes,CL,Agenda,General class time for various gospel topics.
+Wednesday,3:30 PM,6:00 PM,Agenda,Participant Flex Time and Dinner,FT,Agenda,A block of free time for participants to choose their own activities.
+Wednesday,6:00 PM,6:30 PM,Agenda,Games Night Prep,GN,Agenda,Preparation for games night.
+Wednesday,6:30 PM,6:45 PM,Agenda,Travel to Games Night,TR,Agenda,Movement to the location for games night.
+Wednesday,6:45 PM,8:00 PM,Agenda,Games Night and Cheer-Off,GN,Agenda,An evening of fun games and a friendly cheer competition between companies.
+Wednesday,8:00 PM,8:15 PM,Agenda,Travel to Pizza Night,TR,Agenda,Movement to the dorms.
+Wednesday,8:15 PM,9:00 PM,Agenda,Pizza Night,PN,Agenda,A fun pizza party for all participants.
+Wednesday,9:00 PM,9:30 PM,Agenda,"Head Count, Reflect & Review, Journaling, Prayer",RR,Agenda,"A nightly routine of headcount, reflection on the day's events, journaling, and a company prayer."
+Wednesday,9:30 PM,10:15 PM,Agenda,Quiet Time - Get Ready for Bed,QU,Agenda,A designated time for participants to wind down and prepare for bed.
+Wednesday,10:15 PM,10:30 PM,Agenda,Lights Out,LO,Agenda,The official time for all lights to be out in the dorms.
+Thursday,7:10 AM,7:20 AM,Agenda,AC/CN Meeting,ME,Agenda,A meeting for Assistant Coordinators and Counselors.
+Thursday,7:20 AM,7:30 AM,Agenda,Participant Devotional,DV,Agenda,A devotional led by the participants.
+Thursday,7:30 AM,8:30 AM,Agenda,Breakfast,BR,Agenda,Breakfast for all participants and staff.
+Thursday,8:30 AM,9:30 AM,Agenda,Gospel Study,GS,Agenda,Personal and group gospel study time for participants.
+Thursday,9:30 AM,9:45 AM,Agenda,Travel,TR,Agenda,Movement to the location for the YM/YW Activities.
+Thursday,9:45 AM,11:00 AM,Agenda,Young Men Morning Devotional and Young Women Activity,YM,Agenda,A morning devotional specifically for the young men.
+Thursday,11:00 AM,11:15 AM,Agenda,Travel,TR,Agenda,Movement to the location for the YM/YW Activities.
+Thursday,11:15 AM,12:30 PM,Agenda,Young Women Morning Devotional and Young Men Activity,YW,Agenda,An activity specifically for the young men.
+Thursday,12:30 PM,1:30 PM,Agenda,Lunch,LU,Agenda,Lunch for all participants and staff.
+Thursday,1:30 PM,2:00 PM,Agenda,Variety Show Guidelines,VS,Agenda,Reviewing the guidelines for the variety show.
+Thursday,2:00 PM,2:15 PM,Agenda,Travel to Variety Show,TR,Agenda,Movement to the location of the variety show.
+Thursday,2:15 PM,3:30 PM,Agenda,Variety Show,VS,Agenda,A showcase of the talents of the FSY participants.
+Thursday,3:30 PM,5:50 PM,Agenda,Participant Flex Time and Dinner,FT,Agenda,A block of free time for participants to choose their own activities.
+Thursday,5:50 PM,6:05 PM,Agenda,Reverence-Testimony Discussion,RT,Agenda,A discussion about reverence and the sacred nature of testimony meetings.
+Thursday,6:05 PM,6:20 PM,Agenda,Seating for Musical Program and Evening Devotional,MP,Agenda,Participants and staff get seated for the evening's events.
+Thursday,6:20 PM,6:55 PM,Agenda,Musical Program,MP,Agenda,A musical performance by the participants.
+Thursday,6:55 PM,7:30 PM,Agenda,Evening Devotional,DV,Agenda,An evening devotional for all participants.
+Thursday,7:30 PM,7:40 PM,Agenda,Testimony Writing,TE,Agenda,A quiet time for participants to reflect and write their testimonies.
+Thursday,7:40 PM,7:50 PM,Agenda,Seating for Testimony Meetings,TE,Agenda,Participants and staff get seated for the testimony meetings.
+Thursday,7:50 PM,8:40 PM,Agenda,Testimony Meetings,TE,Agenda,A sacred meeting where participants can share their testimonies.
+Thursday,8:40 PM,9:00 PM,Agenda,Travel,TR,Agenda,Movement to the dorms.
+Thursday,9:00 PM,9:30 PM,Agenda,"Head Count, Reflect & Review, Journaling, Prayer",RR,Agenda,"A nightly routine of headcount, reflection on the day's events, journaling, and a company prayer."
+Thursday,9:30 PM,10:15 PM,Agenda,Quiet Time - Get Ready for Bed,QU,Agenda,A designated time for participants to wind down and prepare for bed.
+Thursday,10:15 PM,10:30 PM,Agenda,Lights Out,LO,Agenda,The official time for all lights to be out in the dorms.
+Friday,7:10 AM,7:20 AM,Agenda,AC/CN Meeting,ME,Agenda,A meeting for Assistant Coordinators and Counselors.
+Friday,7:20 AM,7:30 AM,Agenda,Participant Devotional,DV,Agenda,A devotional led by the participants.
+Friday,7:30 AM,8:30 AM,Agenda,Breakfast,BR,Agenda,Breakfast for all participants and staff.
+Friday,8:30 AM,9:30 AM,Agenda,Gospel Study,GS,Agenda,Personal and group gospel study time for participants.
+Friday,9:30 AM,9:45 AM,Agenda,Travel to Morning Devotional,TR,Agenda,Movement to the location for the morning devotional.
+Friday,9:45 AM,10:30 AM,Agenda,Morning Devotional,DV,Agenda,"A short, spiritual devotional to start the day."
+Friday,10:30 AM,10:45 AM,Agenda,Travel,TR,Agenda,Movement to company spots.
+Friday,10:45 AM,12:00 PM,Agenda,Sharing the Gospel Activity,SH,Agenda,An activity focused on learning how to share the gospel with others.
+Friday,12:00 PM,12:30 PM,Agenda,#ShareGoodness Debrief,SG,Agenda,A debrief and discussion about the #ShareGoodness initiative.
+Friday,12:30 PM,1:30 PM,Agenda,Lunch,LU,Agenda,Lunch for all participants and staff.
+Friday,1:30 PM,1:45 PM,Agenda,Travel to Slide Show and Taking It Home Showcase,TR,Agenda,Movement to the location of the final events.
+Friday,1:45 PM,2:45 PM,Agenda,Taking It Home Showcase and Slideshow,TH,Agenda,A final showcase to help participants take the lessons of FSY home with them.
+Friday,2:45 PM,3:00 PM,Agenda,Travel,TR,Agenda,Movement to copmpany spots.
+Friday,3:00 PM,3:30 PM,Agenda,Goal-Setting Review,GR,Agenda,A review of the goals that were set at the beginning of the week.
+Friday,3:30 PM,6:00 PM,Agenda,Participant Flex Time and Dinner,FT,Agenda,A block of free time for participants to choose their own activities.
+Friday,6:00 PM,6:15 PM,Agenda,Picture Taking,PI,Agenda,A time for group pictures.
+Friday,6:15 PM,8:00 PM,Agenda,Dance,DA,Agenda,A fun and energetic dance for all participants.
+Friday,8:00 PM,8:15 PM,Agenda,Travel,TR,Agenda,Movement to copmpany spots.
+Friday,8:15 PM,8:45 PM,Agenda,Taking It Home Message,TH,Agenda,"A final, uplifting message to conclude the FSY session."
+Friday,8:45 PM,9:00 PM,Agenda,Travel to Company Spots,TR,Agenda,Companies travel to their company spots for the last time.
+Friday,9:00 PM,9:30 PM,Agenda,Company Taking It Home,CO,Agenda,A final company meeting to discuss how to apply the lessons learned at FSY.
+Friday,9:30 PM,9:45 PM,Agenda,Travel,TR,Agenda,Movement to the dorms.
+Friday,9:45 PM,10:15 PM,Agenda,Head Count | Quiet Time—Get Ready for Bed Announcements | Prayer,RR,Agenda,The final nightly routine.
+Friday,10:15 PM,10:30 PM,Agenda,Lights Out,LO,Agenda,The official time for all lights to be out in the dorms.
+Friday,10:30 PM,,Agenda,Night Watch,NW,Agenda,A final check on the participants for the night.
+Saturday,6:30 AM,7:00 AM,Agenda,Prepare to Leave,PR,Agenda,Checking rooms for cleanliness and any forgotten items after participants have left.
+Saturday,7:00 AM,7:30 AM,Agenda,Post-session Room Checks,RC,Agenda,Checking rooms for cleanliness and any forgotten items after participants have left.
+Saturday,7:30 AM,7:45 AM,Agenda,Mandatory Wrap-up Meeting,ME,Agenda,A mandatory final meeting for all staff to wrap up the session.
+Saturday,7:45 AM,8:30 AM,Agenda,Staff Breakfast,BR,Agenda,A breakfast for all staff members to start the day together.
