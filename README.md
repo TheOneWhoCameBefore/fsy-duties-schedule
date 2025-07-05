@@ -49,3 +49,6 @@ To start the application in a development environment, run:
 
 ```sh
 npm start
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a3275b1-bd50-4d33-8375-81462a2d96d8/deploy-status)](https://app.netlify.com/projects/fsyduties/deploys)
