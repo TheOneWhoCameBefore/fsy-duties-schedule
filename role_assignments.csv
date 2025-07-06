@@ -1,69 +1,69 @@
 role,name,match_percentage
-AC 1,AC Maddy Hatch,47.1%
-AC 2,AC Avery Moses,52.9%
-AC 3,AC Rebekah Tustian,47.4%
-AC 4,AC Ben Poulin,42.9%
-AC 5,AC Lexi McClenaghan,55.6%
-AC 6,AC Joshua Svenson,52.9%
-AC 7,AC Eunhae Chung,40.0%
-AC 8,AC Zachary Ficiur,46.7%
-AC 9,AC Cerise Ernstberger,47.1%
-AC 10,AC Alex Cattran,30.8%
-CN A,CN Asia Hillyer,44.4%
-CN A,CN Chloe Huggins,44.4%
-CN A,CN Aveyanna Poulin,44.4%
-CN A,CN Elaissa Keimy Sanchez-Aldana Juarez,44.4%
-CN A,CN Jade Stanford,44.4%
-CN B,CN Brody James Hillman,50.0%
-CN B,CN Brock Jensen,50.0%
-CN B,CN John Wayne Mangguera,50.0%
-CN B,CN Annon Moeller,50.0%
-CN B,CN Zeus Brigham Sugue Praqueles,50.0%
-CN C,CN Hannah Christensen,50.0%
-CN C,CN Audrey Curry,50.0%
-CN C,CN Tommylia Dunbar,50.0%
-CN C,CN Laura Lallemant,50.0%
-CN C,CN Alora Purnell,50.0%
-CN C,CN Natalya Tondevold,50.0%
-CN D,CN Denon Burton,50.0%
-CN D,CN Jelem Cuary,50.0%
-CN D,CN Lamine Kamara,50.0%
-CN D,CN Arav Master,50.0%
-CN D,CN Ryrie Spencer,50.0%
-CN D,CN Aubrey Tingle,50.0%
-CN E,CN Amber Christensen,50.0%
-CN E,CN Madeline Darby,50.0%
-CN E,CN Ashlee Jewlal,50.0%
-CN E,CN Maite Lucuix,50.0%
-CN E,CN Aenea Olsen,50.0%
-CN E,CN Chaeeun Shin,50.0%
-CN F,CN Adam Cruickshank,57.1%
-CN F,CN Kenneth Cuellar Giron,57.1%
-CN F,CN Jack Hardy,57.1%
-CN F,CN Tye Jackson,57.1%
-CN F,CN Austin Johnson,57.1%
-CN F,CN Heath Mann,57.1%
-CN G,CN Laurie Champoux,44.4%
-CN G,CN Alea Aldibelle Fernandez Dagmil,44.4%
-CN G,CN Divinity Evans,44.4%
-CN G,CN Kaya Kenyon,44.4%
-CN G,CN Emily Koller,44.4%
-CN G,CN Hailey Larson,44.4%
-CN H,CN Benson Anderson,55.6%
-CN H,CN Isaak Champagne,55.6%
-CN H,CN Ben Dickson,55.6%
-CN H,CN Rex Erickson,55.6%
-CN H,CN Samuel Hudson,55.6%
-CN H,CN Talmage Woodruff,55.6%
-CN I,CN Linnea Backstrom,57.1%
-CN I,CN Naomi Blum,57.1%
-CN I,CN Natalie Faganello,57.1%
-CN I,CN Olivia Gardner,57.1%
-CN I,CN Alice Rasmussen,57.1%
-CN I,CN Emily Wright,57.1%
-CN J,CN Erik Anvik,55.6%
-CN J,CN Jaxson Burdett,55.6%
-CN J,CN Ethan Ernstberger,55.6%
-CN J,CN Malik Jules,55.6%
-CN J,CN Quinn Martin,55.6%
-CN J,CN Benjamin Spencer,55.6%
+AC 1,AC Zachary Ficiur,47.1%
+AC 2,AC Maddy Hatch,52.9%
+AC 3,AC Alex Cattran,47.4%
+AC 4,AC Rebekah Tustian,42.9%
+AC 5,AC Avery Moses,55.6%
+AC 6,AC Chloe Huggins,52.9%
+AC 7,AC Joshua Svenson,40.0%
+AC 8,AC Eunhae Chung,46.7%
+AC 9,AC Jack Hardy,47.1%
+AC 10,AC Lexi McClenaghan,30.8%
+CN A,CN Austin Johnson,44.4%
+CN A,CN Malik Jules,44.4%
+CN A,CN John Wayne Mangguera,44.4%
+CN A,CN Ben Poulin,44.4%
+CN A,CN Matthew Rollins,44.4%
+CN A,CN Talmage Woodruff,44.4%
+CN B,CN Audrey Curry,50.0%
+CN B,CN Alea Aldibelle Fernandez Dagmil,50.0%
+CN B,CN Ashlee Jewlal,50.0%
+CN B,CN Maite Lucuix,50.0%
+CN B,CN Abril Mendoza Morales,50.0%
+CN B,CN Elaissa Keimy Sanchez-Aldana Juarez,50.0%
+CN C,CN Benson Anderson,50.0%
+CN C,CN Denon Burton,50.0%
+CN C,CN Jelem Cuary,50.0%
+CN C,CN Arav Master,50.0%
+CN C,CN Ryrie Spencer,50.0%
+CN C,CN Tyler Tondevold,50.0%
+CN D,CN Naomi Blum,50.0%
+CN D,CN Tommylia Dunbar,50.0%
+CN D,CN Emily Koller,50.0%
+CN D,CN Brenna Livingstone,50.0%
+CN D,CN Makenna Loose,50.0%
+CN D,CN Jade Stanford,50.0%
+CN E,CN Ethan Ernstberger,50.0%
+CN E,CN Samuel Hudson,50.0%
+CN E,CN Brock Jensen,50.0%
+CN E,CN Quinn Martin,50.0%
+CN E,CN Annon Moeller,50.0%
+CN E,CN Joseph Raymant,50.0%
+CN F,CN Hannah Christensen,57.1%
+CN F,CN Cerise Ernstberger,57.1%
+CN F,CN Divinity Evans,57.1%
+CN F,CN Katiana Laplante,57.1%
+CN F,CN Aveyanna Poulin,57.1%
+CN F,CN Tavie Price,57.1%
+CN G,CN Erik Anvik,44.4%
+CN G,CN Jaxson Burdett,44.4%
+CN G,CN Adam Cruickshank,44.4%
+CN G,CN Kenneth Cuellar Giron,44.4%
+CN G,CN Brody James Hillman,44.4%
+CN H,CN Amber Christensen,55.6%
+CN H,CN Kaya Kenyon,55.6%
+CN H,CN Telia Lafontaine,55.6%
+CN H,CN Laura Lallemant,55.6%
+CN H,CN Chaeeun Shin,55.6%
+CN I,CN Ben Dickson,57.1%
+CN I,CN Rex Erickson,57.1%
+CN I,CN Jarom Gregson,57.1%
+CN I,CN Tye Jackson,57.1%
+CN I,CN Zeus Brigham Sugue Praqueles,57.1%
+CN I,CN Benjamin Spencer,57.1%
+CN J,CN Linnea Backstrom,55.6%
+CN J,CN Madeline Darby,55.6%
+CN J,CN Tessa Darby,55.6%
+CN J,CN Emily Hodder,55.6%
+CN J,CN Hailey Larson,55.6%
+CN J,CN Emily Wright,55.6%
