@@ -329,6 +329,11 @@
             color: var(--text-color);
             margin-bottom: 0.5rem;
         }
+        .role-name .name-assignment {
+            font-weight: normal;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
         .role-activity {
             color: #555;
             font-size: 0.9rem;
@@ -640,8 +645,42 @@
             }
         }
 
+        async function loadRoleAssignments() {
+            try {
+                const response = await fetch('role_assignments.csv');
+                const csvText = await response.text();
+                const data = parseCSV(csvText);
+                
+                // Create a mapping from role to names
+                const roleNameMap = {};
+                data.forEach(row => {
+                    const role = row.role;
+                    const name = row.name;
+                    
+                    if (!roleNameMap[role]) {
+                        roleNameMap[role] = [];
+                    }
+                    
+                    // For AC roles, store the first name only
+                    if (name.startsWith('AC ')) {
+                        // Extract just the first name for AC roles
+                        const firstName = name.replace('AC ', '').split(' ')[0];
+                        roleNameMap[role] = [firstName];
+                    }
+                    // For CN roles, don't store names to save space
+                    // CN roles will just show the role name without names in parentheses
+                });
+                
+                return roleNameMap;
+            } catch (error) {
+                console.error('Error loading role assignments:', error);
+                return {};
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', async function () {
             const scheduleData = await loadScheduleData();
+            const roleAssignments = await loadRoleAssignments();
             
             if (scheduleData.length === 0) {
                 console.error('No schedule data loaded');
@@ -660,7 +699,7 @@
                 LOCAL_STORAGE_KEY: 'duties-calendar-preferences',
             };
 
-            const state = { roles: [], processedData: {} };
+            const state = { roles: [], processedData: {}, roleAssignments };
             
             const timeToMinutes = (timeStr) => {
                 if (!timeStr || typeof timeStr !== 'string' || !timeStr.includes(':')) return null;
@@ -687,6 +726,14 @@
                 if (acMatch) return acMatch[1];
                 const cnMatch = roleName.match(/^CN ([A-Z])$/);
                 if (cnMatch) return cnMatch[1];
+                return roleName;
+            };
+            
+            const formatRoleNameWithAssignments = (roleName) => {
+                const assignments = state.roleAssignments[roleName];
+                if (assignments && assignments.length > 0) {
+                    return `${roleName} <span class="name-assignment">(${assignments[0]})</span>`;
+                }
                 return roleName;
             };
             
@@ -980,9 +1027,10 @@
                                     const [role, activityData] = acRole;
                                     const colors = getActivityColor(activityData);
                                     const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                    const roleNameWithAssignments = formatRoleNameWithAssignments(role);
                                     html += `
                                         <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
-                                            <div class="role-name">${role}</div>
+                                            <div class="role-name">${roleNameWithAssignments}</div>
                                             <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
                                         </div>
                                     `;
@@ -996,9 +1044,10 @@
                                     const [role, activityData] = cnRole;
                                     const colors = getActivityColor(activityData);
                                     const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                    const roleNameWithAssignments = formatRoleNameWithAssignments(role);
                                     html += `
                                         <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
-                                            <div class="role-name">${role}</div>
+                                            <div class="role-name">${roleNameWithAssignments}</div>
                                             <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
                                         </div>
                                     `;
@@ -1054,9 +1103,10 @@
                                 const [role, activityData] = otherRoles[i + j];
                                 const colors = getActivityColor(activityData);
                                 const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                const roleNameWithAssignments = formatRoleNameWithAssignments(role);
                                 html += `
                                     <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
-                                        <div class="role-name">${role}</div>
+                                        <div class="role-name">${roleNameWithAssignments}</div>
                                         <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
                                     </div>
                                 `;

@@ -1,0 +1,7 @@
+# This file is used to ignore files that should not be tracked by Git.
+# It is common to ignore files that are generated during the build process,
+# temporary files, or files that contain sensitive information. 
+# The following files and directories are ignored:
+parsed_assignments.csv
+schedule_processor.py
+Wednesday Copy.txt
