@@ -275,11 +275,6 @@
             border-radius: 0.5rem;
             padding: 1.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .agenda-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         .card-header {
             display: flex;
@@ -323,6 +318,12 @@
             padding: 1rem;
             border-radius: 0.375rem;
             border-left: 4px solid var(--primary-color);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .role-assignment:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .role-name {
             font-weight: bold;
@@ -429,6 +430,13 @@
             padding: 0.5rem;
             white-space: normal;
             min-height: 100%;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .event:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1;
         }
         .event > div:first-child {
             position: -webkit-sticky;
@@ -447,44 +455,6 @@
             .calendar.many-columns th.role-col .mobile-abbr {
                 display: inline;
             }
-        }
-
-        .tooltip {
-            position: relative;
-            cursor: pointer;
-        }
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            text-align: left;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1000;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -125px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.85rem;
-            line-height: 1.4;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #333 transparent transparent transparent;
-        }
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
         }
         .current-time-indicator {
             position: absolute;
@@ -505,6 +475,117 @@
             height: 10px;
             background: var(--danger-color);
             border-radius: 50%;
+        }
+        
+        /* Modal Styles */
+        .role-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .role-modal.active {
+            display: flex;
+        }
+        .role-modal-content {
+            background: var(--white);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .role-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+        .role-modal-close:hover {
+            background-color: var(--light-gray);
+        }
+        .role-modal-header {
+            margin-bottom: 1.5rem;
+            padding-right: 2rem;
+        }
+        .role-modal-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 0 0 0.5rem 0;
+        }
+        .role-modal-time {
+            font-size: 1rem;
+            color: #666;
+            background: var(--light-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            display: inline-block;
+        }
+        .role-modal-section {
+            margin-bottom: 1.5rem;
+        }
+        .role-modal-section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.25rem;
+        }
+        .role-modal-activity {
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        .role-modal-activity-name {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .role-modal-activity-type {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: capitalize;
+        }
+        .role-modal-names {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .role-modal-name-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .role-modal-description {
+            color: #555;
+            line-height: 1.5;
         }
         @media (max-width: 768px) {
             .time-col, .calendar th.time-col, .calendar td.time-col {
@@ -597,6 +678,29 @@
         </main>
     </div>
 
+    <!-- Role Details Modal -->
+    <div id="role-modal" class="role-modal">
+        <div class="role-modal-content">
+            <button class="role-modal-close" id="role-modal-close">&times;</button>
+            <div class="role-modal-header">
+                <h2 class="role-modal-title" id="role-modal-title"></h2>
+                <div class="role-modal-time" id="role-modal-time"></div>
+            </div>
+            <div class="role-modal-section">
+                <h3 class="role-modal-section-title">Current Activity</h3>
+                <div class="role-modal-activity" id="role-modal-activity"></div>
+            </div>
+            <div class="role-modal-section">
+                <h3 class="role-modal-section-title">Assigned Staff</h3>
+                <div class="role-modal-names" id="role-modal-names"></div>
+            </div>
+            <div class="role-modal-section" id="role-modal-description-section">
+                <h3 class="role-modal-section-title">Activity Description</h3>
+                <div class="role-modal-description" id="role-modal-description"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    
     <script>
@@ -651,36 +755,41 @@
                 const csvText = await response.text();
                 const data = parseCSV(csvText);
                 
-                // Create a mapping from role to names
+                // Create a mapping from role to names (for display) and full names (for modal)
                 const roleNameMap = {};
+                const roleFullNamesMap = {};
+                
                 data.forEach(row => {
                     const role = row.role;
                     const name = row.name;
                     
                     if (!roleNameMap[role]) {
                         roleNameMap[role] = [];
+                        roleFullNamesMap[role] = [];
                     }
                     
-                    // For AC roles, store the first name only
+                    // For AC roles, store the first name for display
                     if (name.startsWith('AC ')) {
-                        // Extract just the first name for AC roles
                         const firstName = name.replace('AC ', '').split(' ')[0];
                         roleNameMap[role] = [firstName];
+                        roleFullNamesMap[role] = [name.replace('AC ', '')];
+                    } else if (name.startsWith('CN ')) {
+                        // For CN roles, don't store display names but keep full names for modal
+                        const fullName = name.replace('CN ', '');
+                        roleFullNamesMap[role].push(fullName);
                     }
-                    // For CN roles, don't store names to save space
-                    // CN roles will just show the role name without names in parentheses
                 });
                 
-                return roleNameMap;
+                return { roleNameMap, roleFullNamesMap };
             } catch (error) {
                 console.error('Error loading role assignments:', error);
-                return {};
+                return { roleNameMap: {}, roleFullNamesMap: {} };
             }
         }
 
         document.addEventListener('DOMContentLoaded', async function () {
             const scheduleData = await loadScheduleData();
-            const roleAssignments = await loadRoleAssignments();
+            const { roleNameMap, roleFullNamesMap } = await loadRoleAssignments();
             
             if (scheduleData.length === 0) {
                 console.error('No schedule data loaded');
@@ -699,7 +808,7 @@
                 LOCAL_STORAGE_KEY: 'duties-calendar-preferences',
             };
 
-            const state = { roles: [], processedData: {}, roleAssignments };
+            const state = { roles: [], processedData: {}, roleAssignments: roleNameMap, roleFullNames: roleFullNamesMap };
             
             const timeToMinutes = (timeStr) => {
                 if (!timeStr || typeof timeStr !== 'string' || !timeStr.includes(':')) return null;
@@ -860,18 +969,17 @@
                         if (eventAtTime?.isStart) {
                             const rowspan = Math.max(1, Math.floor(eventAtTime.duration / 5));
                             const eventHtml = `
-                                <div class="event event-type-${eventAtTime['Event Type'].toLowerCase()} tooltip" data-event-name="${eventAtTime['Event Name'].toLowerCase()}">
+                                <div class="event event-type-${eventAtTime['Event Type'].toLowerCase()} clickable-event" 
+                                     data-role="${eventAtTime.Role}" 
+                                     data-activity="${eventAtTime['Event Abbreviation']} - ${eventAtTime['Event Name']}" 
+                                     data-description="${eventAtTime['Event Description']}" 
+                                     data-event-time="${eventAtTime['Start Time']} - ${eventAtTime['End Time']}" 
+                                     data-event-name="${eventAtTime['Event Name']}"
+                                     data-event-type="${eventAtTime['Event Type']}">
                                     <div>
                                         <span class="event-full"><strong>${eventAtTime['Event Abbreviation']}</strong> - ${eventAtTime['Event Name']}</span>
                                         <span class="event-abbr-only"><strong>${eventAtTime['Event Abbreviation']}</strong></span>
                                     </div>
-                                    <span class="tooltiptext">
-                                        <strong>${eventAtTime['Event Name']}</strong><br>
-                                        <strong>Time:</strong> ${eventAtTime['Start Time']} - ${eventAtTime['End Time']}<br>
-                                        <strong>Role:</strong> ${eventAtTime.Role}<br>
-                                        <strong>Type:</strong> ${eventAtTime['Event Type']}<br>
-                                        <strong>Description:</strong> ${eventAtTime['Event Description']}
-                                    </span>
                                 </div>`;
                             tableRows += `<td class="role-col" data-role="${roleClass}" rowspan="${rowspan}">${eventHtml}</td>`;
                         } else if (!eventAtTime?.isSpanned) {
@@ -1027,9 +1135,15 @@
                                     const [role, activityData] = acRole;
                                     const colors = getActivityColor(activityData);
                                     const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                    const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'Free' ? 'Free' : 'Duty');
                                     const roleNameWithAssignments = formatRoleNameWithAssignments(role);
+                                    const activityDescription = typeof activityData === 'object' ? 
+                                        dayEvents.find(e => e.Role === role && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
                                     html += `
-                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
+                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
+                                             data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
+                                             data-event-time="${agendaEvent['Start Time']} - ${agendaEvent['End Time']}" data-event-name="${agendaEvent['Event Name']}"
+                                             data-event-type="${eventType}">
                                             <div class="role-name">${roleNameWithAssignments}</div>
                                             <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
                                         </div>
@@ -1044,9 +1158,15 @@
                                     const [role, activityData] = cnRole;
                                     const colors = getActivityColor(activityData);
                                     const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                    const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'Free' ? 'Free' : 'Duty');
                                     const roleNameWithAssignments = formatRoleNameWithAssignments(role);
+                                    const activityDescription = typeof activityData === 'object' ? 
+                                        dayEvents.find(e => e.Role === role && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
                                     html += `
-                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
+                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
+                                             data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
+                                             data-event-time="${agendaEvent['Start Time']} - ${agendaEvent['End Time']}" data-event-name="${agendaEvent['Event Name']}"
+                                             data-event-type="${eventType}">
                                             <div class="role-name">${roleNameWithAssignments}</div>
                                             <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
                                         </div>
@@ -1103,9 +1223,15 @@
                                 const [role, activityData] = otherRoles[i + j];
                                 const colors = getActivityColor(activityData);
                                 const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
+                                const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'Free' ? 'Free' : 'Duty');
                                 const roleNameWithAssignments = formatRoleNameWithAssignments(role);
+                                const activityDescription = typeof activityData === 'object' ? 
+                                    dayEvents.find(e => e.Role === role && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
                                 html += `
-                                    <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};">
+                                    <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
+                                         data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
+                                         data-event-time="${agendaEvent['Start Time']} - ${agendaEvent['End Time']}" data-event-name="${agendaEvent['Event Name']}"
+                                         data-event-type="${eventType}">
                                         <div class="role-name">${roleNameWithAssignments}</div>
                                         <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
                                     </div>
@@ -1179,7 +1305,9 @@
                     // Add AC role if it exists
                     if (acRole) {
                         const roleClass = acRole.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-                        roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${acRole}</label></div>`;
+                        const assignments = state.roleAssignments[acRole];
+                        const displayName = assignments && assignments.length > 0 ? `${acRole} (${assignments[0]})` : acRole;
+                        roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${displayName}</label></div>`;
                     }
                     
                     // Add CN role if it exists
@@ -1286,6 +1414,127 @@
                 });
             }
 
+            function setupRoleModal() {
+                const modal = document.getElementById('role-modal');
+                const closeBtn = document.getElementById('role-modal-close');
+                
+                // Close modal handlers
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) {
+                        modal.classList.remove('active');
+                    }
+                });
+                
+                // Role assignment and table event click handler
+                document.addEventListener('click', (e) => {
+                    // Check for role assignment clicks (card view)
+                    const roleAssignment = e.target.closest('.role-assignment[data-role]');
+                    if (roleAssignment && roleAssignment.style.display !== 'none') {
+                        showRoleModal(roleAssignment);
+                        return;
+                    }
+                    
+                    // Check for table event clicks (table view)
+                    const tableEvent = e.target.closest('.event[data-role]');
+                    if (tableEvent) {
+                        showRoleModal(tableEvent);
+                        return;
+                    }
+                });
+            }
+
+            function showRoleModal(element) {
+                const role = element.dataset.role;
+                const activity = element.dataset.activity;
+                const description = element.dataset.description;
+                const eventTime = element.dataset.eventTime;
+                const eventName = element.dataset.eventName;
+                const eventType = element.dataset.eventType;
+                
+                // Update modal content
+                document.getElementById('role-modal-title').textContent = role;
+                document.getElementById('role-modal-time').textContent = eventTime;
+                
+                // Activity section with color coding
+                const activityContainer = document.getElementById('role-modal-activity');
+                
+                // Create activity data object for color matching
+                let activityDataForColor;
+                if (eventType && eventType !== 'Free' && eventType !== 'Duty') {
+                    activityDataForColor = {
+                        activity: activity,
+                        eventType: eventType
+                    };
+                } else if (activity === 'Free' || eventType === 'Free') {
+                    activityDataForColor = 'Free';
+                } else {
+                    activityDataForColor = {
+                        activity: activity,
+                        eventType: 'Duty'
+                    };
+                }
+                
+                // Use the same color function as the card view
+                const colors = getActivityColor(activityDataForColor);
+                
+                if (eventType) {
+                    // This is a table event, show the event type
+                    activityContainer.innerHTML = `
+                        <div class="role-modal-activity-name">${activity}</div>
+                        <div class="role-modal-activity-type">${eventType}</div>
+                    `;
+                } else {
+                    // This is a role assignment, show the during event
+                    activityContainer.innerHTML = `
+                        <div class="role-modal-activity-name">${activity}</div>
+                        <div class="role-modal-activity-type">During: ${eventName}</div>
+                    `;
+                }
+                
+                // Apply colors to the activity container
+                activityContainer.style.backgroundColor = colors.backgroundColor;
+                activityContainer.style.borderLeftColor = colors.borderColor;
+                activityContainer.style.borderLeftWidth = '4px';
+                activityContainer.style.borderLeftStyle = 'solid';
+                
+                // Names section
+                const namesContainer = document.getElementById('role-modal-names');
+                const fullNames = state.roleFullNames[role] || [];
+                
+                if (fullNames.length > 0) {
+                    const nameTagsHTML = fullNames.map(name => {
+                        return `<span class="role-modal-name-tag">${name}</span>`;
+                    }).join('');
+                    namesContainer.innerHTML = nameTagsHTML;
+                } else {
+                    namesContainer.innerHTML = '<span class="role-modal-name-tag">No staff assigned</span>';
+                }
+                
+                // Description section
+                const descriptionSection = document.getElementById('role-modal-description-section');
+                const descriptionContainer = document.getElementById('role-modal-description');
+                
+                if (description && description.trim()) {
+                    descriptionContainer.textContent = description;
+                    descriptionSection.style.display = 'block';
+                } else {
+                    descriptionSection.style.display = 'none';
+                }
+                
+                // Show modal
+                document.getElementById('role-modal').classList.add('active');
+            }
+
             function savePreferences() {
                 const filters = Array.from(document.querySelectorAll('#filter-panel input[type="checkbox"]')).map(cb => ({ value: cb.value, checked: cb.checked }));
                 const isCardView = document.querySelector('.card-view.active') !== null;
@@ -1388,6 +1637,7 @@
                 });
                 
                 setupEventListeners(swiper);
+                setupRoleModal(); // Move this after DOM is fully ready
                 setupViewToggle(preferences.isCardView);
                 
                 const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
