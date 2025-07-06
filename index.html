@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <style>
-        /* --- Root Variables and Body --- */
         :root {
             --primary-color: #007bff;
             --light-gray: #f8f9fa;
@@ -26,8 +25,6 @@
             color: var(--text-color);
             background-color: var(--light-gray);
         }
-
-        /* --- Main Layout --- */
         .calendar-container {
             position: fixed;
             top: 0;
@@ -52,8 +49,6 @@
             overflow-x: hidden;
             height: 100%;
         }
-        
-        /* --- View Toggle Styles --- */
         .table-view {
             display: none;
             height: 100%;
@@ -62,7 +57,6 @@
             display: block;
         }
 
-        /* --- Header & Toolbar (Ultra-Compacted) --- */
         .calendar-header {
             position: sticky;
             top: 0;
@@ -71,20 +65,18 @@
             border-bottom: 1px solid var(--border-color);
             transform: translateY(0);
             transition: transform 0.3s ease-in-out;
-            margin: -1rem -1rem 0.5rem -1rem; /* Reduced bottom margin */
+            margin: -1rem -1rem 0.5rem -1rem;
             padding: 1rem;
         }
         .calendar-header.hidden {
             transform: translateY(-100%);
         }
-        
-        /* New container for the main nav controls */
         .navigation-controls {
             display: flex;
-            justify-content: center; /* Center the entire block */
+            justify-content: center;
             align-items: center;
-            gap: 0.5rem; /* Gap between arrows and buttons */
-            margin-bottom: 0.25rem; /* Reduced margin */
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
         }
         .swiper-button-next, .swiper-button-prev {
             position: static !important;
@@ -98,21 +90,15 @@
             font-weight: bold;
         }
 
-        /* --- Filter Controls (Compacted) --- */
         .calendar-toolbar {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 0.5rem; /* Reduced margin */
+            margin-bottom: 0.5rem;
             align-items: center;
             flex-wrap: wrap;
         }
-        .filter-container {
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-        .view-toggle-container {
+        .filter-container, .view-toggle-container {
             display: flex;
             justify-content: center;
             position: relative;
@@ -141,9 +127,6 @@
             color: var(--text-color);
             border-color: var(--border-color);
         }
-        .view-icon {
-            margin-right: 0.5rem;
-        }
         #filter-trigger-btn:after {
             content: '▼';
             font-size: 0.7em;
@@ -167,7 +150,7 @@
             display: block;
         }
         .role-filters-expanded {
-            display: none; /* Always hidden now */
+            display: none;
         }
         .filter-controls {
             display: flex;
@@ -198,7 +181,9 @@
             width: calc(50% - 0.25rem);
             margin-bottom: 0.25rem;
         }
-        .role-option input[type="checkbox"] { display: none; }
+        .role-option input[type="checkbox"] { 
+            display: none; 
+        }
         .role-option label {
             display: block;
             padding: 0.5rem 0.75rem;
@@ -220,13 +205,12 @@
             border-color: var(--primary-color);
         }
 
-        /* --- Quick Day Navigation (Compacted) --- */
         .quick-nav {
             display: flex;
             justify-content: center;
             gap: 0.25rem;
             margin: 0;
-            flex-grow: 1; /* Allow the nav to fill space between arrows */
+            flex-grow: 1;
         }
         .quick-nav-btn {
             flex-grow: 1;
@@ -251,15 +235,13 @@
             color: white !important;
             border-color: var(--primary-color) !important;
         }
-
-        /* --- Color Key (Compacted) --- */
         .color-key-container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             gap: 0.25rem 1rem;
-            margin: 0; /* Remove margin since it's now inline */
+            margin: 0;
         }
         .key-item {
             display: flex;
@@ -276,7 +258,6 @@
             flex-shrink: 0;
         }
 
-        /* --- Card View Layout --- */
         .card-view {
             display: none;
             padding: 0.5rem;
@@ -376,7 +357,6 @@
             border-radius: 50%;
         }
 
-        /* --- Calendar Grid & Events --- */
         .calendar {
             width: 100%;
             border-collapse: collapse;
@@ -414,40 +394,23 @@
             width: 60px;
         }
         .calendar th.time-col {
-            z-index: 4; /* Higher z-index for the top-left corner cell */
+            z-index: 4;
         }
-        
-        /* Mobile abbreviation styles */
         .calendar th.role-col .full-text {
             display: inline;
         }
         .calendar th.role-col .mobile-abbr {
             display: none;
         }
-        
-        /* Show abbreviations on mobile when there are many columns */
-        @media (max-width: 768px) {
-            .calendar.many-columns th.role-col .full-text {
-                display: none;
-            }
-            .calendar.many-columns th.role-col .mobile-abbr {
-                display: inline;
-            }
-        }
-
-        /* Event text display control */
         .event-abbr-only {
             display: none;
         }
-        
-        /* When there are many columns, show only abbreviations for events */
         .calendar.many-columns .event-full {
             display: none;
         }
         .calendar.many-columns .event-abbr-only {
             display: inline;
         }
-        
         .event {
             position: relative;
             width: 100%;
@@ -463,17 +426,24 @@
             min-height: 100%;
         }
         .event > div:first-child {
-            position: -webkit-sticky; /* For Safari */
+            position: -webkit-sticky;
             position: sticky;
-            top: 48px; /* Position sticky text just below the calendar header */
+            top: 48px;
         }
         .event-type-free { background-color: #f8f9fa; border-left: 3px solid #6c757d; }
         .event-type-break { background-color: #fff3cd; border-left: 3px solid #ffc107; }
         .event-type-meeting { background-color: #cff4fc; border-left: 3px solid #0dcaf0; }
         .event-type-duty { background-color: #d1e7dd; border-left: 3px solid #198754; }
         .event-type-agenda { background-color: #dbe4ff; border-left: 3px solid #6385ff; }
+        @media (max-width: 768px) {
+            .calendar.many-columns th.role-col .full-text {
+                display: none;
+            }
+            .calendar.many-columns th.role-col .mobile-abbr {
+                display: inline;
+            }
+        }
 
-        /* --- Quality of Life (QOL) Components --- */
         .tooltip {
             position: relative;
             cursor: pointer;
@@ -531,8 +501,6 @@
             background: var(--danger-color);
             border-radius: 50%;
         }
-        
-        /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .time-col, .calendar th.time-col, .calendar td.time-col {
                 width: 45px !important;
@@ -550,13 +518,13 @@
         }
         @media (max-width: 480px) {
             .calendar-toolbar {
-                gap: 0.5rem; /* Reduced gap on mobile */
+                gap: 0.5rem;
             }
             .color-key-container {
-                gap: 0.15rem 0.5rem; /* Reduced spacing on mobile */
+                gap: 0.15rem 0.5rem;
             }
             .key-item {
-                font-size: 0.65rem; /* Smaller font size on mobile */
+                font-size: 0.65rem;
             }
             .agenda-card {
                 padding: 1rem;
@@ -565,8 +533,6 @@
                 font-size: 1rem;
             }
         }
-
-        /* --- Print Styles --- */
         @media print {
             body { overflow: visible !important; height: auto; }
             .calendar-header { display: none !important; }
@@ -601,9 +567,7 @@
                 </section>
             </section>
 
-            <section class="role-filters-expanded" id="role-filters-expanded" style="display: none;">
-                <!-- This section is now permanently hidden -->
-            </section>
+            <section class="role-filters-expanded" id="role-filters-expanded" style="display: none;"></section>
 
             <nav class="navigation-controls">
                 <button class="swiper-button-prev"></button>
@@ -631,7 +595,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    
     <script>
-        // Function to parse CSV data
         function parseCSV(text) {
             const lines = text.trim().split('\n');
             const headers = lines[0].split(',').map(header => header.replace(/"/g, ''));
@@ -653,7 +616,7 @@
                         current += char;
                     }
                 }
-                values.push(current); // Add the last value
+                values.push(current);
                 
                 if (values.length === headers.length) {
                     const entry = {};
@@ -666,7 +629,6 @@
             return data;
         }
 
-        // Function to load CSV data
         async function loadScheduleData() {
             try {
                 const response = await fetch('duties_and_agenda.csv');
@@ -679,7 +641,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', async function () {
-            // Load schedule data from CSV file
             const scheduleData = await loadScheduleData();
             
             if (scheduleData.length === 0) {
@@ -721,24 +682,15 @@
             };
             
             const createMobileAbbreviation = (roleName) => {
-                // Handle Agenda
                 if (roleName === 'Agenda') return 'AG';
-                
-                // Handle AC patterns (AC 1 -> 1, AC 2 -> 2, etc.)
                 const acMatch = roleName.match(/^AC (\d+)$/);
                 if (acMatch) return acMatch[1];
-                
-                // Handle CN patterns (CN A -> A, CN B -> B, etc.)
                 const cnMatch = roleName.match(/^CN ([A-Z])$/);
                 if (cnMatch) return cnMatch[1];
-                
-                // For other patterns, return the original
                 return roleName;
             };
             
-            // Function to get color styling for role activities
             const getActivityColor = (activityData) => {
-                // Handle simple string case (Free)
                 if (typeof activityData === 'string') {
                     if (activityData === 'Free') {
                         return {
@@ -747,7 +699,6 @@
                             textColor: '#6c757d'
                         };
                     }
-                    // Fallback for other strings
                     return {
                         backgroundColor: '#d1e7dd',
                         borderColor: '#198754',
@@ -755,52 +706,18 @@
                     };
                 }
                 
-                // Handle object case with eventType
                 if (activityData && activityData.eventType) {
                     const eventType = activityData.eventType.toLowerCase();
-                    
-                    switch (eventType) {
-                        case 'break':
-                            return {
-                                backgroundColor: '#fff3cd',
-                                borderColor: '#ffc107',
-                                textColor: '#856404'
-                            };
-                        case 'meeting':
-                            return {
-                                backgroundColor: '#cff4fc',
-                                borderColor: '#0dcaf0',
-                                textColor: '#055160'
-                            };
-                        case 'duty':
-                            return {
-                                backgroundColor: '#d1e7dd',
-                                borderColor: '#198754',
-                                textColor: '#0f5132'
-                            };
-                        case 'agenda':
-                            return {
-                                backgroundColor: '#dbe4ff',
-                                borderColor: '#6385ff',
-                                textColor: '#0a58ca'
-                            };
-                        case 'free':
-                            return {
-                                backgroundColor: '#f8f9fa',
-                                borderColor: '#6c757d',
-                                textColor: '#6c757d'
-                            };
-                        default:
-                            // Default for unknown types
-                            return {
-                                backgroundColor: '#d1e7dd',
-                                borderColor: '#198754',
-                                textColor: '#0f5132'
-                            };
-                    }
+                    const colors = {
+                        'break': { backgroundColor: '#fff3cd', borderColor: '#ffc107', textColor: '#856404' },
+                        'meeting': { backgroundColor: '#cff4fc', borderColor: '#0dcaf0', textColor: '#055160' },
+                        'duty': { backgroundColor: '#d1e7dd', borderColor: '#198754', textColor: '#0f5132' },
+                        'agenda': { backgroundColor: '#dbe4ff', borderColor: '#6385ff', textColor: '#0a58ca' },
+                        'free': { backgroundColor: '#f8f9fa', borderColor: '#6c757d', textColor: '#6c757d' }
+                    };
+                    return colors[eventType] || colors['duty'];
                 }
                 
-                // Fallback
                 return {
                     backgroundColor: '#d1e7dd',
                     borderColor: '#198754',
@@ -808,7 +725,6 @@
                 };
             };
             
-            // Function to regenerate card views for all days
             function regenerateCardViews() {
                 CONFIG.DAYS_ORDER.forEach(day => {
                     const slide = document.querySelector(`.swiper-slide[data-day="${day}"]`);
@@ -820,21 +736,18 @@
                             tempDiv.innerHTML = newCardHTML;
                             const newCardView = tempDiv.querySelector('.card-view');
                             
-                            // Preserve the active class if it exists
                             if (cardView.classList.contains('active')) {
                                 newCardView.classList.add('active');
                             }
                             
-                            // Replace the old card view with the new one
                             cardView.parentNode.replaceChild(newCardView, cardView);
                         }
                     }
                 });
             }
+            
             const updateColumnAbbreviations = () => {
-                // Update all calendar tables
                 document.querySelectorAll('.calendar').forEach(calendar => {
-                    // Count visible non-Agenda header columns in this specific calendar
                     const headerCols = calendar.querySelectorAll('th.role-col[data-role]');
                     const visibleNonAgendaCols = Array.from(headerCols).filter(col => {
                         const isVisible = col.style.display !== 'none';
@@ -1238,33 +1151,25 @@
 
             // Function to update active day button
             function updateActiveDayButton(swiper) {
-                // Use requestAnimationFrame to ensure this runs after any DOM updates
                 requestAnimationFrame(() => {
                     const currentDay = swiper.slides[swiper.activeIndex].dataset.day;
-                    // Force remove active class from all buttons first
                     document.querySelectorAll('.quick-nav-btn').forEach(btn => {
                         btn.classList.remove('active');
-                        // Aggressively clear all inline styles on mobile
                         btn.style.removeProperty('background');
                         btn.style.removeProperty('background-color');
                         btn.style.removeProperty('color');
                         btn.style.removeProperty('border-color');
-                        // Also reset to default values
                         btn.style.background = '#ffffff';
                         btn.style.color = '#343a40';
                         btn.style.borderColor = '#dee2e6';
                     });
                     
-                    // Then add active class to the current day button
                     const currentDayButton = document.querySelector(`.quick-nav-btn[data-day="${currentDay}"]`);
                     if (currentDayButton) {
                         currentDayButton.classList.add('active');
-                        // Force the active styling on mobile
                         currentDayButton.style.background = '#007bff';
                         currentDayButton.style.color = 'white';
                         currentDayButton.style.borderColor = '#007bff';
-                        
-                        // Additional force reflow on mobile
                         currentDayButton.offsetHeight;
                     }
                 });
@@ -1339,11 +1244,10 @@
 
             function loadPreferences() {
                 const saved = localStorage.getItem(CONFIG.LOCAL_STORAGE_KEY);
-                if (!saved) return { isCardView: true }; // Default to card view
+                if (!saved) return { isCardView: true };
                 
-                const { filters, isCardView = true } = JSON.parse(saved); // Default to card view if not set
+                const { filters, isCardView = true } = JSON.parse(saved);
                 
-                // Apply filter preferences
                 if (filters) {
                     filters.forEach(filter => {
                         document.querySelectorAll(`input[value="${filter.value}"]`).forEach(cb => cb.checked = filter.checked);
@@ -1351,9 +1255,54 @@
                     });
                 }
                 
-                updateColumnAbbreviations(); // Update abbreviations after loading preferences
+                updateColumnAbbreviations();
                 
                 return { isCardView };
+            }
+
+            function scrollToCurrentTimeCard() {
+                const now = new Date();
+                const currentTime = now.getHours() * 60 + now.getMinutes();
+                
+                const isCardView = document.querySelector('.card-view.active') !== null;
+                if (!isCardView) return;
+                
+                const activeSlide = document.querySelector('.swiper-slide-active');
+                if (!activeSlide) return;
+                
+                const cards = activeSlide.querySelectorAll('.agenda-card');
+                let targetCard = null;
+                let closestTimeDiff = Infinity;
+                
+                cards.forEach(card => {
+                    const timeSlot = card.querySelector('.card-time');
+                    if (timeSlot) {
+                        const timeText = timeSlot.textContent.trim();
+                        const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/);
+                        if (timeMatch) {
+                            const cardHour = parseInt(timeMatch[1], 10);
+                            const cardMinutes = parseInt(timeMatch[2], 10);
+                            const cardTime = cardHour * 60 + cardMinutes;
+                            
+                            const timeDiff = cardTime - currentTime;
+                            if (timeDiff >= 0 && timeDiff < closestTimeDiff) {
+                                closestTimeDiff = timeDiff;
+                                targetCard = card;
+                            }
+                        }
+                    }
+                });
+                
+                if (!targetCard && cards.length > 0) {
+                    targetCard = cards[cards.length - 1];
+                }
+                
+                if (targetCard) {
+                    targetCard.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                }
             }
 
             function initialize() {
@@ -1400,46 +1349,19 @@
                      swiper.emit('slideChangeTransitionEnd');
                 }
                 setInterval(() => updateCurrentTimeIndicator(swiper), 60000);
+                
+                setTimeout(() => scrollToCurrentTimeCard(), 100);
             }
 
             function setupViewToggle(initialIsCardView = true) {
                 const viewToggleBtn = document.getElementById('view-toggle-btn');
                 let isCardView = initialIsCardView;
                 
-                // Set initial view state
-                if (isCardView) {
-                    viewToggleBtn.textContent = 'Table View';
+                const updateViews = () => {
+                    viewToggleBtn.textContent = isCardView ? 'Table View' : 'Card View';
                     document.querySelectorAll('.swiper-slide').forEach(slide => {
                         const tableView = slide.querySelector('.table-view');
                         const cardView = slide.querySelector('.card-view');
-                        tableView.classList.remove('active');
-                        cardView.classList.add('active');
-                    });
-                } else {
-                    viewToggleBtn.textContent = 'Card View';
-                    document.querySelectorAll('.swiper-slide').forEach(slide => {
-                        const tableView = slide.querySelector('.table-view');
-                        const cardView = slide.querySelector('.card-view');
-                        tableView.classList.add('active');
-                        cardView.classList.remove('active');
-                    });
-                }
-                
-                viewToggleBtn.addEventListener('click', () => {
-                    isCardView = !isCardView;
-                    
-                    // Update button text only (no active state)
-                    if (isCardView) {
-                        viewToggleBtn.textContent = 'Table View';
-                    } else {
-                        viewToggleBtn.textContent = 'Card View';
-                    }
-                    
-                    // Toggle views in all slides
-                    document.querySelectorAll('.swiper-slide').forEach(slide => {
-                        const tableView = slide.querySelector('.table-view');
-                        const cardView = slide.querySelector('.card-view');
-                        
                         if (isCardView) {
                             tableView.classList.remove('active');
                             cardView.classList.add('active');
@@ -1448,8 +1370,13 @@
                             cardView.classList.remove('active');
                         }
                     });
-                    
-                    // Save the preference
+                };
+                
+                updateViews();
+                
+                viewToggleBtn.addEventListener('click', () => {
+                    isCardView = !isCardView;
+                    updateViews();
                     savePreferences();
                 });
             }
