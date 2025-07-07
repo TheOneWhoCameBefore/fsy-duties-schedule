@@ -41,6 +41,14 @@
             min-height: 0;
             position: relative;
         }
+        .calendar-footer {
+            flex-shrink: 0;
+            background-color: var(--light-gray);
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-spacer {
+            height: 0.75rem;
+        }
         .swiper {
             height: 100%;
         }
@@ -420,6 +428,41 @@
             border-radius: 50%;
         }
 
+        /* Travel Events Chip Styles */
+        .travel-chip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 0.875rem;
+        }
+        .travel-chip:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .travel-chip-time {
+            background: var(--medium-gray);
+            color: var(--text-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .travel-chip-name {
+            color: #666;
+            font-weight: 500;
+            text-align: center;
+            flex-grow: 1;
+        }
+
         .calendar {
             width: 100%;
             border-collapse: collapse;
@@ -629,9 +672,34 @@
         }
         .role-modal-names {
             display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .role-modal-role-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .role-modal-role-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #495057;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.25rem;
+        }
+        
+        .role-modal-role-title.ac-role {
+            color: #28a745;
+        }
+        
+        .role-modal-role-staff {
+            display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+        
         .role-modal-name-tag {
             background: var(--primary-color);
             color: white;
@@ -647,6 +715,65 @@
         .role-modal-description {
             color: #555;
             line-height: 1.5;
+        }
+        
+        /* Linked Events Section */
+        .role-modal-linked-events {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .role-modal-linked-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .role-modal-linked-title::before {
+            content: "🔗";
+            font-size: 0.9rem;
+        }
+        
+        .role-modal-linked-event {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.375rem;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .role-modal-linked-event:hover {
+            background-color: #e9ecef;
+        }
+        
+        .role-modal-linked-event-name {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.25rem;
+        }
+        
+        .role-modal-linked-event-time {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .role-modal-linked-event-roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+        
+        .role-modal-linked-event-roles .role-modal-name-tag {
+            font-size: 0.8rem;
+            padding: 0.15rem 0.4rem;
         }
         
         /* Duties Summary Modal Styles */
@@ -989,6 +1116,10 @@
                     </div>
             </div>
         </main>
+        
+        <footer class="calendar-footer">
+            <div class="footer-spacer"></div>
+        </footer>
     </div>
 
     <!-- Filter Modal -->
@@ -1019,6 +1150,10 @@
             <div class="role-modal-section" id="role-modal-description-section">
                 <h3 class="role-modal-section-title">Activity Description</h3>
                 <div class="role-modal-description" id="role-modal-description"></div>
+            </div>
+            <div class="role-modal-section" id="role-modal-linked-events-section" style="display: none;">
+                <h3 class="role-modal-section-title">Related Events</h3>
+                <div class="role-modal-linked-events" id="role-modal-linked-events"></div>
             </div>
         </div>
     </div>
@@ -1107,14 +1242,19 @@
                         // For AC roles, store the first name for display
                         if (role.startsWith('AC ')) {
                             const firstName = name.replace('AC ', '').split(' ')[0];
-                            roleNameMap[role] = [firstName];
-                            roleFullNamesMap[role] = [name.replace('AC ', '')];
+                            const fullName = name.replace('AC ', '');
+                            
+                            // Store all first names for display (in case of multiple people)
+                            roleNameMap[role].push(firstName);
+                            // Store all full names for modal
+                            roleFullNamesMap[role].push(fullName);
+                            
                             // Add to all names array
                             allNames.push({
                                 role: role,
                                 displayName: firstName,
-                                fullName: name.replace('AC ', ''),
-                                searchText: `${firstName} ${name.replace('AC ', '')}`.toLowerCase()
+                                fullName: fullName,
+                                searchText: `${firstName} ${fullName}`.toLowerCase()
                             });
                         } else if (role.startsWith('CN ')) {
                             // For CN roles, store full names for modal and don't use display names in table
@@ -1205,7 +1345,13 @@
             const formatRoleNameWithAssignments = (roleName) => {
                 const assignments = state.roleAssignments[roleName];
                 if (assignments && assignments.length > 0) {
-                    return `${roleName} <span class="name-assignment">(${assignments[0]})</span>`;
+                    if (assignments.length === 1) {
+                        return `${roleName} <span class="name-assignment">(${assignments[0]})</span>`;
+                    } else {
+                        // Multiple people assigned - show all names
+                        const namesList = assignments.join(', ');
+                        return `${roleName} <span class="name-assignment">(${namesList})</span>`;
+                    }
                 }
                 return roleName;
             };
@@ -1406,6 +1552,8 @@
                     return a.localeCompare(b, undefined, { numeric: true });
                 });
                 state.processedData = processed;
+                // Store merged events for easy access in modals and other functions
+                state.mergedEvents = mergedEvents;
             }
             
             function createMergedEvents(rawData) {
@@ -1447,6 +1595,115 @@
                 return Array.from(eventMap.values());
             }
 
+            function findLinkedEvents(currentEvent) {
+                const linkedEvents = [];
+                const currentEventName = currentEvent.eventName;
+                const currentEventType = currentEvent.eventType;
+                const currentWeekday = currentEvent.weekday;
+                
+                // Check for Check-in related events (handle various capitalizations)
+                if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In')) {
+                    const checkInEvents = state.mergedEvents.filter(event => {
+                        const hasCheckIn = event.eventName.includes('Check-in') || event.eventName.includes('Check-In') || event.eventName.includes('Check In');
+                        return event.eventType === currentEventType &&
+                               event.weekday === currentWeekday &&
+                               event.eventName !== currentEventName &&
+                               hasCheckIn &&
+                               (event.eventName.includes('Coordinator') || 
+                                event.eventName.includes('Setup') ||
+                                event.eventName.includes('Set Up') ||
+                                event.eventName.includes('Check-in 1') ||
+                                event.eventName.includes('Check-in 2') ||
+                                event.eventName.includes('Check-In 1') ||
+                                event.eventName.includes('Check-In 2') ||
+                                event.eventName.includes('Check In 1') ||
+                                event.eventName.includes('Check In 2') ||
+                                event.eventName.includes('Participant Check-in 1') ||
+                                event.eventName.includes('Participant Check-in 2'));
+                    });
+                    linkedEvents.push(...checkInEvents);
+                }
+                
+                // Check for Dance related events
+                if (currentEventName.includes('Dance')) {
+                    const danceEvents = state.mergedEvents.filter(event => {
+                        return event.eventType === currentEventType &&
+                               event.weekday === currentWeekday &&
+                               event.eventName !== currentEventName &&
+                               event.eventName.includes('Dance') &&
+                               (event.eventName.includes('Coordinator') || 
+                                event.eventName.includes('DJ') ||
+                                event.eventName.includes('Accommodations') ||
+                                event.eventName.includes('Support'));
+                    });
+                    linkedEvents.push(...danceEvents);
+                }
+                
+                // Check for Games Night related events
+                if (currentEventName.includes('Games Night')) {
+                    const gamesEvents = state.mergedEvents.filter(event => {
+                        return event.eventType === currentEventType &&
+                               event.weekday === currentWeekday &&
+                               event.eventName !== currentEventName &&
+                               event.eventName.includes('Games Night') &&
+                               (event.eventName.includes('Coordinator') || 
+                                event.eventName.includes('Accommodations') ||
+                                event.eventName.includes('Support'));
+                    });
+                    linkedEvents.push(...gamesEvents);
+                }
+                
+                // Check for general Coordinator/Support patterns (for other events like Breakfast, Lunch, etc.)
+                const generalPatterns = [
+                    { coordinator: 'Coordinator', support: 'Support' },
+                    { coordinator: 'Lead', support: 'Support' },
+                    { coordinator: 'Lead', support: 'Assist' }
+                ];
+                
+                for (const pattern of generalPatterns) {
+                    const isCoordinator = currentEventName.includes(pattern.coordinator);
+                    const isSupport = currentEventName.includes(pattern.support);
+                    
+                    if (isCoordinator || isSupport) {
+                        // Skip if this is already handled by specific patterns above
+                        if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In') ||
+                            currentEventName.includes('Dance') || 
+                            currentEventName.includes('Games Night')) {
+                            continue;
+                        }
+                        
+                        // Find the base event name (e.g., "Breakfast" from "Breakfast Coordinator")
+                        const baseEventName = currentEventName
+                            .replace(pattern.coordinator, '')
+                            .replace(pattern.support, '')
+                            .trim();
+                        
+                        // Find all events with the same base name, event type, and weekday
+                        const relatedEvents = state.mergedEvents.filter(event => {
+                            const eventBaseName = event.eventName
+                                .replace(pattern.coordinator, '')
+                                .replace(pattern.support, '')
+                                .trim();
+                            
+                            return event.eventType === currentEventType &&
+                                   event.weekday === currentWeekday &&
+                                   eventBaseName === baseEventName &&
+                                   event.eventName !== currentEventName &&
+                                   (event.eventName.includes(pattern.coordinator) || event.eventName.includes(pattern.support));
+                        });
+                        
+                        linkedEvents.push(...relatedEvents);
+                    }
+                }
+                
+                // Remove duplicates
+                const uniqueLinkedEvents = linkedEvents.filter((event, index, self) => 
+                    index === self.findIndex(e => e.eventName === event.eventName && e.weekday === event.weekday)
+                );
+                
+                return uniqueLinkedEvents;
+            }
+
             function generateCalendarForDay(day) {
                 const dayEvents = state.processedData[day];
                 if (!dayEvents || dayEvents.length === 0) {
@@ -1483,6 +1740,8 @@
                         const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
                         if (eventAtTime?.isStart) {
                             const rowspan = Math.max(1, Math.floor(eventAtTime.duration / 5));
+                            // Create event key for finding merged event - match the merging key format
+                            const eventKey = `${eventAtTime['Weekday']}-${eventAtTime['Start Time']}-${eventAtTime['End Time']}-${eventAtTime['Event Name']}-${eventAtTime['Event Type']}`;
                             const eventHtml = `
                                 <div class="event event-type-${eventAtTime['Event Type'].toLowerCase()} clickable-event" 
                                      data-role="${eventAtTime.Role}" 
@@ -1490,7 +1749,8 @@
                                      data-description="${eventAtTime['Event Description']}" 
                                      data-event-time="${eventAtTime['Start Time']} - ${eventAtTime['End Time']}" 
                                      data-event-name="${eventAtTime['Event Name']}"
-                                     data-event-type="${eventAtTime['Event Type']}">
+                                     data-event-type="${eventAtTime['Event Type']}"
+                                     data-event-key="${eventKey}">
                                     <div>
                                         <span class="event-full"><strong>${eventAtTime['Event Abbreviation']}</strong> - ${eventAtTime['Event Name']}</span>
                                         <span class="event-abbr-only"><strong>${eventAtTime['Event Abbreviation']}</strong></span>
@@ -1525,47 +1785,56 @@
                     return `<div class="card-view"><div class="no-events-card">No events for ${day}.</div></div>`;
                 }
                 
-                // Get only significant agenda events (excluding travel/transition) and sort by time
-                const agendaEvents = dayEvents
+                // Get all agenda events and sort by time
+                const allAgendaEvents = dayEvents
                     .filter(event => {
-                        if (!event['Event Type'] || event['Event Type'].toLowerCase() !== 'agenda') {
-                            return false;
-                        }
-                        // Filter out travel/transition-related agenda events
-                        const eventName = event['Event Name'] || '';
-                        const lowerEventName = eventName.toLowerCase();
-                        return !lowerEventName.includes('travel') && 
-                               !lowerEventName.includes('transition') && 
-                               !lowerEventName.includes('move to') &&
-                               !lowerEventName.includes('roll call');
+                        return event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda';
                     })
                     .sort((a, b) => a.startMins - b.startMins);
                 
-                if (agendaEvents.length === 0) {
+                if (allAgendaEvents.length === 0) {
                     return `<div class="card-view"><div class="no-events-card">No agenda events for ${day}.</div></div>`;
                 }
                 
                 let cardsHTML = '';
                 
-                agendaEvents.forEach(agendaEvent => {
-                    // Find what each role is doing during this agenda event using the new hierarchy
-                    const roleActivities = getRoleActivitiesForAgendaEvent(agendaEvent, dayEvents);
+                // Process each agenda event in chronological order
+                allAgendaEvents.forEach(agendaEvent => {
+                    const eventName = agendaEvent['Event Name'] || '';
+                    const lowerEventName = eventName.toLowerCase();
                     
-                    // Generate role assignments HTML with paired columns
-                    const roleAssignmentsHTML = generateRoleAssignmentsHTML(roleActivities, agendaEvent, dayEvents);
+                    // Check if this is a travel/transition event
+                    const isTravelEvent = lowerEventName.includes('travel') || 
+                                         lowerEventName.includes('transition') || 
+                                         lowerEventName.includes('move to') ||
+                                         lowerEventName.includes('roll call');
                     
-                    cardsHTML += `
-                        <div class="agenda-card">
-                            <div class="card-header">
-                                <h3 class="card-title">${agendaEvent['Event Name']}</h3>
-                                <div class="card-time">${agendaEvent['Start Time']} - ${agendaEvent['End Time']}</div>
+                    if (isTravelEvent) {
+                        // Add as a compact chip
+                        cardsHTML += `
+                            <div class="travel-chip">
+                                <span class="travel-chip-time">${agendaEvent['Start Time']}</span>
+                                <span class="travel-chip-name">${agendaEvent['Event Name']}</span>
                             </div>
-                            <div class="card-description">${agendaEvent['Event Description']}</div>
-                            <div class="card-roles">
-                                ${roleAssignmentsHTML}
+                        `;
+                    } else {
+                        // Add as a full agenda card
+                        const roleActivities = getRoleActivitiesForAgendaEvent(agendaEvent, dayEvents);
+                        const roleAssignmentsHTML = generateRoleAssignmentsHTML(roleActivities, agendaEvent, dayEvents);
+                        
+                        cardsHTML += `
+                            <div class="agenda-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">${agendaEvent['Event Name']}</h3>
+                                    <div class="card-time">${agendaEvent['Start Time']} - ${agendaEvent['End Time']}</div>
+                                </div>
+                                <div class="card-description">${agendaEvent['Event Description']}</div>
+                                <div class="card-roles">
+                                    ${roleAssignmentsHTML}
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
+                    }
                 });
                 
                 return `<div class="card-view">${cardsHTML}</div>`;
@@ -1912,11 +2181,22 @@
                 const activityDescription = typeof activityData === 'object' ? 
                     dayEvents.find(e => e.assignedRoles.includes(role) && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
                 
+                // Create event key for finding merged event - use the actual duty event info if available
+                let eventKey = '';
+                if (typeof activityData === 'object' && activityData.activity) {
+                    // Extract event name from the activity string (format: "ABBR - Event Name")
+                    const eventName = activityData.activity.split(' - ')[1] || activityData.activity;
+                    eventKey = `${agendaEvent['Weekday']}-${activityData.startTime}-${activityData.endTime}-${eventName}-${activityData.eventType}`;
+                } else {
+                    // Fallback for string activities or "No Duty"
+                    eventKey = `${agendaEvent['Weekday']}-${agendaEvent['Start Time']}-${agendaEvent['End Time']}-${agendaEvent['Event Name']}-${agendaEvent['Event Type']}`;
+                }
+                
                 return `
                     <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
                          data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
                          data-event-time="${assignmentTime}" data-event-name="${agendaEvent['Event Name']}"
-                         data-event-type="${eventType}">
+                         data-event-type="${eventType}" data-event-key="${eventKey}">
                         <div class="role-name">${roleNameWithAssignments}</div>
                         <div class="role-activity" style="color: ${colors.textColor};">${displayText}${timeIndicator}</div>
                     </div>
@@ -2152,46 +2432,74 @@
             }
 
             function showRoleModal(element) {
-                const role = element.dataset.role;
+                const eventKey = element.dataset.eventKey;
                 const activity = element.dataset.activity;
                 const description = element.dataset.description;
                 const eventTime = element.dataset.eventTime;
                 const eventName = element.dataset.eventName;
                 const eventType = element.dataset.eventType;
                 
-                // Simple approach: Just show staff for the specific role that was clicked
-                // Instead of trying to find "related roles" which might be causing the issue
-                const combinedStaff = [];
-                const roleStaff = state.roleFullNames[role] || [];
-                combinedStaff.push(...roleStaff);
-                
-                // Debug logging to help identify the issue
-                console.log('Modal Debug Info:', {
-                    clickedRole: role,
-                    activity: activity,
-                    eventName: eventName,
-                    eventType: eventType,
-                    eventTime: eventTime,
-                    roleStaff: roleStaff,
-                    combinedStaff: combinedStaff,
-                    allRoleData: state.roleFullNames
+                // Find the merged event using the event key
+                const mergedEvent = state.mergedEvents.find(event => {
+                    const key = `${event.weekday}-${event.startTime}-${event.endTime}-${event.eventName}-${event.eventType}`;
+                    return key === eventKey;
                 });
+                
+                // Collect all staff from all assigned roles for this merged event
+                const combinedStaff = [];
+                if (mergedEvent) {
+                    // Get all assigned roles for this event
+                    mergedEvent.assignedRoles.forEach(role => {
+                        const roleStaff = state.roleFullNames[role] || [];
+                        combinedStaff.push(...roleStaff);
+                    });
+                } else {
+                    // Fallback: use the clicked role's staff (maintain backward compatibility)
+                    const role = element.dataset.role;
+                    const roleStaff = state.roleFullNames[role] || [];
+                    combinedStaff.push(...roleStaff);
+                }
+                
+                // Remove duplicates in case the same person is assigned to multiple roles
+                const uniqueStaff = [...new Set(combinedStaff)];
                 
                 // Update modal content - use activity as title
                 document.getElementById('role-modal-title').textContent = activity;
                 
                 document.getElementById('role-modal-time').textContent = eventTime;
                 
-                // Names section - use staff only from the clicked role
+                // Names section - show all staff assigned to this event
                 const namesContainer = document.getElementById('role-modal-names');
                 
-                if (combinedStaff.length > 0) {
-                    // Check if this role is an AC role for styling
-                    const isAcRole = role.startsWith('AC ');
-                    const acRoleClass = isAcRole ? 'ac-role' : '';
+                if (mergedEvent && mergedEvent.assignedRoles.length > 0) {
+                    // Group staff by their roles for better organization
+                    let roleGroupsHTML = '';
                     
-                    const nameTagsHTML = combinedStaff.map(name => {
-                        return `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`;
+                    mergedEvent.assignedRoles.forEach(role => {
+                        const roleStaff = state.roleFullNames[role] || [];
+                        if (roleStaff.length > 0) {
+                            const isAcRole = role.startsWith('AC ');
+                            const acRoleClass = isAcRole ? 'ac-role' : '';
+                            
+                            // Create role group
+                            roleGroupsHTML += `
+                                <div class="role-modal-role-group">
+                                    <div class="role-modal-role-title ${acRoleClass}">${role}</div>
+                                    <div class="role-modal-role-staff">
+                                        ${roleStaff.map(name => 
+                                            `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    });
+                    
+                    namesContainer.innerHTML = roleGroupsHTML;
+                } else if (uniqueStaff.length > 0) {
+                    // Fallback: show names without role grouping
+                    const nameTagsHTML = uniqueStaff.map(name => {
+                        return `<span class="role-modal-name-tag">${name}</span>`;
                     }).join('');
                     namesContainer.innerHTML = nameTagsHTML;
                 } else {
@@ -2207,6 +2515,68 @@
                     descriptionSection.style.display = 'block';
                 } else {
                     descriptionSection.style.display = 'none';
+                }
+                
+                // Linked events section
+                const linkedEventsSection = document.getElementById('role-modal-linked-events-section');
+                const linkedEventsContainer = document.getElementById('role-modal-linked-events');
+                
+                if (mergedEvent) {
+                    const linkedEvents = findLinkedEvents(mergedEvent);
+                    
+                    if (linkedEvents.length > 0) {
+                        let linkedEventsHTML = '';
+                        
+                        linkedEvents.forEach(linkedEvent => {
+                            const eventKey = `${linkedEvent.weekday}-${linkedEvent.startTime}-${linkedEvent.endTime}-${linkedEvent.eventName}-${linkedEvent.eventType}`;
+                            const eventTime = `${linkedEvent.startTime} - ${linkedEvent.endTime}`;
+                            
+                            // Generate staff list for this linked event
+                            let staffHTML = '';
+                            linkedEvent.assignedRoles.forEach(role => {
+                                const roleStaff = state.roleFullNames[role] || [];
+                                if (roleStaff.length > 0) {
+                                    const isAcRole = role.startsWith('AC ');
+                                    const acRoleClass = isAcRole ? 'ac-role' : '';
+                                    
+                                    staffHTML += roleStaff.map(name => 
+                                        `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`
+                                    ).join('');
+                                }
+                            });
+                            
+                            linkedEventsHTML += `
+                                <div class="role-modal-linked-event" 
+                                     data-event-key="${eventKey}"
+                                     data-activity="${linkedEvent.eventName}"
+                                     data-description="${linkedEvent.eventDescription}"
+                                     data-event-time="${eventTime}"
+                                     data-event-name="${linkedEvent.eventName}"
+                                     data-event-type="${linkedEvent.eventType}">
+                                    <div class="role-modal-linked-event-name">${linkedEvent.eventName}</div>
+                                    <div class="role-modal-linked-event-time">${eventTime}</div>
+                                    <div class="role-modal-linked-event-roles">
+                                        ${staffHTML}
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        
+                        linkedEventsContainer.innerHTML = linkedEventsHTML;
+                        
+                        // Add click event listeners to linked events
+                        linkedEventsContainer.querySelectorAll('.role-modal-linked-event').forEach(linkedEventElement => {
+                            linkedEventElement.addEventListener('click', function() {
+                                showRoleModal(this);
+                            });
+                        });
+                        
+                        linkedEventsSection.style.display = 'block';
+                    } else {
+                        linkedEventsSection.style.display = 'none';
+                    }
+                } else {
+                    linkedEventsSection.style.display = 'none';
                 }
                 
                 // Show modal
