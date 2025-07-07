@@ -688,7 +688,7 @@ Wednesday,12:15 PM,12:30 PM,AC 1,No Duty,ND,free,Time without duty but still act
 Wednesday,12:15 PM,12:30 PM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
 Wednesday,12:15 PM,12:30 PM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
 Wednesday,10:30 AM,12:30 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
-Wednesday,11:30 AM,12:30 PM,AC 7,Class Coordinator / CN Coordination Meeting,CL,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,11:30 AM,12:30 PM,AC 7,Class Coordinator / CN Coordination Meeting,CL,duty,"A scheduled meeting for coordination, planning, or discussion."
 Wednesday,11:30 AM,12:30 PM,AC 8,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
 Wednesday,12:30 PM,1:15 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
 Wednesday,11:00 AM,1:15 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.

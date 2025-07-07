@@ -96,12 +96,14 @@
             gap: 1rem;
             margin-bottom: 0.5rem;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .filter-container, .view-toggle-container, .duties-summary-container {
             display: flex;
             justify-content: center;
             position: relative;
+            flex: 1;
+            min-width: 0;
         }
         .control-btn {
             padding: 0.5rem 1rem;
@@ -111,6 +113,11 @@
             border-radius: 0.25rem;
             cursor: pointer;
             transition: all 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            max-width: 140px;
         }
         .control-btn:hover {
             background-color: var(--primary-color);
@@ -135,19 +142,62 @@
         .filter-dropdown-panel {
             display: none;
             position: fixed;
-            background-color: var(--white);
-            min-width: 300px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            border: 1px solid var(--border-color);
-            border-radius: 0.25rem;
-            z-index: 1001;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
             padding: 1rem;
-            left: 50%;
-            top: 20%;
-            transform: translateX(-50%);
+            box-sizing: border-box;
         }
         .filter-dropdown-panel.active {
-            display: block;
+            display: flex;
+        }
+        .filter-dropdown-content {
+            background-color: var(--white);
+            min-width: 300px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            position: relative;
+        }
+        .filter-dropdown-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+        .filter-dropdown-close:hover {
+            background-color: var(--light-gray);
+        }
+        .filter-dropdown-header {
+            margin-bottom: 1.5rem;
+            padding-right: 2rem;
+        }
+        .filter-dropdown-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 0;
         }
         .role-filters-expanded {
             display: none;
@@ -203,6 +253,12 @@
             background: var(--primary-color);
             color: var(--white);
             border-color: var(--primary-color);
+        }
+        
+        .role-option.ac-role input[type="checkbox"]:checked + label {
+            background: #28a745;
+            color: white;
+            border-color: #28a745;
         }
 
         .quick-nav {
@@ -583,6 +639,10 @@
             font-size: 0.875rem;
             font-weight: 500;
         }
+        
+        .role-modal-name-tag.ac-role {
+            background: #28a745;
+        }
         .role-modal-description {
             color: #555;
             line-height: 1.5;
@@ -619,6 +679,11 @@
             color: white;
             padding: 0.5rem;
             border-radius: 0.25rem;
+        }
+        
+        .duties-summary-column h3.ac-role {
+            background: #28a745;
+            color: white;
         }
         
         .duties-summary-column ul {
@@ -688,6 +753,11 @@
             .calendar-toolbar {
                 gap: 0.5rem;
             }
+            .control-btn {
+                padding: 0.375rem 0.75rem;
+                font-size: 0.8rem;
+                max-width: 120px;
+            }
             .color-key-container {
                 gap: 0.15rem 0.5rem;
             }
@@ -718,26 +788,25 @@
             <section class="calendar-toolbar">
                 <div class="duties-summary-container">
                     <button id="duties-summary-btn" class="control-btn">
-                        Duties Summary
+                        Summary
                     </button>
                 </div>
                 <div class="filter-container">
                     <button id="filter-trigger-btn" class="control-btn">Filter Roles</button>
-                    <div id="filter-panel" class="filter-dropdown-panel">
-                        </div>
                 </div>
                 <div class="view-toggle-container">
                     <button id="view-toggle-btn" class="control-btn view-toggle">
                         Table View
                     </button>
                 </div>
-                <section class="color-key-container">
-                    <div class="key-item"><span class="key-color" style="background-color: #dbe4ff;"></span>Main Agenda</div>
-                    <div class="key-item"><span class="key-color" style="background-color: #d1e7dd;"></span>Duty</div>
-                    <div class="key-item"><span class="key-color" style="background-color: #cff4fc;"></span>Meeting</div>
-                    <div class="key-item"><span class="key-color" style="background-color: #fff3cd;"></span>Break/Off</div>
-                    <div class="key-item"><span class="key-color" style="background-color: #f8f9fa; border: 1px solid #dee2e6;"></span>Free</div>
-                </section>
+            </section>
+            
+            <section class="color-key-container">
+                <div class="key-item"><span class="key-color" style="background-color: #dbe4ff;"></span>Main Agenda</div>
+                <div class="key-item"><span class="key-color" style="background-color: #d1e7dd;"></span>Duty</div>
+                <div class="key-item"><span class="key-color" style="background-color: #cff4fc;"></span>Meeting</div>
+                <div class="key-item"><span class="key-color" style="background-color: #fff3cd;"></span>Break/Off</div>
+                <div class="key-item"><span class="key-color" style="background-color: #f8f9fa; border: 1px solid #dee2e6;"></span>Free</div>
             </section>
 
             <section class="role-filters-expanded" id="role-filters-expanded" style="display: none;"></section>
@@ -765,6 +834,19 @@
         </main>
     </div>
 
+    <!-- Filter Modal -->
+    <div id="filter-panel" class="filter-dropdown-panel">
+        <div class="filter-dropdown-content">
+            <button class="filter-dropdown-close" id="filter-dropdown-close">&times;</button>
+            <div class="filter-dropdown-header">
+                <h2 class="filter-dropdown-title">Filter Roles</h2>
+            </div>
+            <div id="filter-content">
+                <!-- Filter content will be populated here -->
+            </div>
+        </div>
+    </div>
+
     <!-- Role Details Modal -->
     <div id="role-modal" class="role-modal">
         <div class="role-modal-content">
@@ -772,10 +854,6 @@
             <div class="role-modal-header">
                 <h2 class="role-modal-title" id="role-modal-title"></h2>
                 <div class="role-modal-time" id="role-modal-time"></div>
-            </div>
-            <div class="role-modal-section">
-                <h3 class="role-modal-section-title">Current Activity</h3>
-                <div class="role-modal-activity" id="role-modal-activity"></div>
             </div>
             <div class="role-modal-section">
                 <h3 class="role-modal-section-title">Assigned Staff</h3>
@@ -869,11 +947,11 @@
                     }
                     
                     // For AC roles, store the first name for display
-                    if (name.startsWith('AC ')) {
+                    if (role.startsWith('AC ')) {
                         const firstName = name.replace('AC ', '').split(' ')[0];
                         roleNameMap[role] = [firstName];
                         roleFullNamesMap[role] = [name.replace('AC ', '')];
-                    } else if (name.startsWith('CN ')) {
+                    } else if (role.startsWith('CN ')) {
                         // For CN roles, don't store display names but keep full names for modal
                         const fullName = name.replace('CN ', '');
                         roleFullNamesMap[role].push(fullName);
@@ -886,6 +964,9 @@
                 return { roleNameMap: {}, roleFullNamesMap: {} };
             }
         }
+
+        // Global state to make it accessible to all functions
+        let globalState = {};
 
         document.addEventListener('DOMContentLoaded', async function () {
             const scheduleData = await loadScheduleData();
@@ -909,6 +990,7 @@
             };
 
             const state = { roles: [], processedData: {}, roleAssignments: roleNameMap, roleFullNames: roleFullNamesMap };
+            globalState = state; // Make state accessible globally
             
             const timeToMinutes = (timeStr) => {
                 if (!timeStr || typeof timeStr !== 'string' || !timeStr.includes(':')) return null;
@@ -948,7 +1030,7 @@
             
             const getActivityColor = (activityData) => {
                 if (typeof activityData === 'string') {
-                    if (activityData === 'Free') {
+                    if (activityData === 'Free' || activityData === 'No Duty') {
                         return {
                             backgroundColor: '#f8f9fa',
                             borderColor: '#6c757d',
@@ -981,24 +1063,42 @@
                 };
             };
             
-            function regenerateCardViews() {
-                CONFIG.DAYS_ORDER.forEach(day => {
-                    const slide = document.querySelector(`.swiper-slide[data-day="${day}"]`);
-                    if (slide) {
-                        const cardView = slide.querySelector('.card-view');
-                        if (cardView) {
-                            const newCardHTML = generateCardViewForDay(day);
-                            const tempDiv = document.createElement('div');
-                            tempDiv.innerHTML = newCardHTML;
-                            const newCardView = tempDiv.querySelector('.card-view');
-                            
-                            if (cardView.classList.contains('active')) {
-                                newCardView.classList.add('active');
-                            }
-                            
-                            cardView.parentNode.replaceChild(newCardView, cardView);
-                        }
+            // Track if we need to update views when modal closes
+            let needsViewUpdate = false;
+            
+            // Function to apply all filter changes
+            function applyFilterChanges() {
+                if (needsViewUpdate) {
+                    updateColumnAbbreviations();
+                    // Only regenerate card views if we're currently in card view mode
+                    if (document.querySelector('.card-view.active')) {
+                        regenerateCardViews();
                     }
+                    needsViewUpdate = false;
+                }
+            }
+            
+            function regenerateCardViews() {
+                // Use requestAnimationFrame for better performance
+                requestAnimationFrame(() => {
+                    CONFIG.DAYS_ORDER.forEach(day => {
+                        const slide = document.querySelector(`.swiper-slide[data-day="${day}"]`);
+                        if (slide) {
+                            const cardView = slide.querySelector('.card-view');
+                            if (cardView) {
+                                const newCardHTML = generateCardViewForDay(day);
+                                const tempDiv = document.createElement('div');
+                                tempDiv.innerHTML = newCardHTML;
+                                const newCardView = tempDiv.querySelector('.card-view');
+                                
+                                if (cardView.classList.contains('active')) {
+                                    newCardView.classList.add('active');
+                                }
+                                
+                                cardView.parentNode.replaceChild(newCardView, cardView);
+                            }
+                        }
+                    });
                 });
             }
             
@@ -1020,26 +1120,73 @@
             };
             
             function preprocessData(data) {
+                // First, create merged events from the raw data
+                const mergedEvents = createMergedEvents(data);
+                
                 const allRoles = new Set();
                 const processed = {};
                 CONFIG.DAYS_ORDER.forEach(day => processed[day] = []);
-                data.forEach(event => {
-                    if (event.Role) allRoles.add(event.Role);
-                    const startMins = timeToMinutes(event['Start Time']);
-                    const endMins = timeToMinutes(event['End Time']);
-                    if (event.Weekday && processed[event.Weekday] && startMins !== null) {
-                        processed[event.Weekday].push({
+                
+                // Process merged events instead of raw data
+                mergedEvents.forEach(event => {
+                    // Add all roles from this event to the role set
+                    event.assignedRoles.forEach(role => allRoles.add(role));
+                    
+                    const startMins = timeToMinutes(event.startTime);
+                    const endMins = timeToMinutes(event.endTime);
+                    if (event.weekday && processed[event.weekday] && startMins !== null) {
+                        processed[event.weekday].push({
                             ...event,
                             startMins,
                             endMins: endMins === null ? startMins + 15 : endMins,
                         });
                     }
                 });
+                
                 state.roles = [...allRoles].sort((a, b) => {
                     if (a === 'Agenda') return -1; if (b === 'Agenda') return 1;
                     return a.localeCompare(b, undefined, { numeric: true });
                 });
                 state.processedData = processed;
+            }
+            
+            function createMergedEvents(rawData) {
+                const eventMap = new Map();
+                
+                rawData.forEach(row => {
+                    // Create a unique key for events that should be merged
+                    const key = `${row.Weekday}-${row['Start Time']}-${row['End Time']}-${row['Event Name']}-${row['Event Type']}`;
+                    
+                    if (eventMap.has(key)) {
+                        // Event already exists, add this role to it
+                        const existingEvent = eventMap.get(key);
+                        existingEvent.assignedRoles.push(row.Role);
+                    } else {
+                        // Create new merged event
+                        const mergedEvent = {
+                            weekday: row.Weekday,
+                            startTime: row['Start Time'],
+                            endTime: row['End Time'],
+                            eventName: row['Event Name'],
+                            eventAbbreviation: row['Event Abbreviation'],
+                            eventType: row['Event Type'],
+                            eventDescription: row['Event Description'],
+                            assignedRoles: [row.Role],
+                            // Keep original structure for backward compatibility
+                            'Event Name': row['Event Name'],
+                            'Event Abbreviation': row['Event Abbreviation'],
+                            'Event Type': row['Event Type'],
+                            'Event Description': row['Event Description'],
+                            'Start Time': row['Start Time'],
+                            'End Time': row['End Time'],
+                            'Weekday': row.Weekday,
+                            'Role': row.Role // This will be the first role, but we'll use assignedRoles for the full list
+                        };
+                        eventMap.set(key, mergedEvent);
+                    }
+                });
+                
+                return Array.from(eventMap.values());
             }
 
             function generateCalendarForDay(day) {
@@ -1053,13 +1200,23 @@
                 const maxTime = Math.max(...allTimes);
                 const eventGrid = {};
                 state.roles.forEach(role => { eventGrid[role] = {}; });
+                
                 dayEvents.forEach(event => {
-                    if (!event.Role || !eventGrid[event.Role] || event.endMins <= event.startMins) return;
-                    eventGrid[event.Role][event.startMins] = { ...event, isStart: true, duration: event.endMins - event.startMins };
-                    for (let t = event.startMins + 5; t < event.endMins; t += 5) {
-                        eventGrid[event.Role][t] = { isSpanned: true };
-                    }
+                    // For each role assigned to this event, add it to the grid
+                    event.assignedRoles.forEach(role => {
+                        if (!eventGrid[role] || event.endMins <= event.startMins) return;
+                        eventGrid[role][event.startMins] = { 
+                            ...event, 
+                            isStart: true, 
+                            duration: event.endMins - event.startMins,
+                            Role: role // Set the current role for this cell
+                        };
+                        for (let t = event.startMins + 5; t < event.endMins; t += 5) {
+                            eventGrid[role][t] = { isSpanned: true };
+                        }
+                    });
                 });
+                
                 let tableRows = '';
                 for (let t = minTime; t < maxTime; t += 5) {
                     tableRows += `<tr data-time-minutes="${t}"><td class="time-col">${minutesToTime(t)}</td>`;
@@ -1122,227 +1279,11 @@
                 let cardsHTML = '';
                 
                 agendaEvents.forEach(agendaEvent => {
-                    // Find what each role is doing during this agenda event
-                    const roleActivities = {};
-                    
-                    // Initialize all roles (except filtered out ones), plus paired AC/CN roles
-                    state.roles.forEach(role => {
-                        if (role !== 'Agenda') {
-                            const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-                            // Check if role is currently visible (not filtered out)
-                            const isRoleVisible = document.querySelector(`[data-role="${roleClass}"]`)?.style.display !== 'none';
-                            if (isRoleVisible) {
-                                roleActivities[role] = 'Free';
-                                
-                                // If this is an AC role, also include its paired CN role even if filtered out
-                                const acMatch = role.match(/^AC (\d+)$/);
-                                if (acMatch) {
-                                    const acNumber = parseInt(acMatch[1]);
-                                    const pairedCnLetter = String.fromCharCode('A'.charCodeAt(0) + acNumber - 1);
-                                    const pairedCnRole = `CN ${pairedCnLetter}`;
-                                    // Add the paired CN role if it exists in the data
-                                    if (state.roles.includes(pairedCnRole)) {
-                                        roleActivities[pairedCnRole] = 'Free';
-                                    }
-                                }
-                                
-                                // If this is a CN role, also include its paired AC role even if filtered out
-                                const cnMatch = role.match(/^CN ([A-Z])$/);
-                                if (cnMatch) {
-                                    const cnLetter = cnMatch[1];
-                                    const acNumber = cnLetter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
-                                    const pairedAcRole = `AC ${acNumber}`;
-                                    // Add the paired AC role if it exists in the data
-                                    if (state.roles.includes(pairedAcRole)) {
-                                        roleActivities[pairedAcRole] = 'Free';
-                                    }
-                                }
-                            }
-                        }
-                    });
-                    
-                    // Find concurrent events for other roles (only include visible roles)
-                    dayEvents.forEach(event => {
-                        if (event.Role && event.Role !== 'Agenda' && 
-                            event.startMins < agendaEvent.endMins && 
-                            event.endMins > agendaEvent.startMins) {
-                            // Check if this role should be included
-                            if (roleActivities.hasOwnProperty(event.Role)) {
-                                // This event overlaps with the agenda event
-                                roleActivities[event.Role] = {
-                                    activity: `${event['Event Abbreviation']} - ${event['Event Name']}`,
-                                    eventType: event['Event Type']
-                                };
-                            }
-                        }
-                    });
+                    // Find what each role is doing during this agenda event using the new hierarchy
+                    const roleActivities = getRoleActivitiesForAgendaEvent(agendaEvent, dayEvents);
                     
                     // Generate role assignments HTML with paired columns
-                    const roleAssignmentsHTML = (() => {
-                        const roleEntries = Object.entries(roleActivities);
-                        
-                        // Separate AC and CN roles, and other roles
-                        const acRoles = roleEntries.filter(([role]) => role.startsWith('AC '));
-                        const cnRoles = roleEntries.filter(([role]) => role.startsWith('CN '));
-                        const otherRoles = roleEntries.filter(([role]) => !role.startsWith('AC ') && !role.startsWith('CN '));
-                        
-                        // Sort AC and CN roles numerically/alphabetically
-                        acRoles.sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
-                        cnRoles.sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
-                        
-                        let html = '';
-                        
-                        // Create specific AC/CN pairings (AC 1 with CN A, AC 2 with CN B, etc.)
-                        // Convert roles to maps for easier lookup
-                        const acRoleMap = new Map();
-                        const cnRoleMap = new Map();
-                        
-                        acRoles.forEach(([role, activityData]) => {
-                            const match = role.match(/^AC (\d+)$/);
-                            if (match) {
-                                acRoleMap.set(parseInt(match[1]), [role, activityData]);
-                            }
-                        });
-                        
-                        cnRoles.forEach(([role, activityData]) => {
-                            const match = role.match(/^CN ([A-Z])$/);
-                            if (match) {
-                                // Convert letter to number (A=1, B=2, etc.)
-                                const letterNumber = match[1].charCodeAt(0) - 'A'.charCodeAt(0) + 1;
-                                cnRoleMap.set(letterNumber, [role, activityData]);
-                            }
-                        });
-                        
-                        // Find all AC numbers that exist
-                        const allAcNumbers = [...acRoleMap.keys(), ...cnRoleMap.keys()];
-                        const maxAcNumber = allAcNumbers.length > 0 ? Math.max(...allAcNumbers) : 0;
-                        
-                        // Create pairs and track for dividers
-                        const visibleRows = [];
-                        
-                        for (let acNumber = 1; acNumber <= maxAcNumber; acNumber++) {
-                            const acRole = acRoleMap.get(acNumber);
-                            const cnRole = cnRoleMap.get(acNumber);
-                            
-                            // Only create a row if at least one role exists
-                            if (acRole || cnRole) {
-                                visibleRows.push(acNumber);
-                                
-                                html += '<div class="role-pair">';
-                                
-                                // Add AC role if exists, otherwise add invisible placeholder
-                                if (acRole) {
-                                    const [role, activityData] = acRole;
-                                    const colors = getActivityColor(activityData);
-                                    const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
-                                    const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'Free' ? 'Free' : 'Duty');
-                                    const roleNameWithAssignments = formatRoleNameWithAssignments(role);
-                                    const activityDescription = typeof activityData === 'object' ? 
-                                        dayEvents.find(e => e.Role === role && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
-                                    html += `
-                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
-                                             data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
-                                             data-event-time="${agendaEvent['Start Time']} - ${agendaEvent['End Time']}" data-event-name="${agendaEvent['Event Name']}"
-                                             data-event-type="${eventType}">
-                                            <div class="role-name">${roleNameWithAssignments}</div>
-                                            <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
-                                        </div>
-                                    `;
-                                } else {
-                                    // Invisible placeholder for AC column when no AC role but CN role exists
-                                    html += '<div class="role-assignment" style="visibility: hidden;"></div>';
-                                }
-                                
-                                // Add CN role if exists, otherwise add invisible placeholder
-                                if (cnRole) {
-                                    const [role, activityData] = cnRole;
-                                    const colors = getActivityColor(activityData);
-                                    const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
-                                    const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'Free' ? 'Free' : 'Duty');
-                                    const roleNameWithAssignments = formatRoleNameWithAssignments(role);
-                                    const activityDescription = typeof activityData === 'object' ? 
-                                        dayEvents.find(e => e.Role === role && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
-                                    html += `
-                                        <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
-                                             data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
-                                             data-event-time="${agendaEvent['Start Time']} - ${agendaEvent['End Time']}" data-event-name="${agendaEvent['Event Name']}"
-                                             data-event-type="${eventType}">
-                                            <div class="role-name">${roleNameWithAssignments}</div>
-                                            <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
-                                        </div>
-                                    `;
-                                } else {
-                                    // Invisible placeholder for CN column when no CN role but AC role exists
-                                    html += '<div class="role-assignment" style="visibility: hidden;"></div>';
-                                }
-                                
-                                html += '</div>';
-                            }
-                        }
-                        
-                        // Add dividers based on AC number grouping (1-2, 3-4, 5-6, etc.)
-                        if (visibleRows.length > 0) {
-                            // Insert dividers by going through visible rows and adding dividers after every second AC number
-                            let htmlWithDividers = '';
-                            const rowsArray = html.split('<div class="role-pair">').filter(part => part.trim());
-                            
-                            for (let i = 0; i < visibleRows.length; i++) {
-                                const acNumber = visibleRows[i];
-                                const isLastRow = i === visibleRows.length - 1;
-                                const isEvenAcNumber = acNumber % 2 === 0;
-                                
-                                // Add the role pair
-                                if (i === 0) {
-                                    htmlWithDividers += '<div class="role-pair">' + rowsArray[i];
-                                } else {
-                                    htmlWithDividers += '<div class="role-pair">' + rowsArray[i];
-                                }
-                                
-                                // Add divider after even AC numbers (2, 4, 6, etc.) but not after the last row
-                                if (isEvenAcNumber && !isLastRow) {
-                                    htmlWithDividers += '<div class="role-pair-divider"></div>';
-                                }
-                                // Special case: if there's only one visible row from an odd-even pair, add dividers above and below
-                                else if (!isEvenAcNumber && !isLastRow) {
-                                    const nextVisibleAcNumber = visibleRows[i + 1];
-                                    // If next number is not the immediate next (i.e., the even pair is missing), add divider
-                                    if (nextVisibleAcNumber !== acNumber + 1) {
-                                        htmlWithDividers += '<div class="role-pair-divider"></div>';
-                                    }
-                                }
-                            }
-                            
-                            html = htmlWithDividers;
-                        }
-                        
-                        // Add other roles in pairs
-                        for (let i = 0; i < otherRoles.length; i += 2) {
-                            html += '<div class="role-pair">';
-                            
-                            for (let j = 0; j < 2 && (i + j) < otherRoles.length; j++) {
-                                const [role, activityData] = otherRoles[i + j];
-                                const colors = getActivityColor(activityData);
-                                const displayText = typeof activityData === 'string' ? activityData : activityData.activity;
-                                const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'Free' ? 'Free' : 'Duty');
-                                const roleNameWithAssignments = formatRoleNameWithAssignments(role);
-                                const activityDescription = typeof activityData === 'object' ? 
-                                    dayEvents.find(e => e.Role === role && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
-                                html += `
-                                    <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
-                                         data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
-                                         data-event-time="${agendaEvent['Start Time']} - ${agendaEvent['End Time']}" data-event-name="${agendaEvent['Event Name']}"
-                                         data-event-type="${eventType}">
-                                        <div class="role-name">${roleNameWithAssignments}</div>
-                                        <div class="role-activity" style="color: ${colors.textColor};">${displayText}</div>
-                                    </div>
-                                `;
-                            }
-                            
-                            html += '</div>';
-                        }
-                        
-                        return html;
-                    })();
+                    const roleAssignmentsHTML = generateRoleAssignmentsHTML(roleActivities, agendaEvent, dayEvents);
                     
                     cardsHTML += `
                         <div class="agenda-card">
@@ -1359,6 +1300,290 @@
                 });
                 
                 return `<div class="card-view">${cardsHTML}</div>`;
+            }
+            
+            function getRoleActivitiesForAgendaEvent(agendaEvent, dayEvents) {
+                const roleActivities = {};
+                
+                // Initialize all visible roles
+                state.roles.forEach(role => {
+                    if (role !== 'Agenda') {
+                        const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                        // Check if role is currently visible (not filtered out)
+                        const isRoleVisible = document.querySelector(`[data-role="${roleClass}"]`)?.style.display !== 'none';
+                        if (isRoleVisible) {
+                            roleActivities[role] = null; // Start with null, will be filled based on hierarchy
+                            
+                            // If this is an AC role, also include its paired CN role even if filtered out
+                            const acMatch = role.match(/^AC (\d+)$/);
+                            if (acMatch) {
+                                const acNumber = parseInt(acMatch[1]);
+                                const pairedCnLetter = String.fromCharCode('A'.charCodeAt(0) + acNumber - 1);
+                                const pairedCnRole = `CN ${pairedCnLetter}`;
+                                if (state.roles.includes(pairedCnRole)) {
+                                    roleActivities[pairedCnRole] = null;
+                                }
+                            }
+                            
+                            // If this is a CN role, also include its paired AC role even if filtered out
+                            const cnMatch = role.match(/^CN ([A-Z])$/);
+                            if (cnMatch) {
+                                const cnLetter = cnMatch[1];
+                                const acNumber = cnLetter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                                const pairedAcRole = `AC ${acNumber}`;
+                                if (state.roles.includes(pairedAcRole)) {
+                                    roleActivities[pairedAcRole] = null;
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // Find events for each role using the new hierarchy
+                dayEvents.forEach(event => {
+                    if (event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda') {
+                        return; // Skip agenda events
+                    }
+                    
+                    // Check if this event overlaps with the agenda event
+                    const isOverlapping = event.startMins < agendaEvent.endMins && event.endMins > agendaEvent.startMins;
+                    const startsWithinAgenda = event.startMins >= agendaEvent.startMins && event.startMins < agendaEvent.endMins;
+                    const isActiveAtAgendaStart = event.startMins <= agendaEvent.startMins && event.endMins > agendaEvent.startMins;
+                    
+                    if (isOverlapping || startsWithinAgenda || isActiveAtAgendaStart) {
+                        // This event is relevant to the agenda event
+                        event.assignedRoles.forEach(role => {
+                            if (roleActivities.hasOwnProperty(role)) {
+                                const currentActivity = roleActivities[role];
+                                const newActivity = {
+                                    activity: `${event['Event Abbreviation']} - ${event['Event Name']}`,
+                                    eventType: event['Event Type'],
+                                    startTime: event['Start Time'],
+                                    endTime: event['End Time'],
+                                    isOverlapping: isOverlapping,
+                                    startsWithin: startsWithinAgenda,
+                                    priority: getEventPriority(event['Event Type'])
+                                };
+                                
+                                // Apply hierarchy rules
+                                if (shouldReplaceActivity(currentActivity, newActivity)) {
+                                    roleActivities[role] = newActivity;
+                                }
+                            }
+                        });
+                    }
+                });
+                
+                // Fill in any remaining null values with "No Duty"
+                Object.keys(roleActivities).forEach(role => {
+                    if (roleActivities[role] === null) {
+                        roleActivities[role] = 'No Duty';
+                    }
+                });
+                
+                return roleActivities;
+            }
+            
+            function getEventPriority(eventType) {
+                const priorities = {
+                    'duty': 1,    // Highest priority
+                    'break': 2,   // Time off
+                    'free': 3     // No duty - lowest priority
+                };
+                return priorities[eventType.toLowerCase()] || 1; // Default to duty priority
+            }
+            
+            function shouldReplaceActivity(currentActivity, newActivity) {
+                if (currentActivity === null || currentActivity === 'No Duty') {
+                    return true; // Always replace null or "No Duty"
+                }
+                
+                if (typeof currentActivity === 'string') {
+                    return true; // Replace simple strings with detailed activity objects
+                }
+                
+                if (typeof currentActivity === 'object' && typeof newActivity === 'object') {
+                    // Lower priority number = higher priority
+                    if (newActivity.priority < currentActivity.priority) {
+                        return true; // New activity has higher priority
+                    } else if (newActivity.priority === currentActivity.priority) {
+                        // Same priority, use other criteria
+                        if (newActivity.isOverlapping && !currentActivity.isOverlapping) {
+                            return true; // Prefer overlapping events
+                        } else if (newActivity.isOverlapping === currentActivity.isOverlapping) {
+                            // Same overlap type, prefer longer duration
+                            const currentDuration = timeToMinutes(currentActivity.endTime) - timeToMinutes(currentActivity.startTime);
+                            const newDuration = timeToMinutes(newActivity.endTime) - timeToMinutes(newActivity.startTime);
+                            if (newDuration > currentDuration) {
+                                return true;
+                            } else if (newDuration === currentDuration) {
+                                // Same duration, prefer earlier start time
+                                const currentStart = timeToMinutes(currentActivity.startTime);
+                                const newStart = timeToMinutes(newActivity.startTime);
+                                return newStart < currentStart;
+                            }
+                        }
+                    }
+                }
+                
+                return false; // Don't replace
+            }
+            
+            function generateRoleAssignmentsHTML(roleActivities, agendaEvent, dayEvents) {
+                const roleEntries = Object.entries(roleActivities);
+                
+                // Separate AC and CN roles, and other roles
+                const acRoles = roleEntries.filter(([role]) => role.startsWith('AC '));
+                const cnRoles = roleEntries.filter(([role]) => role.startsWith('CN '));
+                const otherRoles = roleEntries.filter(([role]) => !role.startsWith('AC ') && !role.startsWith('CN '));
+                
+                // Sort AC and CN roles numerically/alphabetically
+                acRoles.sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
+                cnRoles.sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
+                
+                let html = '';
+                
+                // Create specific AC/CN pairings (AC 1 with CN A, AC 2 with CN B, etc.)
+                const acRoleMap = new Map();
+                const cnRoleMap = new Map();
+                
+                acRoles.forEach(([role, activityData]) => {
+                    const match = role.match(/^AC (\d+)$/);
+                    if (match) {
+                        acRoleMap.set(parseInt(match[1]), [role, activityData]);
+                    }
+                });
+                
+                cnRoles.forEach(([role, activityData]) => {
+                    const match = role.match(/^CN ([A-Z])$/);
+                    if (match) {
+                        const letterNumber = match[1].charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                        cnRoleMap.set(letterNumber, [role, activityData]);
+                    }
+                });
+                
+                // Find all AC numbers that exist
+                const allAcNumbers = [...acRoleMap.keys(), ...cnRoleMap.keys()];
+                const maxAcNumber = allAcNumbers.length > 0 ? Math.max(...allAcNumbers) : 0;
+                
+                // Create pairs and track for dividers
+                const visibleRows = [];
+                
+                for (let acNumber = 1; acNumber <= maxAcNumber; acNumber++) {
+                    const acRole = acRoleMap.get(acNumber);
+                    const cnRole = cnRoleMap.get(acNumber);
+                    
+                    // Only create a row if at least one role exists
+                    if (acRole || cnRole) {
+                        visibleRows.push(acNumber);
+                        
+                        html += '<div class="role-pair">';
+                        
+                        // Add AC role if exists, otherwise add invisible placeholder
+                        if (acRole) {
+                            html += generateRoleAssignmentHTML(acRole[0], acRole[1], agendaEvent, dayEvents);
+                        } else {
+                            html += '<div class="role-assignment" style="visibility: hidden;"></div>';
+                        }
+                        
+                        // Add CN role if exists, otherwise add invisible placeholder
+                        if (cnRole) {
+                            html += generateRoleAssignmentHTML(cnRole[0], cnRole[1], agendaEvent, dayEvents);
+                        } else {
+                            html += '<div class="role-assignment" style="visibility: hidden;"></div>';
+                        }
+                        
+                        html += '</div>';
+                    }
+                }
+                
+                // Add dividers based on AC number grouping (1-2, 3-4, 5-6, etc.)
+                if (visibleRows.length > 0) {
+                    let htmlWithDividers = '';
+                    const rowsArray = html.split('<div class="role-pair">').filter(part => part.trim());
+                    
+                    for (let i = 0; i < visibleRows.length; i++) {
+                        const acNumber = visibleRows[i];
+                        const isLastRow = i === visibleRows.length - 1;
+                        const isEvenAcNumber = acNumber % 2 === 0;
+                        
+                        // Add the role pair
+                        if (i === 0) {
+                            htmlWithDividers += '<div class="role-pair">' + rowsArray[i];
+                        } else {
+                            htmlWithDividers += '<div class="role-pair">' + rowsArray[i];
+                        }
+                        
+                        // Add divider after even AC numbers (2, 4, 6, etc.) but not after the last row
+                        if (isEvenAcNumber && !isLastRow) {
+                            htmlWithDividers += '<div class="role-pair-divider"></div>';
+                        }
+                        // Special case: if there's only one visible row from an odd-even pair, add dividers above and below
+                        else if (!isEvenAcNumber && !isLastRow) {
+                            const nextVisibleAcNumber = visibleRows[i + 1];
+                            // If next number is not the immediate next (i.e., the even pair is missing), add divider
+                            if (nextVisibleAcNumber !== acNumber + 1) {
+                                htmlWithDividers += '<div class="role-pair-divider"></div>';
+                            }
+                        }
+                    }
+                    
+                    html = htmlWithDividers;
+                }
+                
+                // Add other roles in pairs
+                for (let i = 0; i < otherRoles.length; i += 2) {
+                    html += '<div class="role-pair">';
+                    
+                    for (let j = 0; j < 2 && (i + j) < otherRoles.length; j++) {
+                        const [role, activityData] = otherRoles[i + j];
+                        html += generateRoleAssignmentHTML(role, activityData, agendaEvent, dayEvents);
+                    }
+                    
+                    html += '</div>';
+                }
+                
+                return html;
+            }
+            
+            function generateRoleAssignmentHTML(role, activityData, agendaEvent, dayEvents) {
+                const colors = getActivityColor(activityData);
+                let displayText, timeIndicator = '';
+                let assignmentTime = `${agendaEvent['Start Time']} - ${agendaEvent['End Time']}`; // Default to agenda time
+                
+                if (typeof activityData === 'string') {
+                    displayText = activityData;
+                } else {
+                    displayText = activityData.activity;
+                    // Use the specific assignment's time instead of agenda time
+                    assignmentTime = `${activityData.startTime} - ${activityData.endTime}`;
+                    
+                    // Add time indicator if duty doesn't fully overlap with agenda
+                    if (!activityData.isOverlapping) {
+                        if (activityData.startsWithin) {
+                            // Duty starts within agenda but ends after
+                            timeIndicator = ` (starts ${activityData.startTime})`;
+                        } else {
+                            // Duty is active during agenda but has different time range
+                            timeIndicator = ` (${activityData.startTime} - ${activityData.endTime})`;
+                        }
+                    }
+                }
+                
+                const eventType = typeof activityData === 'object' ? activityData.eventType : (activityData === 'No Duty' ? 'Free' : 'Duty');
+                const roleNameWithAssignments = formatRoleNameWithAssignments(role);
+                const activityDescription = typeof activityData === 'object' ? 
+                    dayEvents.find(e => e.assignedRoles.includes(role) && e.startMins < agendaEvent.endMins && e.endMins > agendaEvent.startMins)?.['Event Description'] || '' : '';
+                
+                return `
+                    <div class="role-assignment" style="background-color: ${colors.backgroundColor}; border-left-color: ${colors.borderColor};" 
+                         data-role="${role}" data-activity="${displayText}" data-description="${activityDescription}" 
+                         data-event-time="${assignmentTime}" data-event-name="${agendaEvent['Event Name']}"
+                         data-event-type="${eventType}">
+                        <div class="role-name">${roleNameWithAssignments}</div>
+                        <div class="role-activity" style="color: ${colors.textColor};">${displayText}${timeIndicator}</div>
+                    </div>
+                `;
             }
             
             function populateFilters() {
@@ -1407,7 +1632,7 @@
                         const roleClass = acRole.replace(/[^a-z0-9]/gi, '-').toLowerCase();
                         const assignments = state.roleAssignments[acRole];
                         const displayName = assignments && assignments.length > 0 ? `${acRole} (${assignments[0]})` : acRole;
-                        roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${displayName}</label></div>`;
+                        roleOptionsHTML += `<div class="role-option ac-role"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${displayName}</label></div>`;
                     }
                     
                     // Add CN role if it exists
@@ -1423,8 +1648,8 @@
                     roleOptionsHTML += `<div class="role-option"><input type="checkbox" id="dd-role-${roleClass}" value="${roleClass}" checked><label for="dd-role-${roleClass}">${role}</label></div>`;
                 });
                 
-                // Only populate the dropdown filter panel
-                document.querySelector(CONFIG.SELECTORS.filterPanel).innerHTML = filterControls + '<div class="filter-options-grid">' + roleOptionsHTML + '</div>';
+                // Populate the filter content area
+                document.querySelector('#filter-content').innerHTML = filterControls + '<div class="filter-options-grid">' + roleOptionsHTML + '</div>';
             }
 
             // Function to update active day button
@@ -1476,12 +1701,33 @@
             function setupEventListeners(swiper) {
                 const filterTrigger = document.querySelector(CONFIG.SELECTORS.filterTrigger);
                 const filterPanel = document.querySelector(CONFIG.SELECTORS.filterPanel);
-                filterTrigger.addEventListener('click', () => filterPanel.classList.toggle('active'));
-                document.addEventListener('click', (e) => {
-                    if (!filterPanel.contains(e.target) && !filterTrigger.contains(e.target)) {
+                const filterClose = document.querySelector('#filter-dropdown-close');
+                
+                // Open filter modal
+                filterTrigger.addEventListener('click', () => filterPanel.classList.add('active'));
+                
+                // Close filter modal
+                filterClose.addEventListener('click', () => {
+                    filterPanel.classList.remove('active');
+                    applyFilterChanges(); // Apply changes when modal closes
+                });
+                
+                // Close modal when clicking outside
+                filterPanel.addEventListener('click', (e) => {
+                    if (e.target === filterPanel) {
                         filterPanel.classList.remove('active');
+                        applyFilterChanges(); // Apply changes when modal closes
                     }
                 });
+                
+                // Close modal with Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && filterPanel.classList.contains('active')) {
+                        filterPanel.classList.remove('active');
+                        applyFilterChanges(); // Apply changes when modal closes
+                    }
+                });
+                
                 document.querySelector(CONFIG.SELECTORS.quickNav).addEventListener('click', (e) => {
                     if (e.target.matches('.quick-nav-btn[data-day]')) {
                         const dayIndex = CONFIG.DAYS_ORDER.indexOf(e.target.dataset.day);
@@ -1499,16 +1745,21 @@
                             const isVisible = target.checked;
                             document.querySelectorAll(`input[value="${role}"]`).forEach(cb => cb.checked = isVisible);
                             document.querySelectorAll(`[data-role="${role}"]`).forEach(el => el.style.display = isVisible ? '' : 'none');
-                            updateColumnAbbreviations(); // Update abbreviations when filters change
-                            regenerateCardViews(); // Update card views when filters change
+                            needsViewUpdate = true; // Mark that we need to update views later
                             savePreferences();
                         } else if (target.matches('.filter-control-btn')) {
                             const isSelectAll = target.dataset.action === 'select-all';
+                            // Bulk operation - update all at once without individual events
                             container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-                                if (cb.checked !== isSelectAll) cb.click();
+                                if (cb.checked !== isSelectAll) {
+                                    cb.checked = isSelectAll;
+                                    const role = cb.value;
+                                    document.querySelectorAll(`input[value="${role}"]`).forEach(syncCb => syncCb.checked = isSelectAll);
+                                    document.querySelectorAll(`[data-role="${role}"]`).forEach(el => el.style.display = isSelectAll ? '' : 'none');
+                                }
                             });
-                            updateColumnAbbreviations(); // Update abbreviations after bulk changes
-                            regenerateCardViews(); // Update card views after bulk changes
+                            needsViewUpdate = true; // Mark that we need to update views later
+                            savePreferences();
                         }
                     });
                 });
@@ -1561,59 +1812,60 @@
                 const eventName = element.dataset.eventName;
                 const eventType = element.dataset.eventType;
                 
-                // Update modal content
-                document.getElementById('role-modal-title').textContent = role;
+                // Find all roles with the same activity, event time, and event type to combine their staff
+                const allRoleAssignments = document.querySelectorAll('.role-assignment[data-role]');
+                const relatedRoles = [];
+                const combinedStaff = [];
+                
+                allRoleAssignments.forEach(roleEl => {
+                    const roleElActivity = roleEl.dataset.activity;
+                    const roleElEventTime = roleEl.dataset.eventTime;
+                    const roleElEventType = roleEl.dataset.eventType;
+                    const roleElRole = roleEl.dataset.role;
+                    
+                    // Check if this role assignment matches the same event (same activity, time, and type)
+                    if (roleElActivity === activity && roleElEventTime === eventTime && roleElEventType === eventType) {
+                        relatedRoles.push(roleElRole);
+                        
+                        // Add staff from this role
+                        const roleStaff = state.roleFullNames[roleElRole] || [];
+                        roleStaff.forEach(staffName => {
+                            if (!combinedStaff.includes(staffName)) {
+                                combinedStaff.push(staffName);
+                            }
+                        });
+                    }
+                });
+                
+                // Update modal content - use activity as title
+                document.getElementById('role-modal-title').textContent = activity;
+                
                 document.getElementById('role-modal-time').textContent = eventTime;
                 
-                // Activity section with color coding
-                const activityContainer = document.getElementById('role-modal-activity');
-                
-                // Create activity data object for color matching
-                let activityDataForColor;
-                if (eventType && eventType !== 'Free' && eventType !== 'Duty') {
-                    activityDataForColor = {
-                        activity: activity,
-                        eventType: eventType
-                    };
-                } else if (activity === 'Free' || eventType === 'Free') {
-                    activityDataForColor = 'Free';
-                } else {
-                    activityDataForColor = {
-                        activity: activity,
-                        eventType: 'Duty'
-                    };
-                }
-                
-                // Use the same color function as the card view
-                const colors = getActivityColor(activityDataForColor);
-                
-                if (eventType) {
-                    // This is a table event, show the event type
-                    activityContainer.innerHTML = `
-                        <div class="role-modal-activity-name">${activity}</div>
-                        <div class="role-modal-activity-type">${eventType}</div>
-                    `;
-                } else {
-                    // This is a role assignment, show the during event
-                    activityContainer.innerHTML = `
-                        <div class="role-modal-activity-name">${activity}</div>
-                        <div class="role-modal-activity-type">During: ${eventName}</div>
-                    `;
-                }
-                
-                // Apply colors to the activity container
-                activityContainer.style.backgroundColor = colors.backgroundColor;
-                activityContainer.style.borderLeftColor = colors.borderColor;
-                activityContainer.style.borderLeftWidth = '4px';
-                activityContainer.style.borderLeftStyle = 'solid';
-                
-                // Names section
+                // Names section - use combined staff from all related roles
                 const namesContainer = document.getElementById('role-modal-names');
-                const fullNames = state.roleFullNames[role] || [];
                 
-                if (fullNames.length > 0) {
-                    const nameTagsHTML = fullNames.map(name => {
-                        return `<span class="role-modal-name-tag">${name}</span>`;
+                if (combinedStaff.length > 0) {
+                    // Create a map of staff names to their roles to determine styling
+                    const staffRoleMap = new Map();
+                    
+                    relatedRoles.forEach(role => {
+                        const roleStaff = state.roleFullNames[role] || [];
+                        roleStaff.forEach(staffName => {
+                            if (!staffRoleMap.has(staffName)) {
+                                staffRoleMap.set(staffName, []);
+                            }
+                            staffRoleMap.get(staffName).push(role);
+                        });
+                    });
+                    
+                    const nameTagsHTML = combinedStaff.map(name => {
+                        // Check if this specific staff member is assigned to an AC role
+                        const staffRoles = staffRoleMap.get(name) || [];
+                        const isAssignedToAcRole = staffRoles.some(role => role.startsWith('AC '));
+                        const acRoleClass = isAssignedToAcRole ? 'ac-role' : '';
+                        
+                        return `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`;
                     }).join('');
                     namesContainer.innerHTML = nameTagsHTML;
                 } else {
@@ -1761,13 +2013,14 @@
                 Object.entries(dutiesData).forEach(([role, duties]) => {
                     const dutiesListHTML = duties.map(duty => `<li>${duty}</li>`).join('');
                     
-                    // Get the assigned name for this role from the state data
-                    const assignments = state.roleAssignments[role];
+                    // Get the assigned name for this role from the global state
+                    const assignments = globalState.roleAssignments && globalState.roleAssignments[role];
                     const assignedName = assignments && assignments.length > 0 ? ` (${assignments[0]})` : '';
+                    const acRoleClass = role.startsWith('AC ') ? 'ac-role' : '';
                     
                     gridHTML += `
                         <div class="duties-summary-column">
-                            <h3>${role}${assignedName}</h3>
+                            <h3 class="${acRoleClass}">${role}${assignedName}</h3>
                             <ul>
                                 ${dutiesListHTML}
                             </ul>
@@ -1914,6 +2167,10 @@
                             cardView.classList.remove('active');
                         }
                     });
+                    // Regenerate card views when switching to card view
+                    if (isCardView) {
+                        regenerateCardViews();
+                    }
                 };
                 
                 updateViews();
