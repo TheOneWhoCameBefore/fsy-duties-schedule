@@ -98,7 +98,7 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .filter-container, .view-toggle-container {
+        .filter-container, .view-toggle-container, .duties-summary-container {
             display: flex;
             justify-content: center;
             position: relative;
@@ -587,6 +587,88 @@
             color: #555;
             line-height: 1.5;
         }
+        
+        /* Duties Summary Modal Styles */
+        .duties-summary-modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            width: 1000px;
+        }
+        
+        .duties-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .duties-summary-column {
+            background: var(--light-gray);
+            border-radius: 0.375rem;
+            padding: 1rem;
+            border-left: 4px solid var(--border-color);
+        }
+        
+        .duties-summary-column h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 0 0 0.75rem 0;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+        }
+        
+        .duties-summary-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .duties-summary-column li {
+            padding: 0.25rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            color: var(--text-color);
+        }
+        
+        .duties-summary-column li:last-child {
+            border-bottom: none;
+        }
+        
+        .duties-summary-column li:before {
+            content: "• ";
+            color: var(--text-color);
+            font-weight: bold;
+            margin-right: 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .duties-summary-modal-content {
+                width: 95vw;
+                max-height: 85vh;
+                padding: 1rem;
+            }
+            
+            .duties-summary-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 0.75rem;
+            }
+            
+            .duties-summary-column {
+                padding: 0.75rem;
+            }
+            
+            .duties-summary-column h3 {
+                font-size: 0.9rem;
+            }
+            
+            .duties-summary-column li {
+                font-size: 0.8rem;
+            }
+        }
         @media (max-width: 768px) {
             .time-col, .calendar th.time-col, .calendar td.time-col {
                 width: 45px !important;
@@ -634,6 +716,11 @@
     <div id="calendar-container" class="calendar-container">
         <header class="calendar-header" id="calendar-header">
             <section class="calendar-toolbar">
+                <div class="duties-summary-container">
+                    <button id="duties-summary-btn" class="control-btn">
+                        Duties Summary
+                    </button>
+                </div>
                 <div class="filter-container">
                     <button id="filter-trigger-btn" class="control-btn">Filter Roles</button>
                     <div id="filter-panel" class="filter-dropdown-panel">
@@ -697,6 +784,19 @@
             <div class="role-modal-section" id="role-modal-description-section">
                 <h3 class="role-modal-section-title">Activity Description</h3>
                 <div class="role-modal-description" id="role-modal-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Duties Summary Modal -->
+    <div id="duties-summary-modal" class="role-modal">
+        <div class="role-modal-content duties-summary-modal-content">
+            <button class="role-modal-close" id="duties-summary-modal-close">&times;</button>
+            <div class="role-modal-header">
+                <h2 class="role-modal-title">AC Role Duties Summary</h2>
+            </div>
+            <div class="duties-summary-grid">
+                <!-- Duties will be populated here -->
             </div>
         </div>
     </div>
@@ -1535,6 +1635,149 @@
                 document.getElementById('role-modal').classList.add('active');
             }
 
+            function setupDutiesSummaryModal() {
+                const modal = document.getElementById('duties-summary-modal');
+                const closeBtn = document.getElementById('duties-summary-modal-close');
+                const triggerBtn = document.getElementById('duties-summary-btn');
+                
+                // Duties data for each AC role
+                const dutiesData = {
+                    'AC 1': [
+                        'Music Program',
+                        'Dance Prep (T)',
+                        'Dance DJ (T)',
+                        'Games Night',
+                        'Dance Lead (F)',
+                        'Wednesday Exercise Coordinator'
+                    ],
+                    'AC 2': [
+                        'Music Program',
+                        'Dance Prep (T)',
+                        'Dance Lead (T)',
+                        'Games Night Accom',
+                        'TIHS Assist',
+                        'Wednesday Exercise Coordinator',
+                        'Bus Bye Bye',
+                        'Friday Exercise Coordinator'
+                    ],
+                    'AC 3': [
+                        'Music Program',
+                        'Games Night',
+                        'Pizza Night',
+                        'Site Office',
+                        'Communications Coordinator',
+                        'Wednesday Exercise Coordinator'
+                    ],
+                    'AC 4': [
+                        'Singers',
+                        'Devo Assist (T)',
+                        'Games Night Lead',
+                        'Hall Monitor',
+                        'Testimony Rooms',
+                        'Dance Accom (F)',
+                        'Bus Bye Bye'
+                    ],
+                    'AC 5': [
+                        'Check-in Lead',
+                        'Orientation/Hall Monitor',
+                        'Breakfast Lead',
+                        'Variety Show',
+                        'Games Night',
+                        'Pizza Night Aid'
+                    ],
+                    'AC 6': [
+                        'Orientation/Hall Monitor',
+                        'Lunch Lead',
+                        'Variety Show',
+                        'Games Night',
+                        'Lost & Found Coordinator',
+                        'Friday Exercise Coordinator'
+                    ],
+                    'AC 7': [
+                        'Class Duty/Lead',
+                        'THIS Lead',
+                        'Dance Accom (F)',
+                        'Site Office',
+                        'Thank You-Notes Coordinator',
+                        'Thursday Exercise Coordinator'
+                    ],
+                    'AC 8': [
+                        'Dinner Lead',
+                        'Games Night',
+                        'Hall Monitor',
+                        'TIHS - Slideshow',
+                        'Social Media Coordinator',
+                        'Thursday Exercise Coordinator',
+                        'Tuesday Exercise Coordinator'
+                    ],
+                    'AC 9': [
+                        'Bus Welcome',
+                        'Flex-Time Lead',
+                        'Dance Accom (T)',
+                        'Games Night',
+                        'TIHS - Assist',
+                        'Tech Bag Coordinator',
+                        'Tuesday Exercise Coordinator'
+                    ],
+                    'AC 10': [
+                        'Dance',
+                        'Orientation Prep',
+                        'Orientation Assist',
+                        'Flex-Time Lead',
+                        'Dance Accom (T)',
+                        'Lunch Lead Assist (Th)'
+                    ]
+                };
+                
+                // Open modal when trigger button is clicked
+                triggerBtn.addEventListener('click', () => {
+                    populateDutiesSummary(dutiesData);
+                    modal.classList.add('active');
+                });
+                
+                // Close modal handlers
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) {
+                        modal.classList.remove('active');
+                    }
+                });
+            }
+
+            function populateDutiesSummary(dutiesData) {
+                const gridContainer = document.querySelector('.duties-summary-grid');
+                let gridHTML = '';
+                
+                // Generate columns for each AC role
+                Object.entries(dutiesData).forEach(([role, duties]) => {
+                    const dutiesListHTML = duties.map(duty => `<li>${duty}</li>`).join('');
+                    
+                    // Get the assigned name for this role from the state data
+                    const assignments = state.roleAssignments[role];
+                    const assignedName = assignments && assignments.length > 0 ? ` (${assignments[0]})` : '';
+                    
+                    gridHTML += `
+                        <div class="duties-summary-column">
+                            <h3>${role}${assignedName}</h3>
+                            <ul>
+                                ${dutiesListHTML}
+                            </ul>
+                        </div>
+                    `;
+                });
+                
+                gridContainer.innerHTML = gridHTML;
+            }
+
             function savePreferences() {
                 const filters = Array.from(document.querySelectorAll('#filter-panel input[type="checkbox"]')).map(cb => ({ value: cb.value, checked: cb.checked }));
                 const isCardView = document.querySelector('.card-view.active') !== null;
@@ -1638,6 +1881,7 @@
                 
                 setupEventListeners(swiper);
                 setupRoleModal(); // Move this after DOM is fully ready
+                setupDutiesSummaryModal(); // Setup duties summary modal
                 setupViewToggle(preferences.isCardView);
                 
                 const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
