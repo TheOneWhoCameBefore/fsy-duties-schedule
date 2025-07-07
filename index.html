@@ -77,6 +77,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 0.25rem;
+            margin-top: 0.5rem;
         }
         .swiper-button-next, .swiper-button-prev {
             position: static !important;
@@ -710,6 +711,126 @@
             margin-right: 0.25rem;
         }
         
+        /* Name Search Dropdown Styles */
+        .name-search-section {
+            margin-bottom: 0.75rem;
+        }
+        
+        .name-search-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .name-search-input {
+            width: 100%;
+            padding: 0.75rem 2.5rem 0.75rem 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            outline: none;
+            transition: all 0.2s;
+            box-sizing: border-box;
+        }
+        
+        .name-search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+        
+        .name-search-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 0.25rem 0.25rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .name-search-dropdown.active {
+            display: block;
+        }
+        
+        .name-search-option {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid var(--light-gray);
+            transition: background-color 0.2s;
+            font-size: 0.875rem;
+        }
+        
+        .name-search-option:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .name-search-option:last-child {
+            border-bottom: none;
+        }
+        
+        .name-search-option.selected {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .name-search-option .name-role {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .name-search-option.selected .name-role {
+            color: white;
+        }
+        
+        .name-search-option .name-full {
+            font-size: 0.8rem;
+            color: #666;
+            margin-left: 0.5rem;
+        }
+        
+        .name-search-option.selected .name-full {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .name-search-clear {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 1.4rem;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+        
+        .name-search-clear:hover {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+        }
+        
+        .name-search-clear.active {
+            display: flex;
+        }
+        
+        /* Highlighted role styles - REMOVED */
+        
         @media (max-width: 768px) {
             .duties-summary-modal-content {
                 width: 95vw;
@@ -732,6 +853,18 @@
             
             .duties-summary-column li {
                 font-size: 0.8rem;
+            }
+            
+            .name-search-dropdown {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90vw;
+                max-width: 400px;
+                max-height: 60vh;
+                border-radius: 0.5rem;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             }
         }
         @media (max-width: 768px) {
@@ -757,6 +890,16 @@
                 padding: 0.375rem 0.75rem;
                 font-size: 0.8rem;
                 max-width: 120px;
+            }
+            .name-search-input {
+                padding: 0.5rem 2rem 0.5rem 0.75rem;
+                font-size: 0.9rem;
+            }
+            .name-search-clear {
+                right: 8px;
+                width: 20px;
+                height: 20px;
+                font-size: 1.2rem;
             }
             .color-key-container {
                 gap: 0.15rem 0.5rem;
@@ -785,6 +928,20 @@
 <body>
     <div id="calendar-container" class="calendar-container">
         <header class="calendar-header" id="calendar-header">
+            <section class="name-search-section">
+                <div class="name-search-container">
+                    <input type="text" 
+                           id="name-search-input" 
+                           class="name-search-input" 
+                           placeholder="Search names..."
+                           autocomplete="off">
+                    <button class="name-search-clear" id="name-search-clear" title="Clear search">&times;</button>
+                    <div class="name-search-dropdown" id="name-search-dropdown">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
             <section class="calendar-toolbar">
                 <div class="duties-summary-container">
                     <button id="duties-summary-btn" class="control-btn">
@@ -928,49 +1085,64 @@
         }
 
         async function loadRoleAssignments() {
-            try {
-                const response = await fetch('role_assignments.csv');
-                const csvText = await response.text();
-                const data = parseCSV(csvText);
-                
-                // Create a mapping from role to names (for display) and full names (for modal)
-                const roleNameMap = {};
-                const roleFullNamesMap = {};
-                
-                data.forEach(row => {
-                    const role = row.role;
-                    const name = row.name;
+                try {
+                    const response = await fetch('role_assignments.csv');
+                    const csvText = await response.text();
+                    const data = parseCSV(csvText);
                     
-                    if (!roleNameMap[role]) {
-                        roleNameMap[role] = [];
-                        roleFullNamesMap[role] = [];
-                    }
+                    // Create a mapping from role to names (for display) and full names (for modal)
+                    const roleNameMap = {};
+                    const roleFullNamesMap = {};
+                    const allNames = []; // New array to store all names for search
                     
-                    // For AC roles, store the first name for display
-                    if (role.startsWith('AC ')) {
-                        const firstName = name.replace('AC ', '').split(' ')[0];
-                        roleNameMap[role] = [firstName];
-                        roleFullNamesMap[role] = [name.replace('AC ', '')];
-                    } else if (role.startsWith('CN ')) {
-                        // For CN roles, don't store display names but keep full names for modal
-                        const fullName = name.replace('CN ', '');
-                        roleFullNamesMap[role].push(fullName);
-                    }
-                });
-                
-                return { roleNameMap, roleFullNamesMap };
-            } catch (error) {
-                console.error('Error loading role assignments:', error);
-                return { roleNameMap: {}, roleFullNamesMap: {} };
+                    data.forEach(row => {
+                        const role = row.role;
+                        const name = row.name;
+                        
+                        if (!roleNameMap[role]) {
+                            roleNameMap[role] = [];
+                            roleFullNamesMap[role] = [];
+                        }
+                        
+                        // For AC roles, store the first name for display
+                        if (role.startsWith('AC ')) {
+                            const firstName = name.replace('AC ', '').split(' ')[0];
+                            roleNameMap[role] = [firstName];
+                            roleFullNamesMap[role] = [name.replace('AC ', '')];
+                            // Add to all names array
+                            allNames.push({
+                                role: role,
+                                displayName: firstName,
+                                fullName: name.replace('AC ', ''),
+                                searchText: `${firstName} ${name.replace('AC ', '')}`.toLowerCase()
+                            });
+                        } else if (role.startsWith('CN ')) {
+                            // For CN roles, don't store display names but keep full names for modal
+                            const fullName = name.replace('CN ', '');
+                            roleFullNamesMap[role].push(fullName);
+                            // Add to all names array
+                            allNames.push({
+                                role: role,
+                                displayName: fullName.split(' ')[0],
+                                fullName: fullName,
+                                searchText: fullName.toLowerCase()
+                            });
+                        }
+                    });
+                    
+                    return { roleNameMap, roleFullNamesMap, allNames };
+                } catch (error) {
+                    console.error('Error loading role assignments:', error);
+                    return { roleNameMap: {}, roleFullNamesMap: {}, allNames: [] };
+                }
             }
-        }
 
         // Global state to make it accessible to all functions
         let globalState = {};
 
         document.addEventListener('DOMContentLoaded', async function () {
             const scheduleData = await loadScheduleData();
-            const { roleNameMap, roleFullNamesMap } = await loadRoleAssignments();
+            const { roleNameMap, roleFullNamesMap, allNames } = await loadRoleAssignments();
             
             if (scheduleData.length === 0) {
                 console.error('No schedule data loaded');
@@ -989,7 +1161,7 @@
                 LOCAL_STORAGE_KEY: 'duties-calendar-preferences',
             };
 
-            const state = { roles: [], processedData: {}, roleAssignments: roleNameMap, roleFullNames: roleFullNamesMap };
+            const state = { roles: [], processedData: {}, roleAssignments: roleNameMap, roleFullNames: roleFullNamesMap, allNames: allNames };
             globalState = state; // Make state accessible globally
             
             const timeToMinutes = (timeStr) => {
@@ -1066,6 +1238,13 @@
             // Track if we need to update views when modal closes
             let needsViewUpdate = false;
             
+            // Global state for name search filtering
+            let nameSearchState = {
+                isActive: false,
+                selectedRole: null,
+                adjacentRole: null
+            };
+            
             // Function to apply all filter changes
             function applyFilterChanges() {
                 if (needsViewUpdate) {
@@ -1100,6 +1279,75 @@
                         }
                     });
                 });
+            }
+            
+            function updateRoleFilterCheckboxes(selectedRole, adjacentRole = null) {
+                // Uncheck all role filters first
+                document.querySelectorAll('.role-option input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                
+                // Check the selected role, adjacent role (if exists), and Agenda
+                const selectedRoleClass = selectedRole.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                const agendaRoleClass = 'agenda';
+                
+                const selectedCheckbox = document.querySelector(`input[value="${selectedRoleClass}"]`);
+                if (selectedCheckbox) {
+                    selectedCheckbox.checked = true;
+                }
+                
+                if (adjacentRole) {
+                    const adjacentRoleClass = adjacentRole.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                    const adjacentCheckbox = document.querySelector(`input[value="${adjacentRoleClass}"]`);
+                    if (adjacentCheckbox) {
+                        adjacentCheckbox.checked = true;
+                    }
+                }
+                
+                const agendaCheckbox = document.querySelector(`input[value="${agendaRoleClass}"]`);
+                if (agendaCheckbox) {
+                    agendaCheckbox.checked = true;
+                }
+            }
+            
+            function clearNameSearch() {
+                const searchInput = document.getElementById('name-search-input');
+                const searchDropdown = document.getElementById('name-search-dropdown');
+                const clearButton = document.getElementById('name-search-clear');
+                
+                if (searchInput) searchInput.value = '';
+                if (searchDropdown) searchDropdown.classList.remove('active');
+                if (clearButton) clearButton.classList.remove('active');
+                
+                nameSearchState.isActive = false;
+                nameSearchState.selectedRole = null;
+                nameSearchState.adjacentRole = null;
+            }
+            
+            function getAdjacentRole(role) {
+                // AC roles: AC 1 pairs with AC 2, AC 3 pairs with AC 4, AC 5 pairs with AC 6, etc.
+                const acMatch = role.match(/^AC (\d+)$/);
+                if (acMatch) {
+                    const acNumber = parseInt(acMatch[1]);
+                    // If odd, pair with next even number; if even, pair with previous odd number
+                    const adjacentNumber = acNumber % 2 === 1 ? acNumber + 1 : acNumber - 1;
+                    return `AC ${adjacentNumber}`;
+                }
+                
+                // CN roles: CN A pairs with CN B, CN C pairs with CN D, CN E pairs with CN F, etc.
+                const cnMatch = role.match(/^CN ([A-Z])$/);
+                if (cnMatch) {
+                    const cnLetter = cnMatch[1];
+                    const letterIndex = cnLetter.charCodeAt(0) - 'A'.charCodeAt(0); // 0 for A, 1 for B, etc.
+                    
+                    // If even index (A, C, E...), pair with next letter; if odd index (B, D, F...), pair with previous letter
+                    const adjacentIndex = letterIndex % 2 === 0 ? letterIndex + 1 : letterIndex - 1;
+                    const adjacentLetter = String.fromCharCode('A'.charCodeAt(0) + adjacentIndex);
+                    return `CN ${adjacentLetter}`;
+                }
+                
+                // For other roles, no adjacent pairing
+                return null;
             }
             
             const updateColumnAbbreviations = () => {
@@ -1741,6 +1989,11 @@
                     container.addEventListener('click', (e) => {
                         const target = e.target;
                         if (target.matches('input[type="checkbox"]')) {
+                            // Check if a name search is active - if so, clear the name search and allow manual filtering
+                            if (nameSearchState.isActive) {
+                                clearNameSearch();
+                            }
+                            
                             const role = target.value;
                             const isVisible = target.checked;
                             document.querySelectorAll(`input[value="${role}"]`).forEach(cb => cb.checked = isVisible);
@@ -1748,6 +2001,11 @@
                             needsViewUpdate = true; // Mark that we need to update views later
                             savePreferences();
                         } else if (target.matches('.filter-control-btn')) {
+                            // Check if a name search is active - if so, clear the name search and allow bulk operations
+                            if (nameSearchState.isActive) {
+                                clearNameSearch();
+                            }
+                            
                             const isSelectAll = target.dataset.action === 'select-all';
                             // Bulk operation - update all at once without individual events
                             container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
@@ -2182,7 +2440,173 @@
                 });
             }
 
+            // Name search functionality
+            function setupNameSearch() {
+                const searchInput = document.getElementById('name-search-input');
+                const searchDropdown = document.getElementById('name-search-dropdown');
+                const clearButton = document.getElementById('name-search-clear');
+                let selectedNameData = null;
+                
+                function populateSearchDropdown(searchTerm = '') {
+                    const filteredNames = state.allNames.filter(nameData => 
+                        nameData.searchText.includes(searchTerm.toLowerCase())
+                    );
+                    
+                    searchDropdown.innerHTML = '';
+                    
+                    if (filteredNames.length === 0) {
+                        searchDropdown.innerHTML = '<div class="name-search-option">No names found</div>';
+                        return;
+                    }
+                    
+                    filteredNames.forEach(nameData => {
+                        const option = document.createElement('div');
+                        option.className = 'name-search-option';
+                        option.innerHTML = `
+                            <span class="name-role">${nameData.role}</span>
+                            <span class="name-full">${nameData.fullName}</span>
+                        `;
+                        option.addEventListener('click', () => selectName(nameData));
+                        searchDropdown.appendChild(option);
+                    });
+                }
+                
+                function selectName(nameData) {
+                    selectedNameData = nameData;
+                    nameSearchState.isActive = true;
+                    nameSearchState.selectedRole = nameData.role;
+                    nameSearchState.adjacentRole = getAdjacentRole(nameData.role);
+                    searchInput.value = `${nameData.role} - ${nameData.fullName}`;
+                    searchDropdown.classList.remove('active');
+                    clearButton.classList.add('active');
+                    
+                    // Filter to show only the selected person's role
+                    filterToRole(nameData.role);
+                }
+                
+                function filterToRole(selectedRole) {
+                    // Hide all role columns first
+                    state.roles.forEach(role => {
+                        const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                        const cols = document.querySelectorAll(`[data-role="${roleClass}"]`);
+                        cols.forEach(col => {
+                            col.style.display = 'none';
+                        });
+                    });
+                    
+                    // Determine which roles to show (selected role + adjacent role + Agenda)
+                    const rolesToShow = [selectedRole];
+                    
+                    // Find adjacent role based on pairing rules
+                    const adjacentRole = getAdjacentRole(selectedRole);
+                    if (adjacentRole && state.roles.includes(adjacentRole)) {
+                        rolesToShow.push(adjacentRole);
+                    }
+                    
+                    // Always include Agenda
+                    rolesToShow.push('Agenda');
+                    
+                    // Show the selected roles
+                    rolesToShow.forEach(role => {
+                        const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                        document.querySelectorAll(`[data-role="${roleClass}"]`).forEach(col => {
+                            col.style.display = '';
+                        });
+                    });
+                    
+                    // Update column abbreviations
+                    updateColumnAbbreviations();
+                    
+                    // Regenerate card views if we're currently in card view mode
+                    if (document.querySelector('.card-view.active')) {
+                        regenerateCardViews();
+                    }
+                    
+                    // Update role filter checkboxes to reflect the current state
+                    updateRoleFilterCheckboxes(selectedRole, adjacentRole);
+                }
+                
+                function clearSearch() {
+                    selectedNameData = null;
+                    clearNameSearch();
+                    
+                    // Reset all role filters to show all columns
+                    resetRoleFilters();
+                }
+                
+                function resetRoleFilters() {
+                    // Show all role columns
+                    state.roles.forEach(role => {
+                        const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                        const cols = document.querySelectorAll(`[data-role="${roleClass}"]`);
+                        cols.forEach(col => {
+                            col.style.display = '';
+                        });
+                    });
+                    
+                    // Check all role filter checkboxes
+                    document.querySelectorAll('.role-option input[type="checkbox"]').forEach(checkbox => {
+                        checkbox.checked = true;
+                    });
+                    
+                    // Update column abbreviations
+                    updateColumnAbbreviations();
+                    
+                    // Regenerate card views if we're currently in card view mode
+                    if (document.querySelector('.card-view.active')) {
+                        regenerateCardViews();
+                    }
+                }
+                
+                // Event listeners
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.trim();
+                    
+                    if (searchTerm.length > 0) {
+                        populateSearchDropdown(searchTerm);
+                        searchDropdown.classList.add('active');
+                        clearButton.classList.add('active');
+                    } else {
+                        searchDropdown.classList.remove('active');
+                        clearButton.classList.remove('active');
+                        // Reset filters when search is cleared
+                        if (nameSearchState.isActive) {
+                            clearNameSearch();
+                            resetRoleFilters();
+                        }
+                    }
+                });
+                
+                searchInput.addEventListener('focus', () => {
+                    if (searchInput.value.trim().length > 0) {
+                        searchDropdown.classList.add('active');
+                    }
+                });
+                
+                searchInput.addEventListener('blur', (e) => {
+                    // Delay hiding dropdown to allow for click events
+                    setTimeout(() => {
+                        if (!searchDropdown.contains(document.activeElement)) {
+                            searchDropdown.classList.remove('active');
+                        }
+                    }, 200);
+                });
+                
+                clearButton.addEventListener('click', clearSearch);
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+                        searchDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Populate initial dropdown
+                populateSearchDropdown();
+            }
+
             initialize();
+            setupNameSearch();
         });
     </script>
 </body>
