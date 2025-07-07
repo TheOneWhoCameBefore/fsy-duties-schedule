@@ -1117,7 +1117,7 @@
                                 searchText: `${firstName} ${name.replace('AC ', '')}`.toLowerCase()
                             });
                         } else if (role.startsWith('CN ')) {
-                            // For CN roles, don't store display names but keep full names for modal
+                            // For CN roles, store full names for modal and don't use display names in table
                             const fullName = name.replace('CN ', '');
                             roleFullNamesMap[role].push(fullName);
                             // Add to all names array
@@ -1126,6 +1126,16 @@
                                 displayName: fullName.split(' ')[0],
                                 fullName: fullName,
                                 searchText: fullName.toLowerCase()
+                            });
+                        } else {
+                            // For other roles, store the name as-is
+                            roleFullNamesMap[role].push(name);
+                            // Add to all names array
+                            allNames.push({
+                                role: role,
+                                displayName: name.split(' ')[0],
+                                fullName: name,
+                                searchText: name.toLowerCase()
                             });
                         }
                     });
@@ -1515,9 +1525,20 @@
                     return `<div class="card-view"><div class="no-events-card">No events for ${day}.</div></div>`;
                 }
                 
-                // Get only agenda events and sort by time
+                // Get only significant agenda events (excluding travel/transition) and sort by time
                 const agendaEvents = dayEvents
-                    .filter(event => event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda')
+                    .filter(event => {
+                        if (!event['Event Type'] || event['Event Type'].toLowerCase() !== 'agenda') {
+                            return false;
+                        }
+                        // Filter out travel/transition-related agenda events
+                        const eventName = event['Event Name'] || '';
+                        const lowerEventName = eventName.toLowerCase();
+                        return !lowerEventName.includes('travel') && 
+                               !lowerEventName.includes('transition') && 
+                               !lowerEventName.includes('move to') &&
+                               !lowerEventName.includes('roll call');
+                    })
                     .sort((a, b) => a.startMins - b.startMins);
                 
                 if (agendaEvents.length === 0) {
@@ -1553,7 +1574,7 @@
             function getRoleActivitiesForAgendaEvent(agendaEvent, dayEvents) {
                 const roleActivities = {};
                 
-                // Initialize all visible roles
+                // Initialize only visible roles (don't auto-include paired roles yet)
                 state.roles.forEach(role => {
                     if (role !== 'Agenda') {
                         const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
@@ -1561,33 +1582,13 @@
                         const isRoleVisible = document.querySelector(`[data-role="${roleClass}"]`)?.style.display !== 'none';
                         if (isRoleVisible) {
                             roleActivities[role] = null; // Start with null, will be filled based on hierarchy
-                            
-                            // If this is an AC role, also include its paired CN role even if filtered out
-                            const acMatch = role.match(/^AC (\d+)$/);
-                            if (acMatch) {
-                                const acNumber = parseInt(acMatch[1]);
-                                const pairedCnLetter = String.fromCharCode('A'.charCodeAt(0) + acNumber - 1);
-                                const pairedCnRole = `CN ${pairedCnLetter}`;
-                                if (state.roles.includes(pairedCnRole)) {
-                                    roleActivities[pairedCnRole] = null;
-                                }
-                            }
-                            
-                            // If this is a CN role, also include its paired AC role even if filtered out
-                            const cnMatch = role.match(/^CN ([A-Z])$/);
-                            if (cnMatch) {
-                                const cnLetter = cnMatch[1];
-                                const acNumber = cnLetter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
-                                const pairedAcRole = `AC ${acNumber}`;
-                                if (state.roles.includes(pairedAcRole)) {
-                                    roleActivities[pairedAcRole] = null;
-                                }
-                            }
                         }
                     }
                 });
                 
-                // Find events for each role using the new hierarchy
+                // Find events for each role and determine which roles actually have assignments
+                const rolesWithAssignments = new Set();
+                
                 dayEvents.forEach(event => {
                     if (event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda') {
                         return; // Skip agenda events
@@ -1601,6 +1602,10 @@
                     if (isOverlapping || startsWithinAgenda || isActiveAtAgendaStart) {
                         // This event is relevant to the agenda event
                         event.assignedRoles.forEach(role => {
+                            // Mark this role as having an assignment
+                            rolesWithAssignments.add(role);
+                            
+                            // If this role is in our visible roles OR we need to add it for pairing
                             if (roleActivities.hasOwnProperty(role)) {
                                 const currentActivity = roleActivities[role];
                                 const newActivity = {
@@ -1619,6 +1624,90 @@
                                 }
                             }
                         });
+                    }
+                });
+                
+                // Now add paired roles only if they have actual assignments during this time
+                const visibleRoles = Object.keys(roleActivities);
+                visibleRoles.forEach(role => {
+                    // If this is an AC role, check if its paired CN role has assignments
+                    const acMatch = role.match(/^AC (\d+)$/);
+                    if (acMatch) {
+                        const acNumber = parseInt(acMatch[1]);
+                        const pairedCnLetter = String.fromCharCode('A'.charCodeAt(0) + acNumber - 1);
+                        const pairedCnRole = `CN ${pairedCnLetter}`;
+                        if (state.roles.includes(pairedCnRole) && rolesWithAssignments.has(pairedCnRole) && !roleActivities.hasOwnProperty(pairedCnRole)) {
+                            // Add the paired CN role and find its activity
+                            roleActivities[pairedCnRole] = null;
+                            
+                            // Find the CN role's activity during this agenda event
+                            dayEvents.forEach(event => {
+                                if (event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda') {
+                                    return; // Skip agenda events
+                                }
+                                
+                                const isOverlapping = event.startMins < agendaEvent.endMins && event.endMins > agendaEvent.startMins;
+                                const startsWithinAgenda = event.startMins >= agendaEvent.startMins && event.startMins < agendaEvent.endMins;
+                                const isActiveAtAgendaStart = event.startMins <= agendaEvent.startMins && event.endMins > agendaEvent.startMins;
+                                
+                                if ((isOverlapping || startsWithinAgenda || isActiveAtAgendaStart) && event.assignedRoles.includes(pairedCnRole)) {
+                                    const currentActivity = roleActivities[pairedCnRole];
+                                    const newActivity = {
+                                        activity: `${event['Event Abbreviation']} - ${event['Event Name']}`,
+                                        eventType: event['Event Type'],
+                                        startTime: event['Start Time'],
+                                        endTime: event['End Time'],
+                                        isOverlapping: isOverlapping,
+                                        startsWithin: startsWithinAgenda,
+                                        priority: getEventPriority(event['Event Type'])
+                                    };
+                                    
+                                    if (shouldReplaceActivity(currentActivity, newActivity)) {
+                                        roleActivities[pairedCnRole] = newActivity;
+                                    }
+                                }
+                            });
+                        }
+                    }
+                    
+                    // If this is a CN role, check if its paired AC role has assignments
+                    const cnMatch = role.match(/^CN ([A-Z])$/);
+                    if (cnMatch) {
+                        const cnLetter = cnMatch[1];
+                        const acNumber = cnLetter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                        const pairedAcRole = `AC ${acNumber}`;
+                        if (state.roles.includes(pairedAcRole) && rolesWithAssignments.has(pairedAcRole) && !roleActivities.hasOwnProperty(pairedAcRole)) {
+                            // Add the paired AC role and find its activity
+                            roleActivities[pairedAcRole] = null;
+                            
+                            // Find the AC role's activity during this agenda event
+                            dayEvents.forEach(event => {
+                                if (event['Event Type'] && event['Event Type'].toLowerCase() === 'agenda') {
+                                    return; // Skip agenda events
+                                }
+                                
+                                const isOverlapping = event.startMins < agendaEvent.endMins && event.endMins > agendaEvent.startMins;
+                                const startsWithinAgenda = event.startMins >= agendaEvent.startMins && event.startMins < agendaEvent.endMins;
+                                const isActiveAtAgendaStart = event.startMins <= agendaEvent.startMins && event.endMins > agendaEvent.startMins;
+                                
+                                if ((isOverlapping || startsWithinAgenda || isActiveAtAgendaStart) && event.assignedRoles.includes(pairedAcRole)) {
+                                    const currentActivity = roleActivities[pairedAcRole];
+                                    const newActivity = {
+                                        activity: `${event['Event Abbreviation']} - ${event['Event Name']}`,
+                                        eventType: event['Event Type'],
+                                        startTime: event['Start Time'],
+                                        endTime: event['End Time'],
+                                        isOverlapping: isOverlapping,
+                                        startsWithin: startsWithinAgenda,
+                                        priority: getEventPriority(event['Event Type'])
+                                    };
+                                    
+                                    if (shouldReplaceActivity(currentActivity, newActivity)) {
+                                        roleActivities[pairedAcRole] = newActivity;
+                                    }
+                                }
+                            });
+                        }
                     }
                 });
                 
@@ -2048,7 +2137,7 @@
                 document.addEventListener('click', (e) => {
                     // Check for role assignment clicks (card view)
                     const roleAssignment = e.target.closest('.role-assignment[data-role]');
-                    if (roleAssignment && roleAssignment.style.display !== 'none') {
+                    if (roleAssignment) {
                         showRoleModal(roleAssignment);
                         return;
                     }
@@ -2070,29 +2159,22 @@
                 const eventName = element.dataset.eventName;
                 const eventType = element.dataset.eventType;
                 
-                // Find all roles with the same activity, event time, and event type to combine their staff
-                const allRoleAssignments = document.querySelectorAll('.role-assignment[data-role]');
-                const relatedRoles = [];
+                // Simple approach: Just show staff for the specific role that was clicked
+                // Instead of trying to find "related roles" which might be causing the issue
                 const combinedStaff = [];
+                const roleStaff = state.roleFullNames[role] || [];
+                combinedStaff.push(...roleStaff);
                 
-                allRoleAssignments.forEach(roleEl => {
-                    const roleElActivity = roleEl.dataset.activity;
-                    const roleElEventTime = roleEl.dataset.eventTime;
-                    const roleElEventType = roleEl.dataset.eventType;
-                    const roleElRole = roleEl.dataset.role;
-                    
-                    // Check if this role assignment matches the same event (same activity, time, and type)
-                    if (roleElActivity === activity && roleElEventTime === eventTime && roleElEventType === eventType) {
-                        relatedRoles.push(roleElRole);
-                        
-                        // Add staff from this role
-                        const roleStaff = state.roleFullNames[roleElRole] || [];
-                        roleStaff.forEach(staffName => {
-                            if (!combinedStaff.includes(staffName)) {
-                                combinedStaff.push(staffName);
-                            }
-                        });
-                    }
+                // Debug logging to help identify the issue
+                console.log('Modal Debug Info:', {
+                    clickedRole: role,
+                    activity: activity,
+                    eventName: eventName,
+                    eventType: eventType,
+                    eventTime: eventTime,
+                    roleStaff: roleStaff,
+                    combinedStaff: combinedStaff,
+                    allRoleData: state.roleFullNames
                 });
                 
                 // Update modal content - use activity as title
@@ -2100,29 +2182,15 @@
                 
                 document.getElementById('role-modal-time').textContent = eventTime;
                 
-                // Names section - use combined staff from all related roles
+                // Names section - use staff only from the clicked role
                 const namesContainer = document.getElementById('role-modal-names');
                 
                 if (combinedStaff.length > 0) {
-                    // Create a map of staff names to their roles to determine styling
-                    const staffRoleMap = new Map();
-                    
-                    relatedRoles.forEach(role => {
-                        const roleStaff = state.roleFullNames[role] || [];
-                        roleStaff.forEach(staffName => {
-                            if (!staffRoleMap.has(staffName)) {
-                                staffRoleMap.set(staffName, []);
-                            }
-                            staffRoleMap.get(staffName).push(role);
-                        });
-                    });
+                    // Check if this role is an AC role for styling
+                    const isAcRole = role.startsWith('AC ');
+                    const acRoleClass = isAcRole ? 'ac-role' : '';
                     
                     const nameTagsHTML = combinedStaff.map(name => {
-                        // Check if this specific staff member is assigned to an AC role
-                        const staffRoles = staffRoleMap.get(name) || [];
-                        const isAssignedToAcRole = staffRoles.some(role => role.startsWith('AC '));
-                        const acRoleClass = isAssignedToAcRole ? 'ac-role' : '';
-                        
                         return `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`;
                     }).join('');
                     namesContainer.innerHTML = nameTagsHTML;
@@ -2313,51 +2381,6 @@
                 return { isCardView };
             }
 
-            function scrollToCurrentTimeCard() {
-                const now = new Date();
-                const currentTime = now.getHours() * 60 + now.getMinutes();
-                
-                const isCardView = document.querySelector('.card-view.active') !== null;
-                if (!isCardView) return;
-                
-                const activeSlide = document.querySelector('.swiper-slide-active');
-                if (!activeSlide) return;
-                
-                const cards = activeSlide.querySelectorAll('.agenda-card');
-                let targetCard = null;
-                let closestTimeDiff = Infinity;
-                
-                cards.forEach(card => {
-                    const timeSlot = card.querySelector('.card-time');
-                    if (timeSlot) {
-                        const timeText = timeSlot.textContent.trim();
-                        const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/);
-                        if (timeMatch) {
-                            const cardHour = parseInt(timeMatch[1], 10);
-                            const cardMinutes = parseInt(timeMatch[2], 10);
-                            const cardTime = cardHour * 60 + cardMinutes;
-                            
-                            const timeDiff = cardTime - currentTime;
-                            if (timeDiff >= 0 && timeDiff < closestTimeDiff) {
-                                closestTimeDiff = timeDiff;
-                                targetCard = card;
-                            }
-                        }
-                    }
-                });
-                
-                if (!targetCard && cards.length > 0) {
-                    targetCard = cards[cards.length - 1];
-                }
-                
-                if (targetCard) {
-                    targetCard.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'center' 
-                    });
-                }
-            }
-
             function initialize() {
                 preprocessData(scheduleData);
                 const swiperWrapper = document.querySelector(CONFIG.SELECTORS.swiperWrapper);
@@ -2404,8 +2427,6 @@
                      swiper.emit('slideChangeTransitionEnd');
                 }
                 setInterval(() => updateCurrentTimeIndicator(swiper), 60000);
-                
-                setTimeout(() => scrollToCurrentTimeCard(), 100);
             }
 
             function setupViewToggle(initialIsCardView = true) {
