@@ -1,14 +1,34 @@
 Weekday,Start Time,End Time,Role,Event Name,Event Abbreviation,Event Type,Event Description
-Sunday,6:00 PM,6:45 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,6:00 PM,6:45 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Sunday,4:45 PM,6:00 PM,AC 1,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 2,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 3,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 4,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 5,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 6,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 7,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 8,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 9,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,AC 10,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN A,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN B,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN C,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN D,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN E,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN F,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN G,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN H,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN I,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,4:45 PM,6:00 PM,CN J,Staff Dinner,ND,free,A non-mandatory dinner for all staff.
+Sunday,6:00 PM,6:45 PM,AC 1,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 2,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 3,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 4,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 5,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 6,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 7,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 8,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 9,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
+Sunday,6:00 PM,6:45 PM,AC 10,SC/AC/WC Meeting,ME,meeting,"A meeting for the core leadership team to get organized, go over session and campus specific details, and set goals."
 Sunday,6:00 PM,7:00 PM,CN A,No Duty,ND,free,Time without duty but still actively participating in the session.
 Sunday,6:00 PM,7:00 PM,CN B,No Duty,ND,free,Time without duty but still actively participating in the session.
 Sunday,6:00 PM,7:00 PM,CN C,No Duty,ND,free,Time without duty but still actively participating in the session.
@@ -19,175 +39,183 @@ Sunday,6:00 PM,7:00 PM,CN G,No Duty,ND,free,Time without duty but still actively
 Sunday,6:00 PM,7:00 PM,CN H,No Duty,ND,free,Time without duty but still actively participating in the session.
 Sunday,6:00 PM,7:00 PM,CN I,No Duty,ND,free,Time without duty but still actively participating in the session.
 Sunday,6:00 PM,7:00 PM,CN J,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 1,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 4,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 5,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 6,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 7,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 8,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 9,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,6:45 PM,7:00 PM,AC 10,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:00 PM,7:50 PM,CN A,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN B,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN C,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN D,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN E,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN F,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN G,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN H,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN I,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,CN J,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:00 PM,7:50 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,7:50 PM,8:00 PM,CN A,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN B,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN C,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN D,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN E,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN F,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN G,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN H,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN I,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,CN J,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 1,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 4,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 5,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 6,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 7,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 8,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 9,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,7:50 PM,8:00 PM,AC 10,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:00 PM,8:15 PM,CN A,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN B,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN C,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN D,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN E,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN F,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN G,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN H,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN I,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,CN J,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:00 PM,8:15 PM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Sunday,8:15 PM,9:15 PM,AC 1,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 2,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 3,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 4,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 5,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 6,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 7,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 8,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 9,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:15 PM,AC 10,Interviews,IN,duty,A specific duty or task: Interviews.
-Sunday,8:15 PM,9:55 PM,CN A,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN B,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN C,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN D,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN E,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN F,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN G,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN H,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN I,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,8:15 PM,9:55 PM,CN J,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 1,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 4,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 5,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 6,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 7,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 8,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 9,No Duty,ND,free,Time without duty but still actively participating in the session.
-Sunday,9:15 PM,9:55 PM,AC 10,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 1,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 4,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 5,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 6,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 7,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 8,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 9,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,8:00 AM,AC 10,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:00 AM,8:25 AM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:00 AM,8:25 AM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:25 AM,8:30 AM,AC 1,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 4,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 5,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 6,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 7,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 8,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 9,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:25 AM,8:30 AM,AC 10,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,8:30 AM,9:15 AM,AC 1,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 2,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 3,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 4,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 5,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 6,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 7,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 8,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 9,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,8:30 AM,9:15 AM,AC 10,Meeting,ME,meeting,"A scheduled meeting for coordination, planning, or discussion."
-Monday,7:30 AM,10:00 AM,CN E,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,7:30 AM,10:00 AM,CN F,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,9:15 AM,10:00 AM,AC 1,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 2,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 3,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 4,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 5,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 6,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 7,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 8,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 9,Interviews,IN,duty,A specific duty or task: Interviews.
-Monday,9:15 AM,10:00 AM,AC 10,Interviews,IN,duty,A specific duty or task: Interviews.
+Sunday,6:45 PM,7:00 PM,AC 1,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 2,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 3,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 4,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 5,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 6,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 7,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 8,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 9,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,6:45 PM,7:00 PM,AC 10,Role Call and Transition,ND,free,Travel to the Session Advisor Message and Check-In.
+Sunday,7:00 PM,7:45 PM,CN A,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN B,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN C,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN D,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN E,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN F,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN G,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN H,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN I,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,CN J,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 1,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 2,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 3,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 4,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 5,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 6,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 7,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 8,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 9,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:00 PM,7:45 PM,AC 10,Session Advisor Message,ME,meeting,A message from the Session Advisor for the enrichment of the staff to help them in their roles at FSY. 
+Sunday,7:45 PM,8:00 PM,CN A,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN B,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN C,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN D,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN E,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN F,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN G,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN H,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN I,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,CN J,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 1,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 2,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 3,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 4,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 5,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 6,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 7,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 8,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 9,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,7:45 PM,8:00 PM,AC 10,Move to AC/CN Breakout,TR,free,Travel from the Session Advisor Message to the AC/CN Breakout
+Sunday,8:00 PM,8:15 PM,CN A,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN B,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN C,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN D,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN E,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN F,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN G,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN H,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN I,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,CN J,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 1,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 2,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 3,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 4,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 5,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 6,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 7,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 8,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 9,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:00 PM,8:15 PM,AC 10,AC/CN Breakout,ME,meeting,"A meeting for Counselors and ACs to get to know each other, answer session and campus specific questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 1,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 2,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 3,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 4,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 5,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 6,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 7,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 8,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 9,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,AC 10,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Sunday,8:15 PM,9:15 PM,CN A,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN B,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN C,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN D,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN E,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN F,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN G,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN H,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN I,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Sunday,8:15 PM,9:15 PM,CN J,Mingle,ND,free,"Time to get to know co-counselors, set goals, plan for the week, and prepare door tags."
+Monday,7:30 AM,8:00 AM,AC 1,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 2,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 3,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 4,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 5,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 6,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 7,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 8,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 9,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:00 AM,AC 10,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN A,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN B,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN C,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN D,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN E,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN F,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN G,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN H,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN I,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,7:30 AM,8:30 AM,CN J,Staff Breakfast,ND,free,Time without duty but still actively participating in the session.
+Monday,8:00 AM,8:30 AM,AC 1,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 2,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 3,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 4,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 5,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 6,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 7,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 8,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 9,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:00 AM,8:30 AM,AC 10,SC/AC/WC Meeting,ME,meeting,A meeting for the core leadership team to coordinate duties and discuss concerns.
+Monday,8:30 AM,9:15 AM,AC 1,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 2,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 3,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 4,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 5,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 6,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 7,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 8,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 9,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,AC 10,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN A,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN B,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN C,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN D,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN E,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN F,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN G,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN H,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN I,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,8:30 AM,9:15 AM,CN J,Staff Business Meeting,ME,meeting,"A meeting to welcome all staff, give announcements, and go over brief introductions."
+Monday,9:15 AM,10:00 AM,AC 1,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 2,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 3,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 4,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 5,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 6,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 7,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 8,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 9,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,AC 10,Counselor Interviews,IN,free,"Time for Counselors and ACs to meet individually and discuss goals, answer questions, and set expectations."
+Monday,9:15 AM,10:00 AM,CN A,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN B,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN C,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN D,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN E,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN F,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN G,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN H,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN I,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
+Monday,9:15 AM,10:00 AM,CN J,Co-counselor Planning,CO,free,Time for Co-counselors to plan and discuss how they will carry out activities and assignments throughout the week.
 Monday,7:30 AM,11:00 AM,CN A,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,7:30 AM,11:00 AM,CN B,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,7:30 AM,11:00 AM,CN C,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,7:30 AM,11:00 AM,CN D,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,10:00 AM,11:00 AM,CN E,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
-Monday,10:00 AM,11:00 AM,CN F,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
+Monday,10:00 AM,11:00 AM,CN E,Check-In Set Up,CH,duty,"Time for moving the check-in materials to the check-in location and organize name cards, t-shirts, and wristbands. "
+Monday,10:00 AM,11:00 AM,CN F,Check-In Set Up,CH,duty,"Time for moving the check-in materials to the check-in location and organize name cards, t-shirts, and wristbands. "
 Monday,7:30 AM,11:00 AM,CN G,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,7:30 AM,11:00 AM,CN H,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,7:30 AM,11:00 AM,CN I,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,7:30 AM,11:00 AM,CN J,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,10:00 AM,11:00 AM,AC 1,No Duty,ND,free,Time without duty but still actively participating in the session.
 Monday,10:00 AM,11:00 AM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
-Monday,10:00 AM,11:00 AM,AC 3,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
-Monday,10:00 AM,11:00 AM,AC 4,Music Performance Coordinator (Singers),MU,duty,A specific duty or task: Music Performance Coordinator (Singers).
-Monday,10:00 AM,11:00 AM,AC 6,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
-Monday,10:00 AM,11:00 AM,AC 8,Check-In Set Up,CH,duty,A specific duty or task: Check-In Set Up.
-Monday,10:00 AM,11:00 AM,AC 10,Counselor Dance,CO,duty,A specific duty or task: Counselor Dance.
+Monday,10:00 AM,11:00 AM,AC 3,Check-In Set Up,CH,duty,"Time for moving the check-in materials to the check-in location and organize name cards, t-shirts, and wristbands. "
+Monday,10:00 AM,11:00 AM,AC 4,Music Performance Coordinator (Singers),MU,duty,Time for the Music Performance Coordinator to organize singers for the week.
+Monday,10:00 AM,11:00 AM,AC 6,Check-In Set Up,CH,duty,"Time for moving the check-in materials to the check-in location and organize name cards, t-shirts, and wristbands. "
+Monday,10:00 AM,11:00 AM,AC 8,Check-In Set Up,CH,duty,"Time for moving the check-in materials to the check-in location and organize name cards, t-shirts, and wristbands. "
+Monday,10:00 AM,11:00 AM,AC 10,Counselor Dance,CO,duty,Time to practice line dances.
 Monday,11:00 AM,12:00 PM,CN A,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
 Monday,11:00 AM,12:00 PM,CN B,Check-in #1,CH,duty,Task related to participant check-in or out: Check-in #1.
 Monday,11:00 AM,12:00 PM,CN C,Time-off,OF,break,Scheduled break or personal time away from duties.
@@ -688,7 +716,7 @@ Wednesday,12:15 PM,12:30 PM,AC 1,No Duty,ND,free,Time without duty but still act
 Wednesday,12:15 PM,12:30 PM,AC 2,No Duty,ND,free,Time without duty but still actively participating in the session.
 Wednesday,12:15 PM,12:30 PM,AC 3,No Duty,ND,free,Time without duty but still actively participating in the session.
 Wednesday,10:30 AM,12:30 PM,AC 5,Time-off,OF,break,Scheduled break or personal time away from duties.
-Wednesday,11:30 AM,12:30 PM,AC 7,Class Coordinator / CN Coordination Meeting,CL,meeting,"A scheduled meeting for coordination, planning, or discussion."
+Wednesday,11:30 AM,12:30 PM,AC 7,Class Coordinator / CN Coordination Meeting,CL,duty,"A scheduled meeting for coordination, planning, or discussion."
 Wednesday,11:30 AM,12:30 PM,AC 8,CN Coordination Meeting,CN,meeting,"A scheduled meeting for coordination, planning, or discussion."
 Wednesday,12:30 PM,1:15 PM,AC 7,Time-off,OF,break,Scheduled break or personal time away from duties.
 Wednesday,11:00 AM,1:15 PM,AC 9,Time-off,OF,break,Scheduled break or personal time away from duties.
