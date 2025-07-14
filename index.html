@@ -1601,6 +1601,144 @@
                 const currentEventType = currentEvent.eventType;
                 const currentWeekday = currentEvent.weekday;
                 
+                // Special handling for agenda events - link them to related duty events by keyword matching
+                if (currentEventType.toLowerCase() === 'agenda') {
+                    // Extract keywords from agenda event name for matching
+                    const agendaKeywords = [];
+                    
+                    // Check for specific patterns
+                    if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In')) {
+                        agendaKeywords.push('Check-in', 'Check-In', 'Check In');
+                    }
+                    if (currentEventName.includes('Games Night')) {
+                        agendaKeywords.push('Games Night');
+                    }
+                    if (currentEventName.includes('Dance')) {
+                        agendaKeywords.push('Dance');
+                    }
+                    if (currentEventName.includes('Class')) {
+                        agendaKeywords.push('Class');
+                    }
+                    if (currentEventName.includes('Breakfast')) {
+                        agendaKeywords.push('Breakfast');
+                    }
+                    if (currentEventName.includes('Lunch')) {
+                        agendaKeywords.push('Lunch');
+                    }
+                    if (currentEventName.includes('Dinner')) {
+                        agendaKeywords.push('Dinner');
+                    }
+                    if (currentEventName.includes('Testimony')) {
+                        agendaKeywords.push('Testimony');
+                    }
+                    if (currentEventName.includes('Devotional')) {
+                        agendaKeywords.push('Devotional');
+                    }
+                    if (currentEventName.includes('Service')) {
+                        agendaKeywords.push('Service');
+                    }
+                    if (currentEventName.includes('Activity')) {
+                        agendaKeywords.push('Activity');
+                    }
+                    if (currentEventName.includes('Orientation')) {
+                        agendaKeywords.push('Orientation');
+                    }
+                    if (currentEventName.includes('Flex Time') || currentEventName.includes('Participant Flex Time')) {
+                        agendaKeywords.push('Flex Time');
+                    }
+                    if (currentEventName.includes('Musical Program')) {
+                        agendaKeywords.push('Musical Program');
+                    }
+                    if (currentEventName.includes('Variety Show')) {
+                        agendaKeywords.push('Variety Show');
+                    }
+                    if (currentEventName.includes('Travel to Variety Show')) {
+                        agendaKeywords.push('Variety Show');
+                    }
+                    if (currentEventName.includes('Young Men Morning Devotional and Young Women Activity')) {
+                        agendaKeywords.push('YM', 'YW', 'YM/YW', 'YM//YW', 'Young Men', 'Young Women');
+                    }
+                    if (currentEventName.includes('Young Women Morning Devotional and Young Men Activity')) {
+                        agendaKeywords.push('YM', 'YW', 'YM/YW', 'YM//YW', 'Young Men', 'Young Women');
+                    }
+                    
+                    // Find duty events that match these keywords
+                    if (agendaKeywords.length > 0) {
+                        const relatedDutyEvents = state.mergedEvents.filter(event => {
+                            if (event.eventType.toLowerCase() === 'agenda') return false;
+                            return event.weekday === currentWeekday && 
+                                   agendaKeywords.some(keyword => event.eventName.includes(keyword));
+                        });
+                        linkedEvents.push(...relatedDutyEvents);
+                    }
+                } else {
+                    // For duty events, also link to agenda events that match keywords
+                    const dutyKeywords = [];
+                    
+                    // Extract keywords from duty event name
+                    if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In')) {
+                        dutyKeywords.push('Check-in', 'Check-In', 'Check In');
+                    }
+                    if (currentEventName.includes('Games Night')) {
+                        dutyKeywords.push('Games Night');
+                    }
+                    if (currentEventName.includes('Dance')) {
+                        dutyKeywords.push('Dance');
+                    }
+                    if (currentEventName.includes('Class')) {
+                        dutyKeywords.push('Class');
+                    }
+                    if (currentEventName.includes('Breakfast')) {
+                        dutyKeywords.push('Breakfast');
+                    }
+                    if (currentEventName.includes('Lunch')) {
+                        dutyKeywords.push('Lunch');
+                    }
+                    if (currentEventName.includes('Dinner')) {
+                        dutyKeywords.push('Dinner');
+                    }
+                    if (currentEventName.includes('Testimony')) {
+                        dutyKeywords.push('Testimony');
+                    }
+                    if (currentEventName.includes('Devotional')) {
+                        dutyKeywords.push('Devotional');
+                    }
+                    if (currentEventName.includes('Service')) {
+                        dutyKeywords.push('Service');
+                    }
+                    if (currentEventName.includes('Activity')) {
+                        dutyKeywords.push('Activity');
+                    }
+                    if (currentEventName.includes('Orientation')) {
+                        dutyKeywords.push('Orientation');
+                    }
+                    if (currentEventName.includes('Flex Time')) {
+                        dutyKeywords.push('Flex Time', 'Participant Flex Time');
+                    }
+                    if (currentEventName.includes('Musical Program')) {
+                        dutyKeywords.push('Musical Program');
+                    }
+                    if (currentEventName.includes('Variety Show')) {
+                        dutyKeywords.push('Variety Show');
+                    }
+                    if (currentEventName.includes('YM/YW Activity') || currentEventName.includes('YM//YW Activity')) {
+                        dutyKeywords.push('Young Men Morning Devotional and Young Women Activity', 'Young Women Morning Devotional and Young Men Activity');
+                    }
+                    if (currentEventName.includes('YM Activity') || currentEventName.includes('YW Activity')) {
+                        dutyKeywords.push('Young Men Morning Devotional and Young Women Activity', 'Young Women Morning Devotional and Young Men Activity');
+                    }
+                    
+                    // Find agenda events that match these keywords
+                    if (dutyKeywords.length > 0) {
+                        const relatedAgendaEvents = state.mergedEvents.filter(event => {
+                            if (event.eventType.toLowerCase() !== 'agenda') return false;
+                            return event.weekday === currentWeekday && 
+                                   dutyKeywords.some(keyword => event.eventName.includes(keyword));
+                        });
+                        linkedEvents.push(...relatedAgendaEvents);
+                    }
+                }
+                
                 // Check for Check-in related events (handle various capitalizations)
                 if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In')) {
                     const checkInEvents = state.mergedEvents.filter(event => {
@@ -1653,6 +1791,20 @@
                     linkedEvents.push(...gamesEvents);
                 }
                 
+                // Check for Class related events (including meetings)
+                if (currentEventName.includes('Class')) {
+                    const classEvents = state.mergedEvents.filter(event => {
+                        return event.eventType === currentEventType &&
+                               event.weekday === currentWeekday &&
+                               event.eventName !== currentEventName &&
+                               event.eventName.includes('Class') &&
+                               (event.eventName.includes('Coordinator') || 
+                                event.eventName.includes('Support') ||
+                                event.eventName.includes('Meeting'));
+                    });
+                    linkedEvents.push(...classEvents);
+                }
+                
                 // Check for general Coordinator/Support patterns (for other events like Breakfast, Lunch, etc.)
                 const generalPatterns = [
                     { coordinator: 'Coordinator', support: 'Support' },
@@ -1668,7 +1820,8 @@
                         // Skip if this is already handled by specific patterns above
                         if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In') ||
                             currentEventName.includes('Dance') || 
-                            currentEventName.includes('Games Night')) {
+                            currentEventName.includes('Games Night') ||
+                            currentEventName.includes('Class')) {
                             continue;
                         }
                         
