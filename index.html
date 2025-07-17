@@ -712,6 +712,24 @@
         .role-modal-name-tag.ac-role {
             background: #28a745;
         }
+        
+        .role-modal-name-tag.clickable-name {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .role-modal-name-tag.clickable-name:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .role-modal-name-tag.clickable-name.ac-role:hover {
+            background: #218838;
+        }
+        
+        .role-modal-name-tag.clickable-name:not(.ac-role):hover {
+            background: #0056b3;
+        }
         .role-modal-description {
             color: #555;
             line-height: 1.5;
@@ -1613,6 +1631,9 @@
                     if (currentEventName.includes('Games Night')) {
                         agendaKeywords.push('Games Night');
                     }
+                    if (currentEventName.includes('Pizza Night')) {
+                        agendaKeywords.push('Pizza Night');
+                    }
                     if (currentEventName.includes('Dance')) {
                         agendaKeywords.push('Dance');
                     }
@@ -1664,10 +1685,40 @@
                     
                     // Find duty events that match these keywords
                     if (agendaKeywords.length > 0) {
+                        const currentStartMins = timeToMinutes(currentEvent.startTime);
+                        const currentEndMins = timeToMinutes(currentEvent.endTime);
+                        
                         const relatedDutyEvents = state.mergedEvents.filter(event => {
                             if (event.eventType.toLowerCase() === 'agenda') return false;
-                            return event.weekday === currentWeekday && 
-                                   agendaKeywords.some(keyword => event.eventName.includes(keyword));
+                            if (event.weekday !== currentWeekday) return false;
+                            if (!agendaKeywords.some(keyword => event.eventName.includes(keyword))) return false;
+                            
+                            // For Class events, check time proximity
+                            if (agendaKeywords.includes('Class') && event.eventName.includes('Class')) {
+                                const eventStartMins = timeToMinutes(event.startTime);
+                                const eventEndMins = timeToMinutes(event.endTime);
+                                
+                                if (currentStartMins === null || currentEndMins === null || 
+                                    eventStartMins === null || eventEndMins === null) {
+                                    return true; // Include if we can't parse times
+                                }
+                                
+                                // Check if events overlap or are closely adjacent (within 1 hour)
+                                const overlap = Math.max(0, Math.min(currentEndMins, eventEndMins) - Math.max(currentStartMins, eventStartMins));
+                                const timeDiff = Math.abs(currentStartMins - eventStartMins);
+                                
+                                // Allow linking if events overlap or if they're within 1 hour and not crossing the lunch break
+                                if (overlap > 0) return true;
+                                if (timeDiff <= 60) {
+                                    // Check if one event is morning (before 1 PM) and other is afternoon (after 1 PM)
+                                    const isCurrentMorning = currentStartMins < 780; // 1 PM = 780 minutes
+                                    const isEventMorning = eventStartMins < 780;
+                                    return isCurrentMorning === isEventMorning; // Only link if both are in same time period
+                                }
+                                return false;
+                            }
+                            
+                            return true; // For non-Class events, use the original logic
                         });
                         linkedEvents.push(...relatedDutyEvents);
                     }
@@ -1681,6 +1732,9 @@
                     }
                     if (currentEventName.includes('Games Night')) {
                         dutyKeywords.push('Games Night');
+                    }
+                    if (currentEventName.includes('Pizza Night')) {
+                        dutyKeywords.push('Pizza Night');
                     }
                     if (currentEventName.includes('Dance')) {
                         dutyKeywords.push('Dance');
@@ -1730,10 +1784,40 @@
                     
                     // Find agenda events that match these keywords
                     if (dutyKeywords.length > 0) {
+                        const currentStartMins = timeToMinutes(currentEvent.startTime);
+                        const currentEndMins = timeToMinutes(currentEvent.endTime);
+                        
                         const relatedAgendaEvents = state.mergedEvents.filter(event => {
                             if (event.eventType.toLowerCase() !== 'agenda') return false;
-                            return event.weekday === currentWeekday && 
-                                   dutyKeywords.some(keyword => event.eventName.includes(keyword));
+                            if (event.weekday !== currentWeekday) return false;
+                            if (!dutyKeywords.some(keyword => event.eventName.includes(keyword))) return false;
+                            
+                            // For Class events, check time proximity
+                            if (currentEventName.includes('Class') && event.eventName.includes('Class')) {
+                                const eventStartMins = timeToMinutes(event.startTime);
+                                const eventEndMins = timeToMinutes(event.endTime);
+                                
+                                if (currentStartMins === null || currentEndMins === null || 
+                                    eventStartMins === null || eventEndMins === null) {
+                                    return true; // Include if we can't parse times
+                                }
+                                
+                                // Check if events overlap or are closely adjacent (within 1 hour)
+                                const overlap = Math.max(0, Math.min(currentEndMins, eventEndMins) - Math.max(currentStartMins, eventStartMins));
+                                const timeDiff = Math.abs(currentStartMins - eventStartMins);
+                                
+                                // Allow linking if events overlap or if they're within 1 hour and not crossing the lunch break
+                                if (overlap > 0) return true;
+                                if (timeDiff <= 60) {
+                                    // Check if one event is morning (before 1 PM) and other is afternoon (after 1 PM)
+                                    const isCurrentMorning = currentStartMins < 780; // 1 PM = 780 minutes
+                                    const isEventMorning = eventStartMins < 780;
+                                    return isCurrentMorning === isEventMorning; // Only link if both are in same time period
+                                }
+                                return false;
+                            }
+                            
+                            return true; // For non-Class events, use the original logic
                         });
                         linkedEvents.push(...relatedAgendaEvents);
                     }
@@ -1791,16 +1875,57 @@
                     linkedEvents.push(...gamesEvents);
                 }
                 
-                // Check for Class related events (including meetings)
-                if (currentEventName.includes('Class')) {
-                    const classEvents = state.mergedEvents.filter(event => {
+                // Check for Pizza Night related events
+                if (currentEventName.includes('Pizza Night')) {
+                    const pizzaEvents = state.mergedEvents.filter(event => {
                         return event.eventType === currentEventType &&
                                event.weekday === currentWeekday &&
                                event.eventName !== currentEventName &&
-                               event.eventName.includes('Class') &&
+                               event.eventName.includes('Pizza Night') &&
                                (event.eventName.includes('Coordinator') || 
-                                event.eventName.includes('Support') ||
-                                event.eventName.includes('Meeting'));
+                                event.eventName.includes('Support'));
+                    });
+                    linkedEvents.push(...pizzaEvents);
+                }
+                
+                // Check for Class related events (including meetings)
+                if (currentEventName.includes('Class')) {
+                    const currentStartMins = timeToMinutes(currentEvent.startTime);
+                    const currentEndMins = timeToMinutes(currentEvent.endTime);
+                    
+                    const classEvents = state.mergedEvents.filter(event => {
+                        if (event.eventType !== currentEventType || 
+                            event.weekday !== currentWeekday || 
+                            event.eventName === currentEventName ||
+                            !event.eventName.includes('Class') ||
+                            !(event.eventName.includes('Coordinator') || 
+                              event.eventName.includes('Support') ||
+                              event.eventName.includes('Meeting'))) {
+                            return false;
+                        }
+                        
+                        // Check for time overlap or proximity (within 1 hour)
+                        const eventStartMins = timeToMinutes(event.startTime);
+                        const eventEndMins = timeToMinutes(event.endTime);
+                        
+                        if (currentStartMins === null || currentEndMins === null || 
+                            eventStartMins === null || eventEndMins === null) {
+                            return true; // Include if we can't parse times
+                        }
+                        
+                        // Check if events overlap or are closely adjacent (within 1 hour)
+                        const overlap = Math.max(0, Math.min(currentEndMins, eventEndMins) - Math.max(currentStartMins, eventStartMins));
+                        const timeDiff = Math.abs(currentStartMins - eventStartMins);
+                        
+                        // Allow linking if events overlap or if they're within 1 hour and not crossing the lunch break
+                        if (overlap > 0) return true;
+                        if (timeDiff <= 60) {
+                            // Check if one event is morning (before 1 PM) and other is afternoon (after 1 PM)
+                            const isCurrentMorning = currentStartMins < 780; // 1 PM = 780 minutes
+                            const isEventMorning = eventStartMins < 780;
+                            return isCurrentMorning === isEventMorning; // Only link if both are in same time period
+                        }
+                        return false;
                     });
                     linkedEvents.push(...classEvents);
                 }
@@ -1821,6 +1946,7 @@
                         if (currentEventName.includes('Check-in') || currentEventName.includes('Check-In') || currentEventName.includes('Check In') ||
                             currentEventName.includes('Dance') || 
                             currentEventName.includes('Games Night') ||
+                            currentEventName.includes('Pizza Night') ||
                             currentEventName.includes('Class')) {
                             continue;
                         }
@@ -2640,7 +2766,7 @@
                                     <div class="role-modal-role-title ${acRoleClass}">${role}</div>
                                     <div class="role-modal-role-staff">
                                         ${roleStaff.map(name => 
-                                            `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`
+                                            `<span class="role-modal-name-tag ${acRoleClass} clickable-name" data-name="${name}">${name}</span>`
                                         ).join('')}
                                     </div>
                                 </div>
@@ -2652,7 +2778,7 @@
                 } else if (uniqueStaff.length > 0) {
                     // Fallback: show names without role grouping
                     const nameTagsHTML = uniqueStaff.map(name => {
-                        return `<span class="role-modal-name-tag">${name}</span>`;
+                        return `<span class="role-modal-name-tag clickable-name" data-name="${name}">${name}</span>`;
                     }).join('');
                     namesContainer.innerHTML = nameTagsHTML;
                 } else {
@@ -2693,7 +2819,7 @@
                                     const acRoleClass = isAcRole ? 'ac-role' : '';
                                     
                                     staffHTML += roleStaff.map(name => 
-                                        `<span class="role-modal-name-tag ${acRoleClass}">${name}</span>`
+                                        `<span class="role-modal-name-tag ${acRoleClass} clickable-name" data-name="${name}">${name}</span>`
                                     ).join('');
                                 }
                             });
@@ -2731,6 +2857,28 @@
                 } else {
                     linkedEventsSection.style.display = 'none';
                 }
+                
+                // Add click event listeners to all clickable name tags
+                const nameTagsContainer = document.getElementById('role-modal-names');
+                nameTagsContainer.querySelectorAll('.clickable-name').forEach(nameTag => {
+                    nameTag.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const name = this.getAttribute('data-name');
+                        activateNameSearch(name);
+                    });
+                });
+                
+                // Also add event listeners to clickable names in linked events
+                const linkedEventsTags = document.querySelectorAll('#role-modal-linked-events .clickable-name');
+                linkedEventsTags.forEach(nameTag => {
+                    nameTag.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const name = this.getAttribute('data-name');
+                        activateNameSearch(name);
+                    });
+                });
                 
                 // Show modal
                 document.getElementById('role-modal').classList.add('active');
@@ -3028,48 +3176,6 @@
                     filterToRole(nameData.role);
                 }
                 
-                function filterToRole(selectedRole) {
-                    // Hide all role columns first
-                    state.roles.forEach(role => {
-                        const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-                        const cols = document.querySelectorAll(`[data-role="${roleClass}"]`);
-                        cols.forEach(col => {
-                            col.style.display = 'none';
-                        });
-                    });
-                    
-                    // Determine which roles to show (selected role + adjacent role + Agenda)
-                    const rolesToShow = [selectedRole];
-                    
-                    // Find adjacent role based on pairing rules
-                    const adjacentRole = getAdjacentRole(selectedRole);
-                    if (adjacentRole && state.roles.includes(adjacentRole)) {
-                        rolesToShow.push(adjacentRole);
-                    }
-                    
-                    // Always include Agenda
-                    rolesToShow.push('Agenda');
-                    
-                    // Show the selected roles
-                    rolesToShow.forEach(role => {
-                        const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-                        document.querySelectorAll(`[data-role="${roleClass}"]`).forEach(col => {
-                            col.style.display = '';
-                        });
-                    });
-                    
-                    // Update column abbreviations
-                    updateColumnAbbreviations();
-                    
-                    // Regenerate card views if we're currently in card view mode
-                    if (document.querySelector('.card-view.active')) {
-                        regenerateCardViews();
-                    }
-                    
-                    // Update role filter checkboxes to reflect the current state
-                    updateRoleFilterCheckboxes(selectedRole, adjacentRole);
-                }
-                
                 function clearSearch() {
                     selectedNameData = null;
                     clearNameSearch();
@@ -3147,6 +3253,76 @@
                 
                 // Populate initial dropdown
                 populateSearchDropdown();
+            }
+            
+            // Function to activate name search from modal name clicks
+            function activateNameSearch(fullName) {
+                // Find the name data for the clicked name
+                const nameData = state.allNames.find(n => n.fullName === fullName);
+                if (!nameData) return;
+                
+                // Close the modal with a small delay to ensure proper UI state
+                const modal = document.getElementById('role-modal');
+                modal.classList.remove('active');
+                
+                // Use setTimeout to ensure the modal closes before proceeding
+                setTimeout(() => {
+                    // Use the existing selectName function logic
+                    const searchInput = document.getElementById('name-search-input');
+                    const clearButton = document.getElementById('name-search-clear');
+                    
+                    nameSearchState.isActive = true;
+                    nameSearchState.selectedRole = nameData.role;
+                    nameSearchState.adjacentRole = getAdjacentRole(nameData.role);
+                    searchInput.value = `${nameData.role} - ${nameData.fullName}`;
+                    clearButton.classList.add('active');
+                    
+                    // Filter to show only the selected person's role
+                    filterToRole(nameData.role);
+                }, 100);
+            }
+            
+            // Helper function to filter to a specific role (extracted from setupNameSearch)
+            function filterToRole(selectedRole) {
+                // Hide all role columns first
+                state.roles.forEach(role => {
+                    const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                    const cols = document.querySelectorAll(`[data-role="${roleClass}"]`);
+                    cols.forEach(col => {
+                        col.style.display = 'none';
+                    });
+                });
+                
+                // Determine which roles to show (selected role + adjacent role + Agenda)
+                const rolesToShow = [selectedRole];
+                
+                // Find adjacent role based on pairing rules
+                const adjacentRole = getAdjacentRole(selectedRole);
+                if (adjacentRole && state.roles.includes(adjacentRole)) {
+                    rolesToShow.push(adjacentRole);
+                }
+                
+                // Always include Agenda
+                rolesToShow.push('Agenda');
+                
+                // Show the selected roles
+                rolesToShow.forEach(role => {
+                    const roleClass = role.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                    document.querySelectorAll(`[data-role="${roleClass}"]`).forEach(col => {
+                        col.style.display = '';
+                    });
+                });
+                
+                // Update column abbreviations
+                updateColumnAbbreviations();
+                
+                // Regenerate card views if we're currently in card view mode
+                if (document.querySelector('.card-view.active')) {
+                    regenerateCardViews();
+                }
+                
+                // Update role filter checkboxes to reflect the current state
+                updateRoleFilterCheckboxes(selectedRole, adjacentRole);
             }
 
             initialize();
